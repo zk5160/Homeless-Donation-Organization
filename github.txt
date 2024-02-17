@@ -1,0 +1,42 @@
+commit 9f34359e29d32d82823ffe1d25eb47f7ae281902
+Author: abhijay kheechee <abhijaysingh2003@gmail.com>
+Date:   Sat Feb 17 15:24:14 2024 -0500
+
+    Abhijay added name
+
+commit 674cf87c068634a8af339b22c565ef4cadbcb2d7
+Author: brija <jak5970@rit.edu>
+Date:   Sat Feb 17 15:23:04 2024 -0500
+
+    Jade added name
+
+commit 498f250515577ae9a1893a453dc8af0e54eac641
+Author: Eliana <egd1486@rit.edu>
+Date:   Sat Feb 17 15:21:23 2024 -0500
+
+    added name
+
+commit cdbc4e7c7986ca9926451955460164cb1b928a2d
+Merge: e9c19dd 628ef2c
+Author: Zara Khan <zk5160@rit.edu>
+Date:   Sat Feb 17 15:18:21 2024 -0500
+
+    Merge branch 'main' of https://github.com/RIT-SWEN-261-04/team-project-2235-swen-261-04-g-team7
+
+commit e9c19ddb2cd47b5ad446e72506382eba63949e33
+Author: Zara Khan <zk5160@rit.edu>
+Date:   Sat Feb 17 15:18:08 2024 -0500
+
+    Zara added name
+
+commit 628ef2c964b1f9ca995a851265c5046709558ba5
+Author: jak5970 <113185281+jak5970@users.noreply.github.com>
+Date:   Sat Feb 17 15:12:32 2024 -0500
+
+    Add files via upload
+
+commit 871a468ecf29742f05e53e3f7f0f5a749403eba2
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Sat Feb 17 20:04:13 2024 +0000
+
+    Initial commit
