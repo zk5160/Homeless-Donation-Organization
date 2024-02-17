@@ -1,0 +1,6 @@
+com\need\api\needapi\persistence\NeedFileDAO.class
+com\need\api\needapi\persistence\NeedDAO.class
+com\need\api\needapi\controller\NeedController.class
+com\need\api\needapi\WebConfig.class
+com\need\api\needapi\NeedApiApplication.class
+com\need\api\needapi\model\Need.class
