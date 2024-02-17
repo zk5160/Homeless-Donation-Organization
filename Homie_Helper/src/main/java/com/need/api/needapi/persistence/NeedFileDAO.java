@@ -196,6 +196,14 @@ public class NeedFileDAO implements NeedDAO {
                 return null;  // hero does not exist
 
             needs.put(need.getId(),need);
+            // needs.put(need.getCost(), need);
+            // needs.put(need.getQuantity(), need);
+            // needs.put(Interger.parseInt(need.getType),need);
+            // needs.put(need.getId(),need.getCost());
+            // needs.put(need.getId(), need.getType());
+            
+            //needs.put(need.getCost(),need);
+            //needs.put(need.getType(),need);
             save(); // may throw an IOException
             return need;
         }
