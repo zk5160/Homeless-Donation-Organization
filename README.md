@@ -1,11 +1,11 @@
-# U-Fund:  _____ _replace with your particular fundraising type_ _____
+# U-Fund: Homeless (Homie) Helper
 # Modify this document to expand any and all sections that are applicable for a better understanding from your users/testers/collaborators (remove this comment and other instructions areas for your FINAL release)
 
 An online U-Fund system built in Java 17=> and ___ _replace with other platform requirements_ ___
   
 ## Team
 
-- MEMBER1
+- Zara Khan
 - MEMBER2
 - MEMBER3
 - MEMBER4
