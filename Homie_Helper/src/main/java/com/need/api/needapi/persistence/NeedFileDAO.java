@@ -26,10 +26,10 @@ import com.need.api.needapi.model.Need;
 @Component
 public class NeedFileDAO implements NeedDAO {
     private static final Logger LOG = Logger.getLogger(NeedFileDAO.class.getName());
-    Map<Integer, Need> needs;   // Provides a local cache of the hero objects
+    Map<Integer, Need> needs;   // Provides a local cache of the need objects
                                 // so that we don't need to read from the file
                                 // each time
-    private ObjectMapper objectMapper;  // Provides conversion between Hero
+    private ObjectMapper objectMapper;  // Provides conversion between Need
                                         // objects and JSON text format written
                                         // to the file
     private static int nextId;  // The next Id to assign to a new need
@@ -127,7 +127,7 @@ public class NeedFileDAO implements NeedDAO {
         // or reading from the file
         Need[] needArray = objectMapper.readValue(new File(filename),Need[].class);
 
-        // Add each hero to the tree map and keep track of the greatest id
+        // Add each need to the tree map and keep track of the greatest id
         for (Need need : needArray) {
             needs.put(need.getId(), need);
             if (need.getId() > nextId)
@@ -193,7 +193,7 @@ public class NeedFileDAO implements NeedDAO {
     public Need updateNeed(Need need) throws IOException {
         synchronized(needs) {
             if (needs.containsKey(need.getId()) == false)
-                return null;  // hero does not exist
+                return null;  // need does not exist
 
             needs.put(need.getId(),need);
             // needs.put(need.getCost(), need);

@@ -49,7 +49,7 @@ public interface NeedDAO {
      * 
      * @param need {@linkplain Need needs} object to be created and saved
      * <br>
-     * The id of the hero object is ignored and a new uniqe id is assigned
+     * The id of the need object is ignored and a new uniqe id is assigned
      *
      * @return new {@link Need need} if successful, false otherwise 
      * 

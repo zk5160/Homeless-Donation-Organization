@@ -39,7 +39,7 @@ public class NeedController {
     /**
      * Creates a REST API controller to reponds to requests
      * 
-     * @param needDao The {@link NeedDAO Hero Data Access Object} to perform CRUD operations
+     * @param needDao The {@link NeedDAO Need Data Access Object} to perform CRUD operations
      * <br>
      * This dependency is injected by the Spring Framework
      */
