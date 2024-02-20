@@ -105,8 +105,8 @@ public class NeedController {
      * HTTP status of OK<br>
      * ResponseEntity with HTTP status of INTERNAL_SERVER_ERROR otherwise
      * <p>
-     * Example: Find all heroes that contain the text "ma"
-     * GET http://localhost:8080/heroes/?name=ma
+     * Example: Find all needs that contain the text "ma"
+     * GET http://localhost:8080/need/?name=ma
      */
     @GetMapping("/")
     public ResponseEntity<Need[]> searchNeed(@RequestParam String name) {
@@ -126,10 +126,10 @@ public class NeedController {
     /**
      * Creates a {@linkplain Need needs} with the provided need object
      * 
-     * @param hero - The {@link Need need} to create
+     * @param need - The {@link Need need} to create
      * 
      * @return ResponseEntity with created {@link Need need} object and HTTP status of CREATED<br>
-     * ResponseEntity with HTTP status of CONFLICT if {@link Hero hero} object already exists<br>
+     * ResponseEntity with HTTP status of CONFLICT if {@link need need} object already exists<br>
      * ResponseEntity with HTTP status of INTERNAL_SERVER_ERROR otherwise
      */
     @PostMapping("")
