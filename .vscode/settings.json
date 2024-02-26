@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
+    "C_Cpp.errorSquiggles": "enabled"
+=======
     "java.compile.nullAnalysis.mode": "automatic"
+>>>>>>> 612d2c67314792e7f9f86797e44b434769480a9c
 }
