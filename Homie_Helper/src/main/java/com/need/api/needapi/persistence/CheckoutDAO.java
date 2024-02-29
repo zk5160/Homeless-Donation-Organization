@@ -24,7 +24,7 @@ public interface CheckoutDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    Checkout[] getBasket() throws IOException;
+//    FundingBasket[] getCheckout() throws IOException;
 
     /**
      * Retrieves a {@linkplain Fundingbasket needs}
@@ -33,7 +33,7 @@ public interface CheckoutDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    Checkout clearBasket() throws IOException;
+ //   Checkout clearCheckout() throws IOException;
 
     //inventory will either use the need json file or copy it so that
     //the quantity can be decremented
@@ -48,6 +48,6 @@ public interface CheckoutDAO {
      * 
      * @throws IOException if underlying storage cannot be accessed
      */
-    Checkout updateInventory(Inventory need) throws IOException;
+//    Checkout updateInventory(Need need) throws IOException;
 
 }
