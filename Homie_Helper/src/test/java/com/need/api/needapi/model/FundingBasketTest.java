@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 //import com.need.api.needapi.model.Need;
 
 /**
- * The unit test suite for the Hero class
+ * The unit test suite for the Fundbasket class
  * 
  * @author SWEN Faculty
  */

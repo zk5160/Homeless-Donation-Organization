@@ -19,7 +19,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 /**
- * Test the Hero Controller class
+ * Test the FundingBasket Controller class
  * 
  * @author SWEN Faculty
  */
@@ -54,11 +54,11 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testgetFundingBasketNotFound() throws Exception { // createHero may throw IOException
+    public void testgetFundingBasketNotFound() throws Exception { // createFunding may throw IOException
         // Setup
         int fundingbasketId = 99;
-        // When the same id is passed in, our mock Hero DAO will return null, simulating
-        // no hero found
+        // When the same id is passed in, our mock fundingbasket DAO will return null, simulating
+        // no fundingbasket found
         when(mockFundingBasketDAO.getFundingBasket(fundingbasketId)).thenReturn(null);
 
         // Invoke
@@ -69,10 +69,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testgetFundingBasketHandleException() throws Exception { // createHero may throw IOException
+    public void testgetFundingBasketHandleException() throws Exception { // createfundingbasket may throw IOException
         // Setup
         int fundingbasketId = 99;
-        // When getHero is called on the Mock Hero DAO, throw an IOException
+        // When getfundingbasket is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).getFundingBasket(fundingbasketId);
 
         // Invoke
@@ -83,15 +83,15 @@ public class FundingBasketControllerTest {
     }
 
     /*****************************************************************
-     * The following tests will fail until all HeroController methods
+     * The following tests will fail until all fundingbasketController methods
      * are implemented.
      ****************************************************************/
 
     @Test
-    public void testCreateFundingBasket() throws IOException {  // createHero may throw IOException
+    public void testCreateFundingBasket() throws IOException {  // createfundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
-        // when createHero is called, return true simulating successful
+        // when createfundingbasket is called, return true simulating successful
         // creation and save
         when(mockFundingBasketDAO.createFundingBasket(fundingbasket)).thenReturn(fundingbasket);
 
@@ -104,10 +104,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testcreateFundingBasketFailed() throws IOException {  // createHero may throw IOException
+    public void testcreateFundingBasketFailed() throws IOException {  // createfundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
-        // when createHero is called, return false simulating failed
+        // when createfundingbasket is called, return false simulating failed
         // creation and save
         when(mockFundingBasketDAO.createFundingBasket(fundingbasket)).thenReturn(null);
 
@@ -119,11 +119,11 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testcreateFundingBasketHandleException() throws IOException {  // createHero may throw IOException
+    public void testcreateFundingBasketHandleException() throws IOException {  // createfundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
 
-        // When createHero is called on the Mock Hero DAO, throw an IOException
+        // When createfundingbasket is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).createFundingBasket(fundingbasket);
 
         // Invoke
@@ -134,10 +134,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testUpdateFundingBasket() throws IOException { // updateHero may throw IOException
+    public void testUpdateFundingBasket() throws IOException { // updatefundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
-        // when updateHero is called, return true simulating successful
+        // when updatefundingbasket is called, return true simulating successful
         // update and save
         when(mockFundingBasketDAO.updateFundingBasket(fundingbasket)).thenReturn(fundingbasket);
         ResponseEntity<FundingBasket> response = fundingbasketController.updateFundingBasket(fundingbasket);
@@ -152,10 +152,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testUpdateFundingBasketFailed() throws IOException { // updateHero may throw IOException
+    public void testUpdateFundingBasketFailed() throws IOException { // updatefundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
-        // when updateHero is called, return true simulating successful
+        // when updatefundingbasket is called, return true simulating successful
         // update and save
         when(mockFundingBasketDAO.updateFundingBasket(fundingbasket)).thenReturn(null);
 
@@ -167,10 +167,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testUpdateFundingBasketHandleException() throws IOException { // updateHero may throw IOException
+    public void testUpdateFundingBasketHandleException() throws IOException { // updatefundingbasket may throw IOException
         // Setup
         FundingBasket fundingbasket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
-        // When updateHero is called on the Mock Hero DAO, throw an IOException
+        // When updatefundingbasket is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).updateFundingBasket(fundingbasket);
 
         // Invoke
@@ -181,7 +181,7 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testgetFundingBaskets() throws IOException { // getHeroes may throw IOException
+    public void testgetFundingBaskets() throws IOException { // getfundingbasketes may throw IOException
         // Setup
         FundingBasket[] fundingbaskets = new FundingBasket[2];
         fundingbaskets[0] = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
@@ -189,7 +189,7 @@ public class FundingBasketControllerTest {
         // needs[0] = new Need(99,"Bolt");
         // needs[1] = new Need(100,"The Great Iguana");
         
-        // When getHeroes is called return the heroes created above
+        // When getfundingbasketes is called return the fundingbasketes created above
         when(mockFundingBasketDAO.getFundingBasket()).thenReturn(fundingbaskets);
 
         // Invoke
@@ -201,9 +201,9 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testgetFundingBasketsHandleException() throws IOException { // getHeroes may throw IOException
+    public void testgetFundingBasketsHandleException() throws IOException { // getfundingbasketes may throw IOException
         // Setup
-        // When getHeroes is called on the Mock Hero DAO, throw an IOException
+        // When getfundingbasketes is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).getFundingBasket();
 
         // Invoke
@@ -214,7 +214,7 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testSearchFundingBaskets() throws IOException { // findHeroes may throw IOException
+    public void testSearchFundingBaskets() throws IOException { // findfundingbasketes may throw IOException
         // Setup
         String searchString = "la";
         FundingBasket[] fundingbaskets = new FundingBasket[2];
@@ -223,8 +223,8 @@ public class FundingBasketControllerTest {
         // needs[0] = new Need(99,"Bolt");
         // needs[1] = new Need(100,"The Great Iguana");
         
-        // When findHeroes is called with the search string, return the two
-        /// heroes above
+        // When findfundingbasketes is called with the search string, return the two
+        /// fundingbasketes above
         when(mockFundingBasketDAO.findFundingBasket(searchString)).thenReturn(fundingbaskets);
 
         // Invoke
@@ -236,10 +236,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testSearchFundingBasketsHandleException() throws IOException { // findHeroes may throw IOException
+    public void testSearchFundingBasketsHandleException() throws IOException { // findfundingbasketes may throw IOException
         // Setup
         String searchString = "an";
-        // When createHero is called on the Mock Hero DAO, throw an IOException
+        // When createfundingbasket is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).findFundingBasket(searchString);
 
         // Invoke
@@ -250,10 +250,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testDeleteFundingBasket() throws IOException { // deleteHero may throw IOException
+    public void testDeleteFundingBasket() throws IOException { // deletefundingbasket may throw IOException
         // Setup
         int fundingbasketId = 99;
-        // when deleteHero is called return true, simulating successful deletion
+        // when deletefundingbasket is called return true, simulating successful deletion
         when(mockFundingBasketDAO.deleteFundingBasket(fundingbasketId)).thenReturn(true);
 
         // Invoke
@@ -264,10 +264,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testDeleteFundingBasketNotFound() throws IOException { // deleteHero may throw IOException
+    public void testDeleteFundingBasketNotFound() throws IOException { // deletefundingbasket may throw IOException
         // Setup
         int fundingbasketId = 99;
-        // when deleteHero is called return false, simulating failed deletion
+        // when deletefundingbasket is called return false, simulating failed deletion
         when(mockFundingBasketDAO.deleteFundingBasket(fundingbasketId)).thenReturn(false);
 
         // Invoke
@@ -278,10 +278,10 @@ public class FundingBasketControllerTest {
     }
 
     @Test
-    public void testDeleteFundingBasketHandleException() throws IOException { // deleteHero may throw IOException
+    public void testDeleteFundingBasketHandleException() throws IOException { // deletefundingbasket may throw IOException
         // Setup
         int fundingbasketId = 99;
-        // When deleteHero is called on the Mock Hero DAO, throw an IOException
+        // When deletefundingbasket is called on the Mock fundingbasket DAO, throw an IOException
         doThrow(new IOException()).when(mockFundingBasketDAO).deleteFundingBasket(fundingbasketId);
 
         // Invoke
