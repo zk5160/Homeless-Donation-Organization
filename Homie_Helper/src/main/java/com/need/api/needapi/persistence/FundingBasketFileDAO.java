@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import com.need.api.needapi.model.FundingBasket;
 
+
 /**
  * Implements the functionality for JSON file-based peristance for FundingBaskets
  * 
@@ -196,14 +197,7 @@ public class FundingBasketFileDAO implements FundingBasketDAO {
                 return null;  // fundingbasket does not exist
 
             fundingbaskets.put(fundingbasket.getId(),fundingbasket);
-            // fundingbaskets.put(fundingbasket.getCost(), fundingbasket);
-            // fundingbaskets.put(fundingbasket.getQuantity(), fundingbasket);
-            // fundingbaskets.put(Interger.parseInt(fundingbasket.getType),fundingbasket);
-            // fundingbaskets.put(fundingbasket.getId(),fundingbasket.getCost());
-            // fundingbaskets.put(fundingbasket.getId(), fundingbasket.getType());
-            
-            //fundingbaskets.put(fundingbasket.getCost(),fundingbasket);
-            //fundingbaskets.put(fundingbasket.getType(),fundingbasket);
+
             save(); // may throw an IOException
             return fundingbasket;
         }
@@ -223,4 +217,42 @@ public class FundingBasketFileDAO implements FundingBasketDAO {
                 return false;
         }
     }
+
+    /**
+    ** {@inheritDoc}
+     */
+//     @Override
+//     public boolean checkout() throws IOException {
+//         //if null, nothing to checkout
+//         if (getFundingBasket() == null) {
+//             return false;
+//         }
+//         //checkout
+//         else {
+//         //getting funding basket
+//         synchronized(fundingbaskets) {
+//             //going through all ids, not the fastest method
+//             //pretending there are at most 10, rn
+//             for (int id=0; id<10; id++) {
+//                 if (fundingbaskets.containsKey(id)) {
+//                     //getting item quanity
+//                     //needdao.getneed(id);
+//                     int x = getFundingBasket(id).getQuantity();
+//                     //int y = getNeed(id).getQuantity();
+//                     //int z = y-x;
+//                     //updating quantity
+//                     //updating need.json file
+//                     //[id=%d, name=%s, cost=%f, quantity=%d, type=%s]
+//                     //Need.updateNeed(need);
+//                     //Need need = new Need(id, getFundingBasket(id).getName(), getFundingBasket(id).getCost(), z, getFundingBasket(id).getType());
+//                     //updateNeed(need);
+//                     //updateNeed();
+//                     //removing id
+//                     deleteFundingBasket(id);
+//                 }
+//              }
+//         }
+//     }
+//         return save();
+// }
 }

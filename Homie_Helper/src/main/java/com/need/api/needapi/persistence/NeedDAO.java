@@ -69,6 +69,10 @@ public interface NeedDAO {
      */
     Need updateNeed(Need need) throws IOException;
 
+    
+    Need decrementQuantity(int id, int quantity) throws IOException;
+
+
     /**
      * Deletes a {@linkplain Need need} with the given id
      * 

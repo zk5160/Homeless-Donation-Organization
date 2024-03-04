@@ -81,4 +81,8 @@ public interface FundingBasketDAO {
      * @throws IOException if underlying storage cannot be accessed
      */
     boolean deleteFundingBasket(int id) throws IOException;
+
+    //checkout user
+    //need to create user id when we create user files
+    //boolean checkout() throws IOException;
 }

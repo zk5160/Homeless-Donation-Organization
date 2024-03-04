@@ -223,4 +223,15 @@ public class NeedFileDAO implements NeedDAO {
                 return false;
         }
     }
+
+    @Override
+    public Need decrementQuantity(int id, int quantity) throws IOException {
+        synchronized(needs) {
+            Need n = getNeed(id);
+            //int quant= n.getQuantity();
+            //decrementing quanitty by one
+            Need update = new Need(id, n.getName(), n.getCost(), n.getQuantity()-quantity, n.getType());
+            return updateNeed(update);
+        }
+    }
 }
