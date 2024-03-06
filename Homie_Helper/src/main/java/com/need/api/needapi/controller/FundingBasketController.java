@@ -139,7 +139,7 @@ public class FundingBasketController {
         try {
             FundingBasket h = fundingbasketDao.createFundingBasket(fundingbasket);
 
-            return new ResponseEntity<FundingBasket>(h,HttpStatus.OK);
+            return new ResponseEntity<FundingBasket>(h,HttpStatus.CREATED);
         }
 
             catch(IOException e) {

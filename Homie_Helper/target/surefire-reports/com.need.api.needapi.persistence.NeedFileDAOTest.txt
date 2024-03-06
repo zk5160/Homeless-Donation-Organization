@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.need.api.needapi.persistence.NeedFileDAOTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.641 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
+testUpdateNeedNotFound  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <null> but was: <Need [id=99, name=T-shirt, cost=10.990000, quantity=10, type=shirt]>
+	at com.need.api.needapi.persistence.NeedFileDAOTest.testUpdateNeedNotFound(NeedFileDAOTest.java:175)
+
+testFindNeeds  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <0> but was: <2>
+	at com.need.api.needapi.persistence.NeedFileDAOTest.testFindNeeds(NeedFileDAOTest.java:72)
+
