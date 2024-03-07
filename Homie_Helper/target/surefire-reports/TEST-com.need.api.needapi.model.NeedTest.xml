@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.model.NeedTest" time="0.002" tests="3" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.model.NeedTest" time="0" tests="3" errors="0" skipped="0" failures="0">
+>>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144
   <properties>
 <<<<<<< HEAD
     <property name="java.specification.version" value="18"/>
@@ -52,7 +56,7 @@
     <property name="basedir" value="C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper"/>
 =======
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter11927828771065681234.jar /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire 2024-03-06T19-17-23_249-jvmRun1 surefire2102039168369784450tmp surefire_03018467722435024811tmp"/>
+    <property name="sun.java.command" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter4041801924919972081.jar /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire 2024-03-06T19-36-12_145-jvmRun1 surefire7950405699549780138tmp surefire_04634036854360698539tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
 >>>>>>> 3f485c3bdd9be4519c5e3f8e51fa769ab17006aa
     <property name="jdk.debug" value="release"/>
@@ -109,8 +113,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
 =======
     <property name="apple.awt.application.name" value="ForkedBooter"/>
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter11927828771065681234.jar"/>
 >>>>>>> 0b395249e7ebdb698d62698157a3d2db2733951a
+=======
+    <property name="surefire.real.class.path" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter4041801924919972081.jar"/>
+>>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
     <property name="user.name" value="zarak"/>

@@ -2,7 +2,11 @@
 Test set: com.need.api.needapi.controller.FundingBasketControllerTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.249 s - in com.need.api.needapi.controller.FundingBasketControllerTest
+=======
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s - in com.need.api.needapi.controller.FundingBasketControllerTest
+>>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144
 =======
 <<<<<<< HEAD
 Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.155 s - in com.need.api.needapi.controller.FundingBasketControllerTest
