@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <<<<<<< HEAD
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.NeedsApiApplicationTests" time="1.941" tests="1" errors="1" skipped="0" failures="0">
+=======
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.NeedsApiApplicationTests" time="3.067" tests="1" errors="1" skipped="0" failures="0">
 =======
 <<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.NeedsApiApplicationTests" time="1.849" tests="1" errors="1" skipped="0" failures="0">
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -16,7 +20,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter5416353330603133600.jar /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire 2024-03-06T18-44-42_537-jvmRun1 surefire15761435887194234306tmp surefire_011984787736126269541tmp"/>
+    <property name="sun.java.command" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter17356347307125933819.jar /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire 2024-03-06T19-12-46_548-jvmRun1 surefire15202804757662701175tmp surefire_09630853393696060738tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/test-classes:/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.5.6/spring-boot-starter-web-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter/2.5.6/spring-boot-starter-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot/2.5.6/spring-boot-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.5.6/spring-boot-autoconfigure-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.5.6/spring-boot-starter-logging-2.5.6.jar:/Users/elianadurell/.m2/repository/ch/qos/logback/logback-classic/1.2.6/logback-classic-1.2.6.jar:/Users/elianadurell/.m2/repository/ch/qos/logback/logback-core/1.2.6/logback-core-1.2.6.jar:/Users/elianadurell/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.14.1/log4j-to-slf4j-2.14.1.jar:/Users/elianadurell/.m2/repository/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar:/Users/elianadurell/.m2/repository/org/slf4j/jul-to-slf4j/1.7.32/jul-to-slf4j-1.7.32.jar:/Users/elianadurell/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/elianadurell/.m2/repository/org/yaml/snakeyaml/1.28/snakeyaml-1.28.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.5.6/spring-boot-starter-json-2.5.6.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.12.5/jackson-databind-2.12.5.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.12.5/jackson-annotations-2.12.5.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.12.5/jackson-core-2.12.5.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.12.5/jackson-datatype-jdk8-2.12.5.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.12.5/jackson-datatype-jsr310-2.12.5.jar:/Users/elianadurell/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.12.5/jackson-module-parameter-names-2.12.5.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.5.6/spring-boot-starter-tomcat-2.5.6.jar:/Users/elianadurell/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.54/tomcat-embed-core-9.0.54.jar:/Users/elianadurell/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.54/tomcat-embed-el-9.0.54.jar:/Users/elianadurell/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.54/tomcat-embed-websocket-9.0.54.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-web/5.3.12/spring-web-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-beans/5.3.12/spring-beans-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-webmvc/5.3.12/spring-webmvc-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-aop/5.3.12/spring-aop-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-context/5.3.12/spring-context-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-expression/5.3.12/spring-expression-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.5.6/spring-boot-starter-test-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-test/2.5.6/spring-boot-test-2.5.6.jar:/Users/elianadurell/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.5.6/spring-boot-test-autoconfigure-2.5.6.jar:/Users/elianadurell/.m2/repository/com/jayway/jsonpath/json-path/2.5.0/json-path-2.5.0.jar:/Users/elianadurell/.m2/repository/net/minidev/json-smart/2.4.7/json-smart-2.4.7.jar:/Users/elianadurell/.m2/repository/net/minidev/accessors-smart/2.4.7/accessors-smart-2.4.7.jar:/Users/elianadurell/.m2/repository/org/ow2/asm/asm/9.1/asm-9.1.jar:/Users/elianadurell/.m2/repository/org/slf4j/slf4j-api/1.7.32/slf4j-api-1.7.32.jar:/Users/elianadurell/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/Users/elianadurell/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/Users/elianadurell/.m2/repository/org/assertj/assertj-core/3.19.0/assertj-core-3.19.0.jar:/Users/elianadurell/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/elianadurell/.m2/repository/org/junit/jupiter/junit-jupiter/5.7.2/junit-jupiter-5.7.2.jar:/Users/elianadurell/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.7.2/junit-jupiter-api-5.7.2.jar:/Users/elianadurell/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/elianadurell/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/elianadurell/.m2/repository/org/junit/platform/junit-platform-commons/1.7.2/junit-platform-commons-1.7.2.jar:/Users/elianadurell/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.7.2/junit-jupiter-params-5.7.2.jar:/Users/elianadurell/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.7.2/junit-jupiter-engine-5.7.2.jar:/Users/elianadurell/.m2/repository/org/junit/platform/junit-platform-engine/1.7.2/junit-platform-engine-1.7.2.jar:/Users/elianadurell/.m2/repository/org/mockito/mockito-core/3.9.0/mockito-core-3.9.0.jar:/Users/elianadurell/.m2/repository/net/bytebuddy/byte-buddy/1.10.22/byte-buddy-1.10.22.jar:/Users/elianadurell/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.22/byte-buddy-agent-1.10.22.jar:/Users/elianadurell/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/Users/elianadurell/.m2/repository/org/mockito/mockito-junit-jupiter/3.9.0/mockito-junit-jupiter-3.9.0.jar:/Users/elianadurell/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/elianadurell/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-core/5.3.12/spring-core-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-jcl/5.3.12/spring-jcl-5.3.12.jar:/Users/elianadurell/.m2/repository/org/springframework/spring-test/5.3.12/spring-test-5.3.12.jar:/Users/elianadurell/.m2/repository/org/xmlunit/xmlunit-core/2.8.3/xmlunit-core-2.8.3.jar:"/>
@@ -28,6 +32,8 @@
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/21.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
     <property name="basedir" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper"/>
+<<<<<<< HEAD
+=======
 =======
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.need.api.needapi.NeedsApiApplicationTests" time="2.946" tests="1" errors="1" skipped="0" failures="0">
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
@@ -81,10 +87,13 @@
     <property name="basedir" value="C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper"/>
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     <property name="surefire.real.class.path" value="C:\Users\zarak\AppData\Local\Temp\surefire1816614805994036524\surefirebooter15310708405831088133.jar"/>
     <property name="user.script" value=""/>
@@ -103,8 +112,9 @@
     <property name="user.dir" value="C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper"/>
 =======
 <<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter5416353330603133600.jar"/>
+    <property name="surefire.real.class.path" value="/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/surefire/surefirebooter17356347307125933819.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="21.0.1"/>
@@ -132,6 +142,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="65.0"/>
+<<<<<<< HEAD
+=======
 =======
     <property name="surefire.real.class.path" value="C:\Users\brija\AppData\Local\Temp\surefire3571914103786795599\surefirebooter1874519330639811659.jar"/>
     <property name="user.script" value=""/>
@@ -176,15 +188,17 @@ Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\z
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
   </properties>
-  <testcase name="testContextLoads" classname="com.need.api.needapi.NeedsApiApplicationTests" time="0">
+  <testcase name="testContextLoads" classname="com.need.api.needapi.NeedsApiApplicationTests" time="0.001">
     <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
-<<<<<<< HEAD
 Error creating bean with name 'fundingBasketController' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/controller/FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
  at [Source: (File); line: 1, column: 0]
 Caused by: org.springframework.beans.factory.BeanCreationException: 
 Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+<<<<<<< HEAD
+=======
 =======
 Error creating bean with name 'fundingBasketController' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
  at [Source: (File); line: 1, column: 0]
@@ -192,6 +206,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException:
 Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
 Caused by: org.springframework.beans.BeanInstantiationException: 
 Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
@@ -200,6 +215,26 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException:
 No content to map due to end-of-input
  at [Source: (File); line: 1, column: 0]
 </error>
+<<<<<<< HEAD
+    <system-out><![CDATA[19:12:48.332 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:12:48.368 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:12:48.478 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.need.api.needapi.NeedsApiApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+19:12:48.509 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.need.api.needapi.NeedsApiApplicationTests], using SpringBootContextLoader
+19:12:48.561 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.need.api.needapi.NeedsApiApplicationTests]: class path resource [com/need/api/needapi/NeedsApiApplicationTests-context.xml] does not exist
+19:12:48.561 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.need.api.needapi.NeedsApiApplicationTests]: class path resource [com/need/api/needapi/NeedsApiApplicationTestsContext.groovy] does not exist
+19:12:48.561 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.need.api.needapi.NeedsApiApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:12:48.562 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.need.api.needapi.NeedsApiApplicationTests]: NeedsApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:12:48.664 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.need.api.needapi.NeedsApiApplicationTests]
+19:12:48.784 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/NeedApiApplication.class]
+19:12:48.789 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.need.api.needapi.NeedApiApplication for test class com.need.api.needapi.NeedsApiApplicationTests
+19:12:48.891 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.need.api.needapi.NeedsApiApplicationTests]: using defaults.
+19:12:48.892 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+19:12:48.904 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+19:12:48.905 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+19:12:48.905 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c19592c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@60e1d87c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2eb60c71, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@87d9a01, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e5b621b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@10177794, org.springframework.test.context.event.EventPublishingTestExecutionListener@e5c2463, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a950a3b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f7be6c8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@647b9364, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@b6bccb4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@49edcb30, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@59303963]
+19:12:48.909 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4b325930 testClass = NeedsApiApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@267f9765 testClass = NeedsApiApplicationTests, locations = '{}', classes = '{class com.need.api.needapi.NeedApiApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@46a488c2, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@34b9eb03, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1f1e58ca, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4730e0f0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5854a18, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@156b88f5], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+19:12:48.942 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+=======
 <<<<<<< HEAD
     <system-out><![CDATA[18:44:41.023 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 18:44:41.045 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
@@ -260,6 +295,7 @@ No content to map due to end-of-input
 18:29:30.113 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -269,6 +305,11 @@ No content to map due to end-of-input
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.6)
 
+<<<<<<< HEAD
+2024-03-06 19:12:49.211  INFO 82643 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : Starting NeedsApiApplicationTests using Java 21.0.1 on ellies-air.wireless.rit.edu with PID 82643 (started by elianadurell in /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper)
+2024-03-06 19:12:49.213  INFO 82643 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : No active profile set, falling back to default profiles: default
+2024-03-06 19:12:50.134  WARN 82643 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/controller/FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
 <<<<<<< HEAD
 2024-03-06 18:44:42.332  INFO 1800 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : Starting NeedsApiApplicationTests using Java 18.0.2.1 on Zara_Khan with PID 1800 (started by zarak in C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper)
 2024-03-06 18:44:42.338  INFO 1800 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : No active profile set, falling back to default profiles: default
@@ -285,13 +326,16 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 2024-03-06 18:44:45.658  INFO 79747 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : Starting NeedsApiApplicationTests using Java 21.0.1 on ellies-air.wireless.rit.edu with PID 79747 (started by elianadurell in /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper)
 2024-03-06 18:44:45.661  INFO 79747 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : No active profile set, falling back to default profiles: default
 2024-03-06 18:44:46.556  WARN 79747 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/controller/FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
-2024-03-06 18:44:46.563  INFO 79747 --- [           main] ConditionEvaluationReportLoggingListener : 
+2024-03-06 19:12:50.141  INFO 82643 --- [           main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2024-03-06 18:44:46.584 ERROR 79747 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2024-03-06 19:12:50.164 ERROR 82643 --- [           main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/controller/FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+<<<<<<< HEAD
+=======
 =======
 2024-03-06 18:29:30.721  INFO 19224 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : Starting NeedsApiApplicationTests using Java 18.0.2 on DESKTOP-5UE1NC5 with PID 19224 (started by brija in C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper)
 2024-03-06 18:29:30.725  INFO 19224 --- [           main] c.n.a.needapi.NeedsApiApplicationTests   : No active profile set, falling back to default profiles: default
@@ -305,6 +349,7 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.12.jar:5.3.12]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.12.jar:5.3.12]
@@ -336,6 +381,9 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -344,6 +392,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
 	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
@@ -367,6 +416,9 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -375,6 +427,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
@@ -385,6 +438,9 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -393,6 +449,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
@@ -417,6 +474,9 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 <<<<<<< HEAD
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 =======
 <<<<<<< HEAD
@@ -425,6 +485,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-5.3.12.jar:5.3.12]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296) ~[spring-beans-5.3.12.jar:5.3.12]
@@ -459,12 +520,18 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No conte
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.12.jar:5.3.12]
 	... 101 common frames omitted
 
+<<<<<<< HEAD
+2024-03-06 19:12:50.166 ERROR 82643 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@3c19592c] to prepare test instance [com.need.api.needapi.NeedsApiApplicationTests@229c4d34]
+=======
 2024-03-06 18:44:46.587 ERROR 79747 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@60e1d87c] to prepare test instance [com.need.api.needapi.NeedsApiApplicationTests@4c678a1f]
 =======
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
@@ -480,6 +547,7 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No conte
 2024-03-06 18:29:32.190 ERROR 19224 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@33a8c9c9] to prepare test instance [com.need.api.needapi.NeedsApiApplicationTests@be186df]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.12.jar:5.3.12]
@@ -494,6 +562,9 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -502,6 +573,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
 	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
@@ -525,6 +597,9 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -533,6 +608,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
@@ -543,6 +619,9 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 <<<<<<< HEAD
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 =======
 <<<<<<< HEAD
@@ -551,6 +630,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.2.jar:1.7.2]
 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.2.jar:1.7.2]
@@ -575,6 +655,9 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
 <<<<<<< HEAD
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/controller/FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 =======
 <<<<<<< HEAD
@@ -583,6 +666,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fundingBasketController' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.12.jar:5.3.12]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.12.jar:5.3.12]
@@ -605,6 +689,9 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.12.jar:5.3.12]
 	... 67 common frames omitted
 <<<<<<< HEAD
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
+<<<<<<< HEAD
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 =======
 <<<<<<< HEAD
@@ -613,6 +700,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
  at [Source: (File); line: 1, column: 0]
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-5.3.12.jar:5.3.12]
 	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:296) ~[spring-beans-5.3.12.jar:5.3.12]
@@ -645,6 +733,11 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No conte
 	at com.need.api.needapi.persistence.FundingBasketFileDAO.load(FundingBasketFileDAO.java:129) ~[classes/:na]
 	at com.need.api.needapi.persistence.FundingBasketFileDAO.<init>(FundingBasketFileDAO.java:50) ~[classes/:na]
 <<<<<<< HEAD
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+=======
+<<<<<<< HEAD
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67) ~[na:na]
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
@@ -659,6 +752,7 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No conte
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483) ~[na:na]
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211) ~[spring-beans-5.3.12.jar:5.3.12]
 	... 101 common frames omitted
 
@@ -666,6 +760,9 @@ Caused by: com.fasterxml.jackson.databind.exc.MismatchedInputException: No conte
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting jdk/jshell/execution/impl/ConsoleImpl$ConsoleProviderImpl.
 	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:94)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
@@ -921,6 +1018,8 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
 	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1118)
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting javax/sql/DataSource.
@@ -934,6 +1033,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 =======
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:182)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:821)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:741)
@@ -945,10 +1045,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
 	at java.base/java.lang.Class.forName0(Native Method)
 	at java.base/java.lang.Class.forName(Class.java:534)
 	at java.base/java.lang.Class.forName(Class.java:513)
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
@@ -959,6 +1064,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 =======
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition.resolve(FilteringSpringBootCondition.java:108)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter.isPresent(FilteringSpringBootCondition.java:140)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter$2.matches(FilteringSpringBootCondition.java:128)
@@ -968,6 +1074,9 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$StandardOutcomesResolver.resolveOutcomes(OnClassCondition.java:190)
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver.lambda$new$0(OnClassCondition.java:150)
 <<<<<<< HEAD
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+=======
+<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:833)
 =======
 <<<<<<< HEAD
@@ -976,11 +1085,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.Thread.run(Thread.java:833)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 Caused by: java.io.IOException: Error while instrumenting javax/sql/DataSource.
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrumentError(Instrumenter.java:160)
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:110)
 	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:92)
 	... 26 more
+<<<<<<< HEAD
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+=======
 <<<<<<< HEAD
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 =======
@@ -990,6 +1103,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:196)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:177)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:163)
@@ -1002,6 +1116,11 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 <<<<<<< HEAD
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1118)
+=======
+<<<<<<< HEAD
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:541)
 	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
@@ -1016,11 +1135,17 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:182)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:821)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:741)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:665)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+<<<<<<< HEAD
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1118)
+=======
 <<<<<<< HEAD
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
 	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
@@ -1036,6 +1161,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:182)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:821)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:741)
@@ -1047,10 +1173,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
 	at java.base/java.lang.Class.forName0(Native Method)
 	at java.base/java.lang.Class.forName(Class.java:534)
 	at java.base/java.lang.Class.forName(Class.java:513)
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
@@ -1061,6 +1192,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 =======
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition.resolve(FilteringSpringBootCondition.java:108)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter.isPresent(FilteringSpringBootCondition.java:140)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter$2.matches(FilteringSpringBootCondition.java:128)
@@ -1070,6 +1202,9 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$StandardOutcomesResolver.resolveOutcomes(OnClassCondition.java:190)
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver.lambda$new$0(OnClassCondition.java:150)
 <<<<<<< HEAD
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+=======
+<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:833)
 =======
 <<<<<<< HEAD
@@ -1078,11 +1213,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.Thread.run(Thread.java:833)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 Caused by: java.io.IOException: Error while instrumenting javax/sql/CommonDataSource.
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrumentError(Instrumenter.java:160)
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:110)
 	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:92)
 	... 34 more
+<<<<<<< HEAD
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+=======
 <<<<<<< HEAD
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 =======
@@ -1092,6 +1231,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:196)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:177)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:163)
@@ -1104,6 +1244,11 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
 	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
 <<<<<<< HEAD
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1118)
+=======
+<<<<<<< HEAD
 	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:541)
 	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
@@ -1118,11 +1263,17 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:182)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:821)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:741)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:665)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+<<<<<<< HEAD
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1118)
+=======
 <<<<<<< HEAD
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
 	at java.base/java.lang.ClassLoader.defineClass2(Native Method)
@@ -1138,6 +1289,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1104)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:182)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:821)
 	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassInModuleOrNull(BuiltinClassLoader.java:741)
@@ -1149,10 +1301,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
 	at java.base/java.lang.Class.forName0(Native Method)
 	at java.base/java.lang.Class.forName(Class.java:534)
 	at java.base/java.lang.Class.forName(Class.java:513)
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
@@ -1163,6 +1320,7 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 =======
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition.resolve(FilteringSpringBootCondition.java:108)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter.isPresent(FilteringSpringBootCondition.java:140)
 	at org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition$ClassNameFilter$2.matches(FilteringSpringBootCondition.java:128)
@@ -1172,6 +1330,9 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$StandardOutcomesResolver.resolveOutcomes(OnClassCondition.java:190)
 	at org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver.lambda$new$0(OnClassCondition.java:150)
 <<<<<<< HEAD
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+=======
+<<<<<<< HEAD
 	at java.base/java.lang.Thread.run(Thread.java:833)
 =======
 <<<<<<< HEAD
@@ -1180,11 +1341,15 @@ java.lang.instrument.IllegalClassFormatException: Error while instrumenting java
 	at java.base/java.lang.Thread.run(Thread.java:833)
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 Caused by: java.io.IOException: Error while instrumenting java/sql/Wrapper.
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrumentError(Instrumenter.java:160)
 	at org.jacoco.agent.rt.internal_3570298.core.instr.Instrumenter.instrument(Instrumenter.java:110)
 	at org.jacoco.agent.rt.internal_3570298.CoverageTransformer.transform(CoverageTransformer.java:92)
 	... 34 more
+<<<<<<< HEAD
+Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 65
+=======
 <<<<<<< HEAD
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 =======
@@ -1194,6 +1359,7 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 62
 >>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
 >>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:196)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:177)
 	at org.jacoco.agent.rt.internal_3570298.asm.ClassReader.<init>(ClassReader.java:163)
