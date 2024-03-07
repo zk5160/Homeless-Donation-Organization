@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 com/need/api/needapi/model/FundingBasketTest.class
 com/need/api/needapi/controller/NeedControllerTest.class
 com/need/api/needapi/controller/FundingBasketControllerTest.class
 com/need/api/needapi/NeedsApiApplicationTests.class
 com/need/api/needapi/model/NeedTest.class
 com/need/api/needapi/persistence/NeedFileDAOTest.class
-=======
-com\need\api\needapi\model\FundingBasketTest.class
-com\need\api\needapi\model\NeedTest.class
-com\need\api\needapi\controller\FundingBasketControllerTest.class
-com\need\api\needapi\NeedsApiApplicationTests.class
-com\need\api\needapi\persistence\NeedFileDAOTest.class
-com\need\api\needapi\controller\NeedControllerTest.class
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8

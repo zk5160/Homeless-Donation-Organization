@@ -1,21 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.need.api.needapi.controller.NeedControllerTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.639 s <<< FAILURE! - in com.need.api.needapi.controller.NeedControllerTest
-testCreateNeedFailed  Time elapsed: 0.011 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <200 OK>
+Tests run: 16, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.579 s <<< FAILURE! - in com.need.api.needapi.controller.NeedControllerTest
+testCreateNeedFailed  Time elapsed: 0.012 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <201 CREATED>
 	at com.need.api.needapi.controller.NeedControllerTest.testCreateNeedFailed(NeedControllerTest.java:116)
-
-testCreateNeed  Time elapsed: 0.001 s  <<< FAILURE!
-=======
-Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.068 s <<< FAILURE! - in com.need.api.needapi.controller.NeedControllerTest
-testCreateNeedFailed  Time elapsed: 0.003 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <200 OK>
-	at com.need.api.needapi.controller.NeedControllerTest.testCreateNeedFailed(NeedControllerTest.java:116)
-
-testCreateNeed  Time elapsed: 0.003 s  <<< FAILURE!
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
-org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <200 OK>
-	at com.need.api.needapi.controller.NeedControllerTest.testCreateNeed(NeedControllerTest.java:100)
 
