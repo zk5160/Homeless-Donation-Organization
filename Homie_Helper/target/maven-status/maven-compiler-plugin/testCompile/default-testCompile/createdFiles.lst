@@ -1,27 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
-com/need/api/needapi/model/FundingBasketTest.class
-com/need/api/needapi/controller/NeedControllerTest.class
-com/need/api/needapi/controller/FundingBasketControllerTest.class
-com/need/api/needapi/NeedsApiApplicationTests.class
-com/need/api/needapi/model/NeedTest.class
-com/need/api/needapi/persistence/NeedFileDAOTest.class
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 com\need\api\needapi\model\FundingBasketTest.class
 com\need\api\needapi\model\NeedTest.class
 com\need\api\needapi\controller\FundingBasketControllerTest.class
 com\need\api\needapi\NeedsApiApplicationTests.class
 com\need\api\needapi\persistence\NeedFileDAOTest.class
 com\need\api\needapi\controller\NeedControllerTest.class
-<<<<<<< HEAD
-=======
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba

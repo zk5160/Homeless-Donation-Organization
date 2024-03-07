@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
-com/need/api/needapi/model/FundingBasket.class
-com/need/api/needapi/NeedApiApplication.class
-com/need/api/needapi/persistence/InventoryFileDAO.class
-com/need/api/needapi/controller/FundingBasketController.class
-com/need/api/needapi/controller/NeedController.class
-com/need/api/needapi/persistence/FundingBasketFileDAO.class
-com/need/api/needapi/model/Need.class
-com/need/api/needapi/persistence/NeedDAO.class
-com/need/api/needapi/persistence/FundingBasketDAO.class
-com/need/api/needapi/controller/CheckoutController.class
-com/need/api/needapi/WebConfig.class
-com/need/api/needapi/persistence/NeedFileDAO.class
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 com\need\api\needapi\controller\CheckoutController.class
 com\need\api\needapi\persistence\FundingBasketFileDAO.class
 com\need\api\needapi\model\FundingBasket.class
@@ -32,8 +10,3 @@ com\need\api\needapi\WebConfig.class
 com\need\api\needapi\persistence\InventoryFileDAO.class
 com\need\api\needapi\model\Need.class
 com\need\api\needapi\persistence\FundingBasketDAO.class
-<<<<<<< HEAD
-=======
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba

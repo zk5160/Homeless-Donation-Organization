@@ -1,27 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.need.api.needapi.persistence.NeedFileDAOTest
 -------------------------------------------------------------------------------
-<<<<<<< HEAD
-Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.431 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
-testUpdateNeedNotFound  Time elapsed: 0.002 s  <<< FAILURE!
-=======
-<<<<<<< HEAD
-Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.669 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
-testUpdateNeedNotFound  Time elapsed: 0.002 s  <<< FAILURE!
-=======
-<<<<<<< HEAD
-Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.439 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
-testUpdateNeedNotFound  Time elapsed: 0.002 s  <<< FAILURE!
-=======
-Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.641 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
-testUpdateNeedNotFound  Time elapsed: 0.004 s  <<< FAILURE!
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
+Tests run: 11, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.581 s <<< FAILURE! - in com.need.api.needapi.persistence.NeedFileDAOTest
+testUpdateNeedNotFound  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <null> but was: <Need [id=99, name=T-shirt, cost=10.990000, quantity=10, type=shirt]>
 	at com.need.api.needapi.persistence.NeedFileDAOTest.testUpdateNeedNotFound(NeedFileDAOTest.java:175)
 
-testFindNeeds  Time elapsed: 0.001 s  <<< FAILURE!
+testFindNeeds  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <0> but was: <2>
 	at com.need.api.needapi.persistence.NeedFileDAOTest.testFindNeeds(NeedFileDAOTest.java:72)
 
