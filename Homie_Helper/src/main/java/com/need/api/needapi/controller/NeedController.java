@@ -139,7 +139,7 @@ public class NeedController {
         try {
             Need h = needDao.createNeed(need);
 
-            return new ResponseEntity<Need>(h,HttpStatus.OK);
+            return new ResponseEntity<Need>(h,HttpStatus.CREATED);
         }
 
             catch(IOException e) {

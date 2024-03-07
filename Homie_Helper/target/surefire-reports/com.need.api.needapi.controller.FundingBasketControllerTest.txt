@@ -1,12 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: com.need.api.needapi.controller.FundingBasketControllerTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.509 s <<< FAILURE! - in com.need.api.needapi.controller.FundingBasketControllerTest
 testCreateFundingBasket  Time elapsed: 0.024 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <200 OK>
 	at com.need.api.needapi.controller.FundingBasketControllerTest.testCreateFundingBasket(FundingBasketControllerTest.java:102)
 
 testcreateFundingBasketFailed  Time elapsed: 0.005 s  <<< FAILURE!
+=======
+<<<<<<< HEAD
+Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.034 s <<< FAILURE! - in com.need.api.needapi.controller.FundingBasketControllerTest
+testCreateFundingBasket  Time elapsed: 0.001 s  <<< FAILURE!
+=======
+Tests run: 16, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.363 s <<< FAILURE! - in com.need.api.needapi.controller.FundingBasketControllerTest
+testCreateFundingBasket  Time elapsed: 0.021 s  <<< FAILURE!
+>>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
+org.opentest4j.AssertionFailedError: expected: <201 CREATED> but was: <200 OK>
+	at com.need.api.needapi.controller.FundingBasketControllerTest.testCreateFundingBasket(FundingBasketControllerTest.java:102)
+
+testcreateFundingBasketFailed  Time elapsed: 0.002 s  <<< FAILURE!
+>>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
 org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <200 OK>
 	at com.need.api.needapi.controller.FundingBasketControllerTest.testcreateFundingBasketFailed(FundingBasketControllerTest.java:118)
 
