@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: com.need.api.needapi.controller.NeedControllerTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.809 s - in com.need.api.needapi.controller.NeedControllerTest
+=======
+<<<<<<< HEAD
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.053 s - in com.need.api.needapi.controller.NeedControllerTest
+=======
+Tests run: 16, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.628 s <<< FAILURE! - in com.need.api.needapi.controller.NeedControllerTest
+testCreateNeedFailed  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <409 CONFLICT> but was: <201 CREATED>
+	at com.need.api.needapi.controller.NeedControllerTest.testCreateNeedFailed(NeedControllerTest.java:116)
+
+>>>>>>> 3f485c3bdd9be4519c5e3f8e51fa769ab17006aa
+>>>>>>> 0b395249e7ebdb698d62698157a3d2db2733951a

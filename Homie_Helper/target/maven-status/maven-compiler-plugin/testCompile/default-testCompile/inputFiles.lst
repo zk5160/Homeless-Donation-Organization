@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\model\NeedTest.java
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\persistence\NeedFileDAOTest.java
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\controller\FundingBasketControllerTest.java
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\controller\NeedControllerTest.java
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\NeedsApiApplicationTests.java
+C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\test\java\com\need\api\needapi\model\FundingBasketTest.java
+=======
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/NeedsApiApplicationTests.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/model/NeedTest.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/model/FundingBasketTest.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/controller/NeedControllerTest.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/persistence/NeedFileDAOTest.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/test/java/com/need/api/needapi/controller/FundingBasketControllerTest.java
+>>>>>>> 3f485c3bdd9be4519c5e3f8e51fa769ab17006aa
