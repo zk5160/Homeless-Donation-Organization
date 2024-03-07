@@ -3,7 +3,11 @@ Test set: com.need.api.needapi.persistence.NeedFileDAOTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.71 s - in com.need.api.needapi.persistence.NeedFileDAOTest
+=======
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.775 s - in com.need.api.needapi.persistence.NeedFileDAOTest
+>>>>>>> 398cc08578bef0a6bb810e54b383d927a388fd3d
 =======
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.62 s - in com.need.api.needapi.persistence.NeedFileDAOTest
 >>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144

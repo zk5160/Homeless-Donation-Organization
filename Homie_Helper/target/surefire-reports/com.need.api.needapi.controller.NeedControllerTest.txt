@@ -3,7 +3,11 @@ Test set: com.need.api.needapi.controller.NeedControllerTest
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.072 s - in com.need.api.needapi.controller.NeedControllerTest
+=======
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s - in com.need.api.needapi.controller.NeedControllerTest
+>>>>>>> 398cc08578bef0a6bb810e54b383d927a388fd3d
 =======
 Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.809 s - in com.need.api.needapi.controller.NeedControllerTest
 >>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144
