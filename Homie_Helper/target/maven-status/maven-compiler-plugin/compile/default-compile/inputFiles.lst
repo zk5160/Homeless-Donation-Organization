@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketFileDAO.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\CheckoutController.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\WebConfig.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\NeedApiApplication.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedFileDAO.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\NeedController.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\FundingBasketController.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\FundingBasket.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketDAO.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedDAO.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\InventoryFileDAO.java
-C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\Need.java
-=======
-<<<<<<< HEAD
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedFileDAO.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\NeedController.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\InventoryFileDAO.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\WebConfig.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\FundingBasketController.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedDAO.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketDAO.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketFileDAO.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\FundingBasket.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\Need.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\CheckoutController.java
-C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\NeedApiApplication.java
-=======
-<<<<<<< HEAD
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/NeedApiApplication.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/persistence/NeedDAO.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/controller/NeedController.java
@@ -42,22 +10,3 @@ C:\Users\zarak\swen-261\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\m
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/persistence/FundingBasketFileDAO.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/persistence/NeedFileDAO.java
 /Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/src/main/java/com/need/api/needapi/persistence/InventoryFileDAO.java
-<<<<<<< HEAD
-=======
-=======
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\FundingBasketController.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedFileDAO.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketDAO.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\FundingBasket.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\WebConfig.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\InventoryFileDAO.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\NeedDAO.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\NeedController.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\model\Need.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\persistence\FundingBasketFileDAO.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\NeedApiApplication.java
-C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\src\main\java\com\need\api\needapi\controller\CheckoutController.java
->>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
->>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
->>>>>>> 408869cb356e123364fbdadb4d516fdcbe58974a
->>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
