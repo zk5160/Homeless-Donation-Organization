@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.need.api.needapi.persistence.NeedDAO;
+import com.need.api.needapi.persistence.NeedFileDAO;
 import com.need.api.needapi.model.Need;
 
 /**
@@ -135,8 +136,11 @@ public class NeedController {
     @PostMapping("")
     public ResponseEntity<Need> createNeed(@RequestBody Need need) {
         LOG.info("POST /need " + need);
-
         try {
+            // if (need.containsKey(x)){
+            //     return new ResponseEntity<>(HttpStatus.CONFLICT);
+            // }
+        
             Need h = needDao.createNeed(need);
 
             return new ResponseEntity<Need>(h,HttpStatus.CREATED);
