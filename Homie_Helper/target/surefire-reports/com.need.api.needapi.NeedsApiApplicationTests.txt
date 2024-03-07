@@ -1,14 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: com.need.api.needapi.NeedsApiApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.835 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
 testContextLoads  Time elapsed: 0.014 s  <<< ERROR!
+=======
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.433 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
+testContextLoads  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
+Error creating bean with name 'fundingBasketController' defined in file [C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+ at [Source: (File); line: 1, column: 0]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\abhij\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.787 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
+testContextLoads  Time elapsed: 0 s  <<< ERROR!
+>>>>>>> 0b395249e7ebdb698d62698157a3d2db2733951a
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: 
 Error creating bean with name 'fundingBasketController' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\controller\FundingBasketController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
  at [Source: (File); line: 1, column: 0]
 Caused by: org.springframework.beans.factory.BeanCreationException: 
+<<<<<<< HEAD
 Error creating bean with name 'fundingBasketFileDAO' defined in file [C:\Users\brija\team-project-2235-swen-261-04-g-team7\Homie_Helper\target\classes\com\need\api\needapi\persistence\FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+=======
+Error creating bean with name 'fundingBasketFileDAO' defined in file [/Users/elianadurell/Desktop/HomeworkNotes/2023-2024/spring/swen/2235-SWEN-261-04-G-Team7/team-project-2235-swen-261-04-g-team7/Homie_Helper/target/classes/com/need/api/needapi/persistence/FundingBasketFileDAO.class]: Bean instantiation via constructor failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
+>>>>>>> 3f485c3bdd9be4519c5e3f8e51fa769ab17006aa
+>>>>>>> 0b395249e7ebdb698d62698157a3d2db2733951a
  at [Source: (File); line: 1, column: 0]
 Caused by: org.springframework.beans.BeanInstantiationException: 
 Failed to instantiate [com.need.api.needapi.persistence.FundingBasketFileDAO]: Constructor threw exception; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
