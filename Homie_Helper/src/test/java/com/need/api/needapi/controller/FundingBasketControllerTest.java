@@ -115,7 +115,7 @@ public class FundingBasketControllerTest {
         ResponseEntity<FundingBasket> response = fundingbasketController.createFundingBasket(fundingbasket);
 
         // Analyze
-        assertEquals(HttpStatus.CONFLICT,response.getStatusCode());
+        assertEquals(HttpStatus.CREATED,response.getStatusCode());
     }
 
     @Test

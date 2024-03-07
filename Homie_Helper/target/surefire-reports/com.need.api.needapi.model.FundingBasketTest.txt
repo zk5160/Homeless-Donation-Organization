@@ -2,3 +2,13 @@
 Test set: com.need.api.needapi.model.FundingBasketTest
 -------------------------------------------------------------------------------
 Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.need.api.needapi.model.FundingBasketTest
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.need.api.needapi.model.FundingBasketTest
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.need.api.needapi.model.FundingBasketTest
+>>>>>>> 3d92f88a1646c9df4a4fc5ae5a59c211992fcce8
+>>>>>>> 3870e89c6f4ce8f1c6fe19cbeba916163f5e9948
+>>>>>>> 7e4869bac67bcedd8981def0db1d373a409c67ba
