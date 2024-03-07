@@ -2,8 +2,13 @@
 Test set: com.need.api.needapi.NeedsApiApplicationTests
 -------------------------------------------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.835 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
 testContextLoads  Time elapsed: 0.014 s  <<< ERROR!
+=======
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.275 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
+testContextLoads  Time elapsed: 0.007 s  <<< ERROR!
+>>>>>>> 578cef95afe2574dd04c4cc352dc2501cc621144
 =======
 <<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.433 s <<< FAILURE! - in com.need.api.needapi.NeedsApiApplicationTests
