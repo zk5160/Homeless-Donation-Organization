@@ -198,4 +198,21 @@ public class NeedFileDAOTest {
                         () -> new NeedFileDAO("doesnt_matter.txt",mockObjectMapper),
                         "IOException not thrown");
     }
+
+    @Test
+    public void testdecrementQuantity() throws IOException {
+        // Setup
+        Need need = needFileDAO.decrementQuantity(99, 1);
+        // Analyze
+        Need actual = needFileDAO.getNeed(need.getId());
+        assertEquals(actual,need);
+    }
+
+    @Test
+    public void testdecrementQuantityBelowZero() throws IOException {
+        // Setup
+        Need need = needFileDAO.decrementQuantity(99, 5);
+        // Analyze
+        assertEquals(null,need);
+    }
 }

@@ -20,9 +20,11 @@ public class CheckoutController {
         else{
             //iterating through ids, not the fastest
             for (int id=0; id<100; id++) {
-                    basket.deleteFundingBasket(id);
-                    //need to create inventory decrement function, only decrements one
-                    need.decrementQuantity(id, basket.getFundingBasket(id).getQuantity());
+                    if (basket.deleteFundingBasket(id) != false){
+                        //not sure if it actually will delete
+                        //need to create inventory decrement function, only decrements one
+                        need.decrementQuantity(id, basket.getFundingBasket(id).getQuantity());
+                    }
                 }
              }
         return true;

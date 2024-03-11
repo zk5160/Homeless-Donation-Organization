@@ -10,6 +10,8 @@ import java.util.logging.Logger;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.need.api.needapi.model.Need;
@@ -227,9 +229,15 @@ public class NeedFileDAO implements NeedDAO {
     @Override
     public Need decrementQuantity(int id, int quantity) throws IOException {
         synchronized(needs) {
+            if (getNeed(id) == null){
+                return null;
+            }
             Need n = getNeed(id);
+            if (n.getQuantity()-quantity < 0){
+                return null;
+            }
             //int quant= n.getQuantity();
-            //decrementing quanitty by one
+            //decrementing quanitty
             Need update = new Need(id, n.getName(), n.getCost(), n.getQuantity()-quantity, n.getType());
             return updateNeed(update);
         }

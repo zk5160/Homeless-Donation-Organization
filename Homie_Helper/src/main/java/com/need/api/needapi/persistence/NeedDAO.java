@@ -70,6 +70,7 @@ public interface NeedDAO {
     Need updateNeed(Need need) throws IOException;
 
     
+    //returns null if id not found or decrementing quantity is below 0
     Need decrementQuantity(int id, int quantity) throws IOException;
 
 
