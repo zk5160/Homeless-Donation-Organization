@@ -28,37 +28,58 @@ public class CheckoutControllerTest {
     private CheckoutController CheckoutController;
     private FundingBasketDAO mockBasket;
     private NeedDAO mockNeedDAO;
+    private NeedController NeedController;
+    private FundingBasketController FundingBasketController;
 
     /**
      * Before each test, create a new NeedController object and inject
      * a mock Need DAO
      */
     @BeforeEach
-    public void setupNeedController() {
+    public void setupCheckoutController() {
         mockNeedDAO = mock(NeedDAO.class);
         mockBasket = mock(FundingBasketDAO.class);
         CheckoutController = new CheckoutController(mockBasket);
+        NeedController = new NeedController(mockNeedDAO);
+        FundingBasketController = new FundingBasketController(mockBasket);
     }
 
     @Test
     public void testCheckout() throws IOException {  // getNeed may throw IOException
         // Setup
+        //not used??
         Need need = new Need(99,"T-shirt", 10.99f, 10, "shirt");
         FundingBasket fundingBasket = new FundingBasket (99,"T-shirt", 10.99f, 3, "shirt");
-        
-        // need to fix the when 
-        //when(CheckoutController.checkout()).thenReturn(FundingBasket[]); 
+        // need to fix the when  
+
+        //stuff created
+        when(mockNeedDAO.createNeed(need)).thenReturn(need);
+        when(mockBasket.createFundingBasket(fundingBasket)).thenReturn(fundingBasket);
+
+        //doing checkout
+        //when(CheckoutController.checkout()).thenReturn(true);
+        //when(mockBasket.getFundingBasket(fundingBasket.getId())).thenReturn(fundingBasket);
 
         boolean response = CheckoutController.checkout();
-        //.thenReturn(fundingBasket);
-        //need to check needs were updated
-        // Invoke
+        //ResponseEntity<boolean> response = CheckoutController.checkout();
+        // Analyze
+        //getbasket returning null
+        assertEquals(true, response);
+       
+        
+    }
 
-        //boolean response = CheckoutController.checkout();
+    @Test
+    public void testCheckoutNothing() throws IOException {  // getNeed may throw IOException
+        // Setup
+        Need need = new Need(99,"T-shirt", 10.99f, 10, "shirt");
+
+        boolean response = CheckoutController.checkout();;
 
         // Analyze
-        assertEquals(true, response);
-        //assertEquals(need,response.getBody());
+        //getbasket returning null
+        assertEquals(false, response);
+        
     }
 
     // @Test
