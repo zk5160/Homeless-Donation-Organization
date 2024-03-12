@@ -3,6 +3,7 @@ package com.need.api.needapi.controller;
 import java.io.IOException;
 
 import com.need.api.needapi.model.FundingBasket;
+import com.need.api.needapi.model.Need;
 import com.need.api.needapi.persistence.FundingBasketDAO;
 import com.need.api.needapi.persistence.NeedDAO;
 
@@ -17,6 +18,7 @@ public class CheckoutController {
     //parameter will be user id
     public boolean checkout(){
         try{
+            //always null?
         if (basket.getFundingBasket() == null){
             return false;
         }
