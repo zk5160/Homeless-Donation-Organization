@@ -4,9 +4,7 @@ import java.util.logging.Logger;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
- * Janked together reskin of the product system to do the same but with user accounts
  * 
- * @author Ethan Patterson
  */
 public class User {
     private static final Logger LOG = Logger.getLogger(User.class.getName());
@@ -15,7 +13,8 @@ public class User {
 
     @JsonProperty("id") private int id;
     @JsonProperty("name") private String name;
-    @JsonProperty("basket") private ArrayList<FundingBasket> basket;
+    @JsonProperty("basket")
+    public ArrayList<FundingBasket> basket;
 
 
     /**
@@ -63,24 +62,26 @@ public class User {
     public ArrayList<FundingBasket> getBasket() {return basket;}
 
     /**
-     * adds an item to the end of the shopping cart
+     * adds an item to basket
      * @param quantity The product to add
      */
     public void addToBasket(FundingBasket productToAdd) {this.basket.add(productToAdd);}
 
     /**
-     * removes an item from shopping cart. this assumes the given id is actually in the shopping cart, does nothing otherwise
+     * removes an item from shopping basket
      * @param id The id of the product to remove
      */
-    public void removeFromBasket(int id) {
+    public boolean removeFromBasket(int id) {
         for (FundingBasket product : basket) {
             if(product.getId()==id){
                 basket.remove(product);
-                break;
+                return true;
             }
         }
+        return false;
     }
 
+    
     /**
      * {@inheritDoc}
      */
