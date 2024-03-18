@@ -28,7 +28,6 @@ The site will utilize persistence, updating quantities and prices as per user pu
 An E-store that enables users to purchase products to donate to homeless individuals in need, and recieve discount codes if they are returning customers. Admins have the ability to add and change item quantities and prices at their own discretion.
 
 ### Glossary and Acronyms
-> _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
 
 | Term | Definition |
 |------|------------|
@@ -49,7 +48,12 @@ This section describes the features of the application.
 > maybe Epics and critical Stories._
 
 ### Definition of MVP
-> _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
+* User can create and log into account
+* User can browse or search site inventory and add items to cart
+* User can view their shopping cart
+* User can purchase products in shopping cart
+* Admin can log in and view admin dashboard
+* Admin can edit product inventory (items, quantities, prices, etc.)
 
 ### MVP Features
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._

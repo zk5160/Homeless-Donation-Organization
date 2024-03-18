@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: com.need.api.needapi.model.NeedTest
+-------------------------------------------------------------------------------
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.need.api.needapi.model.NeedTest
+=======
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.need.api.needapi.model.NeedTest
+=======
+<<<<<<< HEAD
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.need.api.needapi.model.NeedTest
+=======
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.need.api.needapi.model.NeedTest
+>>>>>>> 3f485c3bdd9be4519c5e3f8e51fa769ab17006aa
+>>>>>>> 0b395249e7ebdb698d62698157a3d2db2733951a
