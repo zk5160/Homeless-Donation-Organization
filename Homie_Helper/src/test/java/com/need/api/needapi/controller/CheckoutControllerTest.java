@@ -63,16 +63,16 @@ public class CheckoutControllerTest {
     @Test
     public void testCheckout() throws IOException {  // getNeed may throw IOException
         // Setup
-        ArrayList<FundingBasket> array = new ArrayList<FundingBasket>(1);
+        ArrayList<FundingBasket> array = new ArrayList<FundingBasket>();
         array.add(new FundingBasket(72,"T-shirt", 10.99f, 3, "shirt"));
         //array.add(new FundingBasket(70,"T-shirt", 10.99f, 3, "shirt"));
-        ArrayList<Need> need = new ArrayList<Need>(1);
-        need.add(new Need(72,"T-shirt", 10.99f, 10, "shirt"));
+        //ArrayList<Need> need = new ArrayList<Need>();
+        //need.add(new Need(72,"T-shirt", 10.99f, 10, "shirt"));
 
         User user0 = new User(0, "Jade", array);
-        //mockUser.createUser(user0);
         //need?
         when (mockUser.getUser(0)).thenReturn(user0);
+        //assertEquals(false, user0.basket.size());
         //when (moc)
         //when (CheckoutController.checkout(0)).thenReturn(true);
         //assertEquals(true,array);
@@ -90,6 +90,12 @@ public class CheckoutControllerTest {
     public void testCheckoutNothing() throws IOException {  // getNeed may throw IOException
         // Setup
 
+        ArrayList<FundingBasket> array = new ArrayList<FundingBasket>();
+
+        User user0 = new User(0, "Jade", array);
+        //need?
+        when (mockUser.getUser(0)).thenReturn(user0);
+        
         boolean response = CheckoutController.checkout(0);
 
         // Analyze

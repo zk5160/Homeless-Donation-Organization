@@ -71,13 +71,22 @@ public class User {
      * @param id The id of the product to remove
      */
     public boolean removeFromBasket(int id) {
-        for (FundingBasket product : basket) {
-            if(product.getId()==id){
+        // for (FundingBasket product : basket) {
+        //     if(product.getId()==id){
+        //         basket.remove(product);
+        //         return true;
+        //     }
+        // }
+        // return false;
+        ArrayList<FundingBasket> updatedBasket = new ArrayList<>(basket);
+        for (FundingBasket product : updatedBasket) {
+            if (product.getId() == id) {
                 basket.remove(product);
                 return true;
             }
         }
         return false;
+    
     }
 
     public boolean checkBasketId(int id){
@@ -87,6 +96,17 @@ public class User {
             }
         }
         return false;
+    }
+
+    //gets quantity of basket id 
+    //else quantity is 0 because product doesn't exist
+    public int BasketQuantity(int id){
+        for (FundingBasket product : basket) {
+            if(product.getId()==id){
+                return product.getQuantity();
+            }
+        }
+        return 0;
     }
     
     /**

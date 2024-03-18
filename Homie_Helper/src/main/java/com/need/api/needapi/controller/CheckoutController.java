@@ -26,20 +26,32 @@ public class CheckoutController {
         if (user.getUser(userid).getBasket() == null){
             return false;
         }
+        if (user.getUser(userid).basket.size() <= 0){
+            return false;
+        }
         //checking length?
-        while (user.getUser(userid).basket.size() != 0) {
+        System.out.println(user.getUser(userid).basket.size());
+        while (user.getUser(userid).basket.size() > 0) {
             //iterating through ids of funding basket, not the fastest
             //need to decremenet first, then remove?
+            //System.out.println("TEST1");
             for (int id=0; id<100; id++) {
                     //check if id exists
+                    //System.out.println("IN FOR LOOP");
                     if (user.getUser(userid).checkBasketId(id) == true){
-                        
-                        need.decrementQuantity(id, user.getUser(userid).basket.get(id).getQuantity());
+                        System.out.println("IF STATEMENT");
+                        //need decrement failing
+                        int x = (user.getUser(userid).BasketQuantity(id));
+                        need.decrementQuantity(id, x);
+                        //System.out.println("NEED");
                         user.getUser(userid).removeFromBasket(id);
+                       
                     }
                 }
+                //System.out.println("OUT");
                 //return true;
             }
+            //System.out.println("TRUE");
             return true;
         //  }
         // catch (Exception e){
