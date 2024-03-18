@@ -9,28 +9,36 @@ geometry: margin=1in
 > and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations._
 
 ## Team Information
-* Team name: TEAMNAME
+* Team name: Team 7
 * Team members
-  * MEMBER1
-  * MEMBER2
-  * MEMBER3
-  * MEMBER4
+  * Zara Khan
+  * Eliana Durell
+  * Jade Kimmel
+  * Abhijay Kheechee
 
 ## Executive Summary
 
-This is a summary of the project.
+Our team is creating a fully-implemented site called Homie Helper where users can purchase items to donate to homeless individuals in need. Items include: 
+* Clothing
+* Toiletries
+* Food
+The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, A-Z), toggle dark-mode, and use discount codes in checkout.
 
 ### Purpose
->  _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most
-> important user group and user goals._
+An E-store that enables users to purchase products to donate to homeless individuals in need, and recieve discount codes if they are returning customers. Admins have the ability to add and change item quantities and prices at their own discretion.
 
 ### Glossary and Acronyms
 > _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
 
 | Term | Definition |
 |------|------------|
-| SPA | Single Page |
-
+| Front-end | Portion of application user can view and interact with |
+| Back-end | Portion of application that handles functionality |
+| Angular | Javascript library involved with handling front-end |
+| REST APIs | Set of standards for application interface |
+| Controllers/DAOs | Java classes that deal with front-end and back-end communication |
+| Trello | Kanban-style project management tool used by team |
+| CURL Commands | Set of commands that allow HTTP requests (get, create, delete, update, search) |
 
 ## Requirements
 
