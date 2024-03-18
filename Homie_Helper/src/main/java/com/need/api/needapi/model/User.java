@@ -13,8 +13,7 @@ public class User {
 
     @JsonProperty("id") private int id;
     @JsonProperty("name") private String name;
-    @JsonProperty("basket")
-    public ArrayList<FundingBasket> basket;
+    @JsonProperty("basket") public ArrayList<FundingBasket> basket;
 
 
     /**
@@ -81,6 +80,14 @@ public class User {
         return false;
     }
 
+    public boolean checkBasketId(int id){
+        for (FundingBasket product : basket) {
+            if(product.getId()==id){
+                return true;
+            }
+        }
+        return false;
+    }
     
     /**
      * {@inheritDoc}

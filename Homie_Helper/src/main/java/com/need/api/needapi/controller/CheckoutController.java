@@ -13,29 +13,37 @@ public class CheckoutController {
     private NeedDAO need;
     private UserDAO user;
 
-    public CheckoutController(UserDAO user){
+    public CheckoutController(UserDAO user, NeedDAO need){
         this.user = user;
+        this.need = need;
     }
 
     //parameter will be user id
-    public boolean checkout(int userid){
-         try{
-            //always null?
+    public boolean checkout(int userid) throws IOException{
+         //try{
+            //always null? fixed
         //getting user's basket
         if (user.getUser(userid).getBasket() == null){
             return false;
         }
-            //iterating through ids, not the fastest
+        //checking length?
+        while (user.getUser(userid).basket.size() != 0) {
+            //iterating through ids of funding basket, not the fastest
+            //need to decremenet first, then remove?
             for (int id=0; id<100; id++) {
-                    if (user.getUser(userid).removeFromBasket(id) != false){
-                        //not sure if it actually will delete
+                    //check if id exists
+                    if (user.getUser(userid).checkBasketId(id) == true){
+                        
                         need.decrementQuantity(id, user.getUser(userid).basket.get(id).getQuantity());
+                        user.getUser(userid).removeFromBasket(id);
                     }
                 }
-                return true;
-         }
-        catch (Exception e){
-            return false;
-        }
+                //return true;
+            }
+            return true;
+        //  }
+        // catch (Exception e){
+        //     return false;
+        // }
     }
 }

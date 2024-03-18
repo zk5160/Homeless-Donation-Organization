@@ -52,11 +52,11 @@ public class CheckoutControllerTest {
      */
     @BeforeEach
     public void setupCheckoutController() throws IOException {
-        // mockNeedDAO = mock(NeedDAO.class);
+         mockNeedDAO = mock(NeedDAO.class);
         // mockBasket = mock(FundingBasketDAO.class);
         mockUser = mock(UserDAO.class);        
-        CheckoutController = new CheckoutController(mockUser);
-        // NeedController = new NeedController(mockNeedDAO);
+        CheckoutController = new CheckoutController(mockUser, mockNeedDAO);
+        //NeedController = new NeedController(mockNeedDAO);
         // FundingBasketController = new FundingBasketController(mockBasket);
     }
 
@@ -65,21 +65,23 @@ public class CheckoutControllerTest {
         // Setup
         ArrayList<FundingBasket> array = new ArrayList<FundingBasket>(1);
         array.add(new FundingBasket(72,"T-shirt", 10.99f, 3, "shirt"));
-
+        //array.add(new FundingBasket(70,"T-shirt", 10.99f, 3, "shirt"));
         ArrayList<Need> need = new ArrayList<Need>(1);
         need.add(new Need(72,"T-shirt", 10.99f, 10, "shirt"));
 
         User user0 = new User(0, "Jade", array);
         //mockUser.createUser(user0);
         //need?
-        when (mockUser.createUser(user0)).thenReturn(user0);
+        when (mockUser.getUser(0)).thenReturn(user0);
+        //when (moc)
         //when (CheckoutController.checkout(0)).thenReturn(true);
-
+        //assertEquals(true,array);
         boolean response = CheckoutController.checkout(user0.getId());
+        assertEquals(true, response);
         // Analyze
         //getbasket returning null, nothing in it
         //need to fix, not supposed to return false
-        assertEquals(true,response);
+       
     
         
     }
