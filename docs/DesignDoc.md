@@ -48,7 +48,12 @@ This section describes the features of the application.
 > maybe Epics and critical Stories._
 
 ### Definition of MVP
-> _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
+* User can create and log into account
+* User can browse or search site inventory and add items to cart
+* User can view their shopping cart
+* User can purchase products in shopping cart
+* Admin can log in and view admin dashboard
+* Admin can edit product inventory (items, quantities, prices, etc.)
 
 ### MVP Features
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
