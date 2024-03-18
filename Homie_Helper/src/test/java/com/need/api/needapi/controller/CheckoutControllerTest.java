@@ -65,9 +65,8 @@ public class CheckoutControllerTest {
         // Setup
         ArrayList<FundingBasket> array = new ArrayList<FundingBasket>();
         array.add(new FundingBasket(72,"T-shirt", 10.99f, 3, "shirt"));
-        //array.add(new FundingBasket(70,"T-shirt", 10.99f, 3, "shirt"));
-        //ArrayList<Need> need = new ArrayList<Need>();
-        //need.add(new Need(72,"T-shirt", 10.99f, 10, "shirt"));
+        ArrayList<Need> need = new ArrayList<Need>();
+        need.add(new Need(72,"T-shirt", 10.99f, 10, "shirt"));
 
         User user0 = new User(0, "Jade", array);
         //need?
@@ -95,7 +94,7 @@ public class CheckoutControllerTest {
         User user0 = new User(0, "Jade", array);
         //need?
         when (mockUser.getUser(0)).thenReturn(user0);
-        
+
         boolean response = CheckoutController.checkout(0);
 
         // Analyze
