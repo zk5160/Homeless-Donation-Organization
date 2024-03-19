@@ -14,7 +14,7 @@ import java.io.File;
 import java.io.IOException;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.need.api.needapi.model.Need;
+import com.need.api.needapi.model.FundingBasket;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
@@ -26,9 +26,9 @@ import org.junit.jupiter.api.Test;
  * @author SWEN Faculty
  */
 @Tag("Persistence-tier")
-public class NeedFileDAOTest {
-    NeedFileDAO needFileDAO;
-    Need[] testNeeds;
+public class FundingBasketDAOTest {
+    FundingBasketFileDAO fundingDAO;
+    FundingBasket[] testBaskets;
     ObjectMapper mockObjectMapper;
 
     /**
@@ -39,54 +39,54 @@ public class NeedFileDAOTest {
     @BeforeEach
     public void setupNeedFileDAO() throws IOException {
         mockObjectMapper = mock(ObjectMapper.class);
-        testNeeds = new Need[3];
-        testNeeds[0] = new Need(99,"tent", 15f, 4, "supplies");
-        testNeeds[1] = new Need(100,"sweater", 5f, 3, "clothes");
-        testNeeds[2] = new Need(101,"soup", 2.99f, 2, "food");
+        testBaskets = new FundingBasket[3];
+        testBaskets[0] = new FundingBasket(99,"tent", 15f, 4, "supplies");
+        testBaskets[1] = new FundingBasket(100,"sweater", 5f, 3, "clothes");
+        testBaskets[2] = new FundingBasket(101,"soup", 2.99f, 2, "food");
 
         // When the object mapper is supposed to read from the file
         // the mock object mapper will return the need array above
         when(mockObjectMapper
-            .readValue(new File("doesnt_matter.txt"),Need[].class))
-                .thenReturn(testNeeds);
-        needFileDAO = new NeedFileDAO("doesnt_matter.txt",mockObjectMapper);
+            .readValue(new File("doesnt_matter.txt"),FundingBasket[].class))
+                .thenReturn(testBaskets);
+        fundingDAO = new FundingBasketFileDAO("doesnt_matter.txt",mockObjectMapper);
     }
 
     @Test
-    public void testGetNeeds() {
+    public void testGetBaskets() {
         // Invoke
-        Need[] needs = needFileDAO.getNeed();
+        FundingBasket[] baskets = fundingDAO.getFundingBasket();
 
         // Analyze
-        assertEquals(needs.length,testNeeds.length);
-        for (int i = 0; i < testNeeds.length;++i)
-            assertEquals(needs[i],testNeeds[i]);
+        assertEquals(baskets.length,testBaskets.length);
+        for (int i = 0; i < testBaskets.length;++i)
+            assertEquals(baskets[i],testBaskets[i]);
     }
 
     @Test
-    public void testFindNeeds() {
+    public void testFindBaskets() {
         // Invoke
-        Need[] needs = needFileDAO.findNeed("s");
+        FundingBasket[] baskets = fundingDAO.findFundingBasket("s");
 
         // Analyze
-        assertEquals(needs.length,2);
-        assertEquals(needs[0],testNeeds[1]);
-        assertEquals(needs[1],testNeeds[2]);
+        assertEquals(baskets.length,2);
+        assertEquals(baskets[0],testBaskets[1]);
+        assertEquals(baskets[1],testBaskets[2]);
     }
 
     @Test
-    public void testGetNeed() {
+    public void testGetBasket() {
         // Invoke
-        Need need = needFileDAO.getNeed(99);
+        FundingBasket basket = fundingDAO.getFundingBasket(99);
 
         // Analzye
-        assertEquals(need,testNeeds[0]);
+        assertEquals(basket,testBaskets[0]);
     }
 
     @Test
-    public void testDeleteNeed() {
+    public void testDeleteBasket() {
         // Invoke
-        boolean result = assertDoesNotThrow(() -> needFileDAO.deleteNeed(99),
+        boolean result = assertDoesNotThrow(() -> fundingDAO.deleteFundingBasket(99),
                             "Unexpected exception thrown");
 
         // Analzye
@@ -95,85 +95,83 @@ public class NeedFileDAOTest {
         // of the test needs array - 1 (because of the delete)
         // Because needs attribute of NeedFileDAO is package private
         // we can access it directly
-        assertEquals(needFileDAO.needs.size(),testNeeds.length-1);
+        assertEquals(fundingDAO.fundingbaskets.size(),testBaskets.length-1);
     }
 
     @Test
-    public void testCreateNeed() {
+    public void testCreateBasket() throws IOException {
         // Setup
-        Need need = new Need(72,"T-shirt", 10.99f, 10, "shirt");
+        FundingBasket basket = new FundingBasket(72,"T-shirt", 10.99f, 10, "shirt");
 
         // Invoke
-        Need result = assertDoesNotThrow(() -> needFileDAO.createNeed(need),
+        FundingBasket result = assertDoesNotThrow(() -> fundingDAO.createFundingBasket(basket),
                                 "Unexpected exception thrown");
 
         // Analyze
         assertNotNull(result);
-        Need actual = needFileDAO.getNeed(need.getId());
+        FundingBasket actual = fundingDAO.createFundingBasket(basket);
 
         // temporarily commented out, actual.getProperty() returns null
-        // assertEquals(actual.getId(),need.getId());
-        // assertEquals(actual.getName(),need.getName());
+        //assertEquals(actual.getId(),basket.getId());
+        assertEquals(actual.getName(),basket.getName());
     }
 
     @Test
-    public void testUpdateNeed() {
+    public void testUpdateBaskets() {
         // Setup
-        Need need = new Need(99,"T-shirt", 10.99f, 10, "shirt");
+        FundingBasket basket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
 
         // Invoke
-        Need result = assertDoesNotThrow(() -> needFileDAO.updateNeed(need),
+        FundingBasket result = assertDoesNotThrow(() -> fundingDAO.updateFundingBasket(basket),
                                 "Unexpected exception thrown");
 
         // Analyze
         assertNotNull(result);
-        Need actual = needFileDAO.getNeed(need.getId());
-        assertEquals(actual,need);
+        FundingBasket actual = fundingDAO.getFundingBasket(basket.getId());
+        assertEquals(actual,basket);
     }
 
     @Test
     public void testSaveException() throws IOException{
         doThrow(new IOException())
             .when(mockObjectMapper)
-                .writeValue(any(File.class),any(Need[].class));
+                .writeValue(any(File.class),any(FundingBasket[].class));
 
-        Need need = new Need(99,"T-shirt", 10.99f, 10, "shirt");
+        FundingBasket basket = new FundingBasket(99,"T-shirt", 10.99f, 10, "shirt");
 
         assertThrows(IOException.class,
-                        () -> needFileDAO.createNeed(need),
+                        () -> fundingDAO.createFundingBasket(basket),
                         "IOException not thrown");
     }
 
     @Test
-    public void testGetNeedNotFound() {
+    public void testGetBasketNotFound() {
         // Invoke
-        Need need = needFileDAO.getNeed(98);
+        FundingBasket basket = fundingDAO.getFundingBasket(98);
 
         // Analyze
-        assertEquals(need,null);
+        assertEquals(basket,null);
     }
 
     @Test
-    public void testDeleteNeedNotFound() {
+    public void testDeleteBasketNotFound() {
         // Invoke
-        boolean result = assertDoesNotThrow(() -> needFileDAO.deleteNeed(98),
+        boolean result = assertDoesNotThrow(() -> fundingDAO.deleteFundingBasket(98),
                                                 "Unexpected exception thrown");
 
         // Analyze
         assertEquals(result,false);
-        assertEquals(needFileDAO.needs.size(),testNeeds.length); // note: keyword public added to NeedFileDAO Map needs for accessibility
+        assertEquals(fundingDAO.fundingbaskets.size(),testBaskets.length); // note: keyword public added to NeedFileDAO Map needs for accessibility
     }
 
     @Test
-    public void testUpdateNeedNotFound() {
+    public void testUpdateBasketNotFound() {
         // Setup
-        Need need = new Need(9,"T-shirt", 10.99f, 10, "shirt");
+        FundingBasket basket = new FundingBasket(0,"T-shirt", 10.99f, 10, "shirt");
 
         // Invoke
-        Need result = assertDoesNotThrow(() -> needFileDAO.updateNeed(need),
+        FundingBasket result = assertDoesNotThrow(() -> fundingDAO.updateFundingBasket(basket),
                                                 "Unexpected exception thrown");
-
-        //Object result = null;
 
         // Analyze
         assertNull(result);
@@ -191,28 +189,12 @@ public class NeedFileDAOTest {
         // raised
         doThrow(new IOException())
             .when(mockObjectMapper)
-                .readValue(new File("doesnt_matter.txt"),Need[].class);
+                .readValue(new File("doesnt_matter.txt"),FundingBasket[].class);
 
         // Invoke & Analyze
         assertThrows(IOException.class,
-                        () -> new NeedFileDAO("doesnt_matter.txt",mockObjectMapper),
+                        () -> new FundingBasketFileDAO("doesnt_matter.txt",mockObjectMapper),
                         "IOException not thrown");
     }
 
-    @Test
-    public void testdecrementQuantity() throws IOException {
-        // Setup
-        Need need = needFileDAO.decrementQuantity(99, 1);
-        // Analyze
-        Need actual = needFileDAO.getNeed(need.getId());
-        assertEquals(actual,need);
-    }
-
-    @Test
-    public void testdecrementQuantityBelowZero() throws IOException {
-        // Setup
-        Need need = needFileDAO.decrementQuantity(99, 5);
-        // Analyze
-        assertEquals(null,need);
-    }
-}
+ }

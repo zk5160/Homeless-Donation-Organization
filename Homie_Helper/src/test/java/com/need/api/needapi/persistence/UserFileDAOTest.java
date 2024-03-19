@@ -191,8 +191,6 @@ public class UserFileDAOTest {
         User result = assertDoesNotThrow(() -> userFileDAO.updateUser(user),
                                                 "Unexpected exception thrown");
 
-        //Object result = null;
-
         // Analyze
         assertNull(result);
     }
