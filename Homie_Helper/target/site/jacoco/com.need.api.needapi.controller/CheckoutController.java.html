@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CheckoutController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">need-api</a> &gt; <a href="index.source.html" class="el_package">com.need.api.needapi.controller</a> &gt; <span class="el_source">CheckoutController.java</span></div><h1>CheckoutController.java</h1><pre class="source lang-java linenums">package com.need.api.needapi.controller;
+
+import java.io.IOException;
+
+import com.need.api.needapi.model.FundingBasket;
+import com.need.api.needapi.model.Need;
+import com.need.api.needapi.persistence.FundingBasketDAO;
+import com.need.api.needapi.persistence.NeedDAO;
+import com.need.api.needapi.persistence.UserDAO;
+
+public class CheckoutController {
+    private FundingBasketDAO basket;
+    private NeedDAO need;
+    private UserDAO user;
+
+<span class="fc" id="L16">    public CheckoutController(UserDAO user, NeedDAO need){</span>
+<span class="fc" id="L17">        this.user = user;</span>
+<span class="fc" id="L18">        this.need = need;</span>
+<span class="fc" id="L19">    }</span>
+
+    //parameter will be user id
+    public boolean checkout(int userid) throws IOException{
+         //try{
+            //always null? fixed
+        //getting user's basket
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">        if (user.getUser(userid).getBasket() == null){</span>
+<span class="nc" id="L27">            return false;</span>
+        }
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (user.getUser(userid).basket.size() &lt;= 0){</span>
+<span class="fc" id="L30">            return false;</span>
+        }
+        //checking length?
+<span class="fc" id="L33">        System.out.println(user.getUser(userid).basket.size());</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        while (user.getUser(userid).basket.size() &gt; 0) {</span>
+            //iterating through ids of funding basket, not the fastest
+            //need to decremenet first, then remove?
+            //System.out.println(&quot;TEST1&quot;);
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            for (int id=0; id&lt;100; id++) {</span>
+                    //check if id exists
+                    //System.out.println(&quot;IN FOR LOOP&quot;);
+<span class="fc bfc" id="L41" title="All 2 branches covered.">                    if (user.getUser(userid).checkBasketId(id) == true){</span>
+<span class="fc" id="L42">                        System.out.println(&quot;IF STATEMENT&quot;);</span>
+                        //need decrement failing
+<span class="fc" id="L44">                        int x = (user.getUser(userid).BasketQuantity(id));</span>
+<span class="fc" id="L45">                        need.decrementQuantity(id, x);</span>
+                        //System.out.println(&quot;NEED&quot;);
+<span class="fc" id="L47">                        user.getUser(userid).removeFromBasket(id);</span>
+                       
+                    }
+                }
+                //System.out.println(&quot;OUT&quot;);
+                //return true;
+            }
+            //System.out.println(&quot;TRUE&quot;);
+<span class="fc" id="L55">            return true;</span>
+        //  }
+        // catch (Exception e){
+        //     return false;
+        // }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

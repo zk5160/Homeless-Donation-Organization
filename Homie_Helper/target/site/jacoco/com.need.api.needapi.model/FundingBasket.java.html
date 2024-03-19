@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FundingBasket.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">need-api</a> &gt; <a href="index.source.html" class="el_package">com.need.api.needapi.model</a> &gt; <span class="el_source">FundingBasket.java</span></div><h1>FundingBasket.java</h1><pre class="source lang-java linenums">package com.need.api.needapi.model;
+
+import java.util.logging.Logger;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+/**
+ * Represents a FundingBasket entity
+ * 
+ * @author SWEN Faculty
+ * @author modifications by Team 7G
+ */
+public class FundingBasket {
+<span class="fc" id="L13">    private static final Logger LOG = Logger.getLogger(FundingBasket.class.getName());</span>
+
+    // Package private for tests
+    static final String STRING_FORMAT = &quot;FundingBasket [id=%d, name=%s, cost=%f, quantity=%d, type=%s]&quot;;
+    @JsonProperty(&quot;name&quot;) private String name;
+    @JsonProperty(&quot;cost&quot;) private float cost;
+    @JsonProperty(&quot;quantity&quot;) private int quantity;
+    @JsonProperty(&quot;type&quot;) private String type;
+    @JsonProperty(&quot;id&quot;) private int id;
+
+    /**
+     * Create a fundingbasket with the given id, name, cost, quantity and type
+     * @param quantity : amount of fundingbaskets that we want
+     * @param cost  : how much fundingbasket is worth
+     * @param type  : the type of fundingbasket
+     * @param name  : name of the fundingbasket
+     * @param id    : id of fundingbasket to keep organized
+     * {@literal @}JsonProperty is used in serialization and deserialization
+     * of the JSON object to the Java object in mapping the fields.  If a field
+     * is not provided in the JSON object, the Java field gets the default Java
+     * value, i.e. 0 for int
+     */
+    public FundingBasket(@JsonProperty(&quot;id&quot;) int id, @JsonProperty(&quot;name&quot;) String name, @JsonProperty(&quot;cost&quot;) float cost, 
+<span class="fc" id="L36">                @JsonProperty(&quot;quantity&quot;) int quantity, @JsonProperty(&quot;type&quot;) String type) {</span>
+<span class="fc" id="L37">        this.name = name;</span>
+<span class="fc" id="L38">        this.cost = cost;</span>
+<span class="fc" id="L39">        this.quantity = quantity;</span>
+<span class="fc" id="L40">        this.type = type;</span>
+<span class="fc" id="L41">        this.id = id;</span>
+<span class="fc" id="L42">    }</span>
+
+    /**
+     * Retrieves the type of the fundingbasket
+     * @return The type of the fundingbasket
+     */
+<span class="fc" id="L48">    public String getType() {return type;}</span>
+
+    /**
+     * Retrieves the quantity of the fundingbasket
+     * @return The quantity of the fundingbasket
+     */
+<span class="fc" id="L54">    public int getQuantity() {return quantity;}</span>
+
+    /**
+     * Retrieves the cost of the fundingbasket
+     * @return The cpst of the fundingbasket
+     */
+<span class="fc" id="L60">    public float getCost() {return cost;}</span>
+
+    /**
+     * Retrieves the id of the fundingbasket
+     * @return The id of the fundingbasket
+     */
+<span class="fc" id="L66">    public int getId() {return id;}</span>
+
+    /**
+     * Retrieves the name of the fundingbasket
+     * @return The name of the fundingbasket
+     */
+<span class="fc" id="L72">    public String getName() {return name;}</span>
+
+    /**
+     * Sets the name of the fundingbasket - necessary for JSON object to Java object deserialization
+     * @param name The name of the fundingbasket
+     */
+<span class="fc" id="L78">    public void setName(String name) {this.name = name;}</span>
+
+    /**
+     * Sets the name of the fundingbasket - necessary for JSON object to Java object deserialization
+     * @param cost The cost of the fundingbasket
+     */
+<span class="nc" id="L84">    public void setCost(float cost) {this.cost = cost;}</span>
+
+    /**
+     * Sets the type of the fundingbasket - necessary for JSON object to Java object deserialization
+     * @param type The name of the fundingbasket
+     */
+<span class="nc" id="L90">    public void setType(String type) {this.type = type;}</span>
+
+    /**
+     * Sets the quantity of the fundingbasket - necessary for JSON object to Java object deserialization
+     * @param quanitty The quantity of the fundingbasket
+     */
+<span class="nc" id="L96">    public void setQuantity(int quantity) {this.quantity = quantity;}</span>
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+<span class="fc" id="L103">        return String.format(STRING_FORMAT, id, name, cost, quantity, type);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

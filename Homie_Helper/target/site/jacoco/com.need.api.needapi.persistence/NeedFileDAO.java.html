@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>NeedFileDAO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">need-api</a> &gt; <a href="index.source.html" class="el_package">com.need.api.needapi.persistence</a> &gt; <span class="el_source">NeedFileDAO.java</span></div><h1>NeedFileDAO.java</h1><pre class="source lang-java linenums">package com.need.api.needapi.persistence;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.logging.Logger;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+
+import com.need.api.needapi.model.Need;
+
+/**
+ * Implements the functionality for JSON file-based peristance for Needs
+ * 
+ * {@literal @}Component Spring annotation instantiates a single instance of this
+ * class and injects the instance into other classes as needed
+ * 
+ * @author SWEN Faculty
+ * @author modificaitons by Team 7G
+ */
+@Component
+public class NeedFileDAO implements NeedDAO {
+<span class="fc" id="L30">    private static final Logger LOG = Logger.getLogger(NeedFileDAO.class.getName());</span>
+    public Map&lt;Integer, Need&gt; needs;   // Provides a local cache of the need objects
+                                // so that we don't need to read from the file
+                                // each time
+    private ObjectMapper objectMapper;  // Provides conversion between Need
+                                        // objects and JSON text format written
+                                        // to the file
+    private static int nextId;  // The next Id to assign to a new need
+    private String filename;    // Filename to read from and write to
+
+    /**
+     * Creates a Need File Data Access Object
+     * 
+     * @param filename Filename to read from and write to
+     * @param objectMapper Provides JSON Object to/from Java Object serialization and deserialization
+     * 
+     * @throws IOException when file cannot be accessed or read from
+     */
+<span class="fc" id="L48">    public NeedFileDAO(@Value(&quot;${needs.file}&quot;) String filename,ObjectMapper objectMapper) throws IOException {</span>
+<span class="fc" id="L49">        this.filename = filename;</span>
+<span class="fc" id="L50">        this.objectMapper = objectMapper;</span>
+<span class="fc" id="L51">        load();  // load the needs from the file</span>
+<span class="fc" id="L52">    }</span>
+
+    /**
+     * Generates the next id for a new {@linkplain Need need}
+     * 
+     * @return The next id
+     */
+    private synchronized static int nextId() {
+<span class="fc" id="L60">        int id = nextId;</span>
+<span class="fc" id="L61">        ++nextId;</span>
+<span class="fc" id="L62">        return id;</span>
+    }
+
+    /**
+     * Generates an array of {@linkplain Need needs} from the tree map
+     * 
+     * @return  The array of {@link Need needs}, may be empty
+     */
+    private Need[] getNeedArray() {
+<span class="fc" id="L71">        return getNeedArray(null);</span>
+    }
+
+    /**
+     * Generates an array of {@linkplain Need needs} from the tree map for any
+     * {@linkplain Need needs} that contains the text specified by containsText
+     * &lt;br&gt;
+     * If containsText is null, the array contains all of the {@linkplain Need needs}
+     * in the tree map
+     * 
+     * @return  The array of {@link Need needs}, may be empty
+     */
+    private Need[] getNeedArray(String containsText) { // if containsText == null, no filter
+<span class="fc" id="L84">        ArrayList&lt;Need&gt; needArrayList = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L86" title="All 2 branches covered.">        for (Need need : needs.values()) {</span>
+<span class="fc bfc" id="L87" title="All 4 branches covered.">            if (containsText == null || need.getName().contains(containsText)) {</span>
+<span class="fc" id="L88">                needArrayList.add(need);</span>
+            }
+<span class="fc" id="L90">        }</span>
+
+<span class="fc" id="L92">        Need[] needArray = new Need[needArrayList.size()];</span>
+<span class="fc" id="L93">        needArrayList.toArray(needArray);</span>
+<span class="fc" id="L94">        return needArray;</span>
+    }
+
+    /**
+     * Saves the {@linkplain Need needs} from the map into the file as an array of JSON objects
+     * 
+     * @return true if the {@link Need needs} were written successfully
+     * 
+     * @throws IOException when file cannot be accessed or written to
+     */
+    private boolean save() throws IOException {
+<span class="fc" id="L105">        Need[] needArray = getNeedArray();</span>
+
+        // Serializes the Java Objects to JSON objects into the file
+        // writeValue will thrown an IOException if there is an issue
+        // with the file or reading from the file
+<span class="fc" id="L110">        objectMapper.writeValue(new File(filename),needArray);</span>
+<span class="fc" id="L111">        return true;</span>
+    }
+
+    /**
+     * Loads {@linkplain Need needs} from the JSON file into the map
+     * &lt;br&gt;
+     * Also sets next id to one more than the greatest id found in the file
+     * 
+     * @return true if the file was read successfully
+     * 
+     * @throws IOException when file cannot be accessed or read from
+     */
+    private boolean load() throws IOException {
+<span class="fc" id="L124">        needs = new TreeMap&lt;&gt;();</span>
+<span class="fc" id="L125">        nextId = 0;</span>
+
+        // Deserializes the JSON objects from the file into an array of needs
+        // readValue will throw an IOException if there's an issue with the file
+        // or reading from the file
+<span class="fc" id="L130">        Need[] needArray = objectMapper.readValue(new File(filename),Need[].class);</span>
+
+        // Add each need to the tree map and keep track of the greatest id
+<span class="fc bfc" id="L133" title="All 2 branches covered.">        for (Need need : needArray) {</span>
+<span class="fc" id="L134">            needs.put(need.getId(), need);</span>
+<span class="pc bpc" id="L135" title="1 of 2 branches missed.">            if (need.getId() &gt; nextId)</span>
+<span class="fc" id="L136">                nextId = need.getId();</span>
+        }
+        // Make the next id one greater than the maximum from the file
+<span class="fc" id="L139">        ++nextId;</span>
+<span class="fc" id="L140">        return true;</span>
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public Need[] getNeed() {
+<span class="fc" id="L148">        synchronized(needs) {</span>
+<span class="fc" id="L149">            return getNeedArray();</span>
+        }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public Need[] findNeed(String containsText) {
+<span class="fc" id="L158">        synchronized(needs) {</span>
+<span class="fc" id="L159">            return getNeedArray(containsText);</span>
+        }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public Need getNeed(int id) {
+<span class="fc" id="L168">        synchronized(needs) {</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">            if (needs.containsKey(id))</span>
+<span class="fc" id="L170">                return needs.get(id);</span>
+            else
+<span class="fc" id="L172">                return null;</span>
+        }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public Need createNeed(Need need) throws IOException {
+<span class="fc" id="L181">        synchronized(needs) {</span>
+            // We create a new need object because the id field is immutable
+            // and we need to assign the next unique id
+<span class="fc" id="L184">            Need newNeed = new Need(nextId(), need.getName(), need.getCost(), need.getQuantity(), need.getType());</span>
+<span class="fc" id="L185">            needs.put(newNeed.getId(), newNeed);</span>
+<span class="fc" id="L186">            save(); // may throw an IOException</span>
+<span class="fc" id="L187">            return newNeed;</span>
+        }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public Need updateNeed(Need need) throws IOException {
+<span class="fc" id="L196">        synchronized(needs) {</span>
+<span class="fc bfc" id="L197" title="All 2 branches covered.">            if (needs.containsKey(need.getId()) == false)</span>
+<span class="fc" id="L198">                return null;  // need does not exist</span>
+
+<span class="fc" id="L200">            needs.put(need.getId(),need);</span>
+            // needs.put(need.getCost(), need);
+            // needs.put(need.getQuantity(), need);
+            // needs.put(Interger.parseInt(need.getType),need);
+            // needs.put(need.getId(),need.getCost());
+            // needs.put(need.getId(), need.getType());
+            
+            //needs.put(need.getCost(),need);
+            //needs.put(need.getType(),need);
+<span class="fc" id="L209">            save(); // may throw an IOException</span>
+<span class="fc" id="L210">            return need;</span>
+        }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public boolean deleteNeed(int id) throws IOException {
+<span class="fc" id="L219">        synchronized(needs) {</span>
+<span class="fc bfc" id="L220" title="All 2 branches covered.">            if (needs.containsKey(id)) {</span>
+<span class="fc" id="L221">                needs.remove(id);</span>
+<span class="fc" id="L222">                return save();</span>
+            }
+            else
+<span class="fc" id="L225">                return false;</span>
+        }
+    }
+
+    @Override
+    public Need decrementQuantity(int id, int quantity) throws IOException {
+<span class="fc" id="L231">        synchronized(needs) {</span>
+<span class="pc bpc" id="L232" title="1 of 2 branches missed.">            if (getNeed(id) == null){</span>
+<span class="nc" id="L233">                return null;</span>
+            }
+<span class="fc" id="L235">            Need n = getNeed(id);</span>
+<span class="fc bfc" id="L236" title="All 2 branches covered.">            if (n.getQuantity()-quantity &lt; 0){</span>
+<span class="fc" id="L237">                return null;</span>
+            }
+            //int quant= n.getQuantity();
+            //decrementing quanitty
+<span class="fc" id="L241">            Need update = new Need(id, n.getName(), n.getCost(), n.getQuantity()-quantity, n.getType());</span>
+<span class="fc" id="L242">            return updateNeed(update);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
