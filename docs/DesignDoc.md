@@ -22,6 +22,7 @@ Our team is creating a fully-implemented site called Homie Helper where users ca
 * Clothing
 * Toiletries
 * Food
+
 The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, A-Z), toggle dark-mode, and use discount codes in checkout.
 
 ### Purpose
