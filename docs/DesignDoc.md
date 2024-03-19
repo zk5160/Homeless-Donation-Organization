@@ -74,7 +74,6 @@ This section describes the application domain.
 This section describes the application architecture.
 
 ### Summary
-
 The following Tiers/Layers model shows a high-level view of the webapp's architecture. 
 
 ![The Tiers & Layers of the Architecture](architecture-tiers-and-layers.png)
@@ -89,7 +88,6 @@ Both the ViewModel and Model are built using Java and Spring Framework. Details 
 
 
 ### Overview of User Interface
-
 This section describes the web interface flow; this is how the user views and interacts with the web application.
 
 > _Provide a summary of the application's user interface.  Describe, from the user's perspective, the flow of the pages in the web application._
@@ -142,14 +140,13 @@ In addition, DAO (Data Access Object) files such as FundingBasketDAO, InventoryD
 ## OO Design Principles
 
 ### Low Coupling
-Low coupling involves the structuring of classes and logic in such a way that contains the functionality and responsibility of an object without interfering with other objects. We implemented this principle by separating object/class functionalities: our User, Need, FundingBasket, and Checkout classes each contain their own constructiors, getters, and setters that are unreadable by external classes. Instead, any interactions between classes are handled by another separate class that was solely made for this purpose.
+Low coupling involves the structuring of classes in such a way that contains the functionality and responsibility of an object without interfering with other objects. We implemented this principle by separating object/class functionalities: our User, Need, FundingBasket, and Checkout classes each contain their own constructiors, getters, and setters that are unreadable by external classes. Instead, any interactions between classes are handled by another separate class that was solely made for this purpose.
 
 ### Controller
+The controller specifies a separation of concerns between the user-interface and other system components by assigning responsibilities to recieve and coordinate system operations to a class outside of the UI, and acts as a mediator between the front and back-ends. In our application, the CheckoutController, FundingBasketController, NeedController, and UserController classes are used to handle and execute such operations. For instance, if a user selects a need, the NeedController class handles the HTTP requests (i.e. get) and displays the need on the front-end.
 
-
-### Dependency Injection
-
-> _**[Sprint 1]** Name and describe the initial OO Principles that your team has considered in support of your design (and implementation) for this first Sprint._
+### Dependency Inversion/Injection
+Dependency inversion entails that high-level modules should not depend on low level modules: rather, both should depend on abstractions, providing a looser coupling between dependent entities. The main way by which we utilize this in our application is through our DAO (Data Access Object) classes. Each DAO file has a respective abstract DAO file that provides an interface for the implementation files to follow. This allows us to not only test our DAO files with mock classes but also completely change our implementations without affecting any classes external to the one being injected.  
 
 > _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
 
@@ -168,6 +165,8 @@ Low coupling involves the structuring of classes and logic in such a way that co
 > and the results of the testing._
 
 ### Acceptance Testing
+![Domain Model](Team7DomainAnalysis.png)
+
 > _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
 > acceptance criteria tests, the number that have some acceptance
 > criteria tests failing, and the number of user stories that
