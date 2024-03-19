@@ -165,7 +165,6 @@ Dependency inversion entails that high-level modules should not depend on low le
 > and the results of the testing._
 
 ### Acceptance Testing
-![Domain Model](Team7DomainAnalysis.png)
 
 > _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
 > acceptance criteria tests, the number that have some acceptance
@@ -181,6 +180,7 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 >_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
+![Code Coverage](jacoco 100.webp)
 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**major**_ team decisions or design milestones/changes and corresponding justification._
