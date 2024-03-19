@@ -167,7 +167,8 @@ Dependency inversion entails that high-level modules should not depend on low le
 ### Acceptance Testing
 
 #### Sprint 2
-* There are 6 user stories that have passed all their acceptance criteria tests.
+* There are 4 user stories from this sprint that have passed their acceptance criteria tests (Funding Basket (8), Get Entire Cupboard (5), Checkout (8), Helper (13)).
+* There are 2 user stories from this sprint that have some failing acceptance criteria (Admin (13), Login/Logout (8)). Need to create logging in permissions specific to users/admins.
 
 > _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
 > acceptance criteria tests, the number that have some acceptance
@@ -192,7 +193,7 @@ Dependency inversion entails that high-level modules should not depend on low le
 ![Unit Testing](user-controller-code-coverage.png)
 ![Unit Testing](user-file-dao-code-coverage.png)
 
-FundingBasket is a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
+FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
 
 >_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
