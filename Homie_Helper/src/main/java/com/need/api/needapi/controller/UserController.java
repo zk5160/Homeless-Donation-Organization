@@ -124,8 +124,6 @@ public class UserController {
             for (int i = 0; i < Users2.length; i++) {
                 Users2[i] = Users[i];
             }
-
-
             if (Users2.length != 0)
                 return new ResponseEntity<User[]>(Users2,HttpStatus.OK);
             else
@@ -136,12 +134,11 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
 
-        // Replace below with your implementation
     }
 
     /**
      * Creates a {@linkplain User User} with the provided User object
-     * 
+     * g
      * @param User - The {@link User User} to create
      * 
      * @return ResponseEntity with created {@link User User} object and HTTP status of CREATED<br>
