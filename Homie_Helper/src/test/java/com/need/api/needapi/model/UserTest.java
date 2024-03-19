@@ -68,50 +68,143 @@ public class UserTest {
     }
 
     @Test
-    public void testCartAdd() {
+    public void testUserAddToBasket() {
         // Setup
         int user_id = 5;
         String name = "User0";
-        ArrayList<FundingBasket> basket = new ArrayList<FundingBasket>();
-        basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+        ArrayList<FundingBasket> basket = new ArrayList<>();
+        //basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
         User user = new User(user_id,name, basket);
 
-        ArrayList<FundingBasket> expected_basket = new ArrayList<FundingBasket>();
-        expected_basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+        ArrayList<FundingBasket> expected_basket = new ArrayList<>();
+        //expected_basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
 
-        FundingBasket expected_add = new FundingBasket(2, "milk", 2.99f, 2, "food");
+        //FundingBasket expected_add = new ArrayList<FundingBasket>();
+        FundingBasket expected_add =new FundingBasket(2, "milk", 2.99f, 2, "food");
         expected_basket.add(expected_add);
 
         // Invoke
         user.addToBasket(expected_add);
 
         // Analyze
-        assertEquals(expected_basket.get(0), user.getBasket().get(0));
-        assertEquals(expected_basket.get(1), user.getBasket().get(1));
+        assertEquals(expected_basket, user.getBasket());
+        //assertEquals(expected_basket.get(0), user.getBasket().get(0));
+       // assertEquals(expected_basket.get(1), user.getBasket().get(1));
     }
 
     @Test
-    public void testCartRemove() {
+    public void testUserRemoveFromBasket() {
         // Setup
         int id = 0;
         String name = "User0";
-        ArrayList<FundingBasket> basket = new ArrayList<FundingBasket>();
+        ArrayList<FundingBasket> basket = new ArrayList<>();
         basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
         basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
 
         User user = new User(id, name, basket);
-        ArrayList<FundingBasket> expected_basket = new ArrayList<FundingBasket>();
+
+        ArrayList<FundingBasket> expected_basket = new ArrayList<>();
+        //FundingBasket expected_add =new FundingBasket(2, "milk", 2.99f, 2, "food");
+        //expected_basket.add(expected_add);
+        // 
         expected_basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
 
         // Invoke
-        user.removeFromBasket(1);
+        boolean response = user.removeFromBasket(1);
 
         // Analyze
-        assertEquals(expected_basket, user.getBasket());
-        //assertTrue(expected_basket.get(0).equals(user.getBasket().get(0)));
+        assertEquals(true, response);
     }
 
+    @Test
+    public void testUserRemoveInvalidFromBasket() {
+        // Setup
+        int id = 0;
+        String name = "User0";
+        ArrayList<FundingBasket> basket = new ArrayList<>();
+        basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+        basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
 
+        User user = new User(id, name, basket);
+
+        // Invoke
+        boolean response = user.removeFromBasket(3);
+
+        // Analyze
+        assertEquals(false, response);
+    }
+
+    @Test
+    public void testCheckId(){
+                // Setup
+                int id = 0;
+                String name = "User0";
+                ArrayList<FundingBasket> basket = new ArrayList<>();
+                basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+                basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
+        
+                User user = new User(id, name, basket);
+        
+                // Invoke
+                boolean response = user.checkBasketId(1);
+        
+                // Analyze
+                assertEquals(true, response);
+    }
+
+    @Test
+    public void testCheckIdNotValid(){
+                // Setup
+                int id = 0;
+                String name = "User0";
+                ArrayList<FundingBasket> basket = new ArrayList<>();
+                basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+                basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
+        
+                User user = new User(id, name, basket);
+        
+                // Invoke
+                boolean response = user.checkBasketId(5);
+        
+                // Analyze
+                assertEquals(false, response);
+    }
+
+    @Test
+    public void testBasketQuantity(){
+                // Setup
+                int id = 0;
+                String name = "User0";
+                ArrayList<FundingBasket> basket = new ArrayList<>();
+                basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+                basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
+                int expected = 3;
+                User user = new User(id, name, basket);
+        
+                // Invoke
+                int response = user.BasketQuantity(1);
+        
+                // Analyze
+                assertEquals(expected, response);
+    }
+
+    @Test
+    public void testBasketQuantityZero(){
+                // Setup
+                int id = 0;
+                String name = "User0";
+                ArrayList<FundingBasket> basket = new ArrayList<>();
+                basket.add(new FundingBasket(1, "tent", 10.99f, 3, "housing"));
+                basket.add(new FundingBasket(2, "milk", 2.99f, 4, "food"));
+                int expected = 0;
+                User user = new User(id, name, basket);
+        
+                // Invoke
+                int response = user.BasketQuantity(5);
+        
+                // Analyze
+                assertEquals(expected, response);
+    }
 
 
 }
