@@ -181,7 +181,15 @@ Dependency inversion entails that high-level modules should not depend on low le
 > coverage targets, why you selected those values, and how well your
 > code coverage met your targets._
 
-
+![Unit Testing](checkout-controller-code-coverage.png)
+![Unit Testing](funding-basket-code-coverage.png)
+![Unit Testing](funding-basket-controller-code-coverage.png)
+![Unit Testing](funding-file-dao-code-coverage.png)
+![Unit Testing](need-controller-code-coverage.png)
+![Unit Testing](need-file-dao-code-coverage.png)
+![Unit Testing](user-code-coverage.png)
+![Unit Testing](user-controller-code-coverage.png)
+![Unit Testing](user-file-dao-code-coverage.png)
 
 >_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
