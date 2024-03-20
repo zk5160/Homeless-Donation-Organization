@@ -8,6 +8,7 @@
 <div>
   <label for="new-need">Product name: </label>
   <input id="new-need" #needName />
+  
 
   <!-- (click) passes input value to add() and then clears the input -->
   <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">

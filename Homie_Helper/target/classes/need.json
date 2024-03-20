@@ -1,1 +1,1 @@
-[{"id":4,"name":"tent","cost":15.0,"quantity":4,"type":"supplies"},{"id":6,"name":"sweater","cost":5.0,"quantity":3,"type":"clothes"},{"id":8,"name":"soup","cost":2.99,"quantity":2,"type":"food"}]
+[{"id":4,"name":"tent","cost":15.0,"quantity":4,"type":"supplies"},{"id":6,"name":"sweater","cost":5.0,"quantity":3,"type":"clothes"},{"id":8,"name":"soup","cost":2.99,"quantity":2,"type":"food"},{"id":13,"name":"cat","cost":0.0,"quantity":0,"type":null}]
