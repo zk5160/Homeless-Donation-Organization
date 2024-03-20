@@ -11,7 +11,7 @@ import { MessageService } from './message.service';
 @Injectable({ providedIn: 'root' })
 export class NeedService {
 
-  private needsUrl = 'http://localhost:8080/needs'
+  private needsUrl = 'http://localhost:8080/need'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -23,6 +23,7 @@ export class NeedService {
 
   /** GET needs from the server */
   getNeeds(): Observable<Need[]> {
+    console.log("Test")
     return this.http.get<Need[]>(this.needsUrl)
       .pipe(
         tap(_ => this.log('fetched needs')),
