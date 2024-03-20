@@ -183,14 +183,23 @@ Dependency inversion entails that high-level modules should not depend on low le
 > code coverage met your targets._
 
 ![Unit Testing](checkout-controller-code-coverage.png)
+
 ![Unit Testing](funding-basket-code-coverage.png)
+
 ![Unit Testing](funding-basket-controller-code-coverage.png)
+
 ![Unit Testing](funding-file-dao-code-coverage.png)
+
 ![Unit Testing](need-code-coverage.png)
+
 ![Unit Testing](need-controller-code-coverage.png)
+
 ![Unit Testing](need-file-dao-code-coverage.png)
+
 ![Unit Testing](user-code-coverage.png)
+
 ![Unit Testing](user-controller-code-coverage.png)
+
 ![Unit Testing](user-file-dao-code-coverage.png)
 
 FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
