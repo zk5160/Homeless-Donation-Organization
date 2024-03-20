@@ -16,9 +16,12 @@ export class AuthService {
   session : any;
   constructor() { }
   login(username: string, password: string){
-    if(this.users.find((u)=>u.username===username && u.password===password))
+    let user = this.users.find((u)=>u.username===username && u.password===password)
+    if(user)
     {
-    //     this.session = 
+        this.session = user;
+        localStorage.setItem('session', JSON.stringify(this.session));
     }
+    return user;
   }
 }
