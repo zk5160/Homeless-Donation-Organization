@@ -3,15 +3,15 @@
   <button routerLink="/needs">Needs</button>
 </nav> -->
 
-<h2>My Needs</h2>
+<h2>Manage Products</h2>
 
 <div>
-  <label for="new-need">Need name: </label>
+  <label for="new-need">Product name: </label>
   <input id="new-need" #needName />
 
   <!-- (click) passes input value to add() and then clears the input -->
   <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">
-    Add need
+    Add product
   </button>
 </div>
 
