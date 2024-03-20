@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NeedsComponent } from './needs/needs.component';
 import { NeedDetailComponent } from './need-detail/need-detail.component';
-import { LoginComponent } from './user-login/user-login.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', loadChildren: ()=>import('./user/user.module').then((m)=>m.UserModule)}, 
