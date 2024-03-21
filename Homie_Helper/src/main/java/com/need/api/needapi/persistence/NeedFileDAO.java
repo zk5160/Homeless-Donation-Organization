@@ -214,6 +214,24 @@ public class NeedFileDAO implements NeedDAO {
         return needsList;
     }
 
+        /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortType() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getType));
+        return needsList;
+    }
 
     /**
     ** {@inheritDoc}

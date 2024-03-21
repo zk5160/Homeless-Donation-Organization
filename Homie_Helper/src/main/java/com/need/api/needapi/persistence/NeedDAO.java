@@ -31,7 +31,7 @@ public interface NeedDAO {
      */
     ArrayList<Need> sortAlphabetically() throws IOException;
 
-        /**
+    /**
      * Retrieves all {@linkplain Need needs}
      * 
      * @return An array of {@link Need need} objects, may be empty
@@ -40,7 +40,7 @@ public interface NeedDAO {
      */
     ArrayList<Need> sortCost() throws IOException;
 
-            /**
+    /**
      * Retrieves all {@linkplain Need needs}
      * 
      * @return An array of {@link Need need} objects, may be empty
@@ -48,6 +48,15 @@ public interface NeedDAO {
      * @throws IOException if an issue with underlying storage
      */
     ArrayList<Need> sortQuantity() throws IOException;
+
+     /**
+     * Retrieves all {@linkplain Need needs}
+     * 
+     * @return An array of {@link Need need} objects, may be empty
+     * 
+     * @throws IOException if an issue with underlying storage
+     */
+    ArrayList<Need> sortType() throws IOException;
 
     /**
      * Finds all {@linkplain Need needs} whose name contains the given text

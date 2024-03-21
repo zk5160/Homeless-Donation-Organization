@@ -91,6 +91,14 @@ public class NeedFileDAOTest {
     }
 
     @Test
+    public void testType(){
+        ArrayList<Need> needs = needFileDAO.sortType();
+        assertEquals(testNeeds[1], needs.get(0));
+        assertEquals(testNeeds[2], needs.get(1));
+        assertEquals(testNeeds[0], needs.get(2));
+    }
+
+    @Test
     public void testFindNeeds() {
         // Invoke
         Need[] needs = needFileDAO.findNeed("s");
