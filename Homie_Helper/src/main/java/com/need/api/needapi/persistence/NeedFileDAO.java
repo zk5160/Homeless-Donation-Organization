@@ -180,6 +180,45 @@ public class NeedFileDAO implements NeedDAO {
     ** {@inheritDoc}
      */
     @Override
+    public ArrayList<Need> sortCost() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getCost));
+        return needsList;
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortQuantity() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getQuantity));
+        return needsList;
+    }
+
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
     public Need[] findNeed(String containsText) {
         synchronized(needs) {
             return getNeedArray(containsText);
