@@ -1,6 +1,9 @@
 package com.need.api.needapi.persistence;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.need.api.needapi.model.Need;
 
 /**
@@ -18,6 +21,15 @@ public interface NeedDAO {
      * @throws IOException if an issue with underlying storage
      */
     Need[] getNeed() throws IOException;
+
+    /**
+     * Retrieves all {@linkplain Need needs}
+     * 
+     * @return An array of {@link Need need} objects, may be empty
+     * 
+     * @throws IOException if an issue with underlying storage
+     */
+    ArrayList<Need> sortAlphabetically() throws IOException;
 
     /**
      * Finds all {@linkplain Need needs} whose name contains the given text

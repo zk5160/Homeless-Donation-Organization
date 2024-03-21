@@ -3,9 +3,16 @@ package com.need.api.needapi.persistence;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -148,6 +155,25 @@ public class NeedFileDAO implements NeedDAO {
         synchronized(needs) {
             return getNeedArray();
         }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortAlphabetically() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getName));
+        return needsList;
     }
 
     /**

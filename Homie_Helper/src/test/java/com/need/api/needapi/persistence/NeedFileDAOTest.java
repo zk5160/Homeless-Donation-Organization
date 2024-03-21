@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
@@ -12,6 +13,8 @@ import static org.mockito.Mockito.when;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.need.api.needapi.model.Need;
@@ -63,6 +66,13 @@ public class NeedFileDAOTest {
             assertEquals(needs[i],testNeeds[i]);
     }
 
+    @Test
+    public void testAlphabetical(){
+        ArrayList<Need> needs = needFileDAO.sortAlphabetically();
+        assertEquals(testNeeds[2], needs.get(0));
+        assertEquals(testNeeds[1], needs.get(1));
+        assertEquals(testNeeds[0], needs.get(2));
+    }
     @Test
     public void testFindNeeds() {
         // Invoke
