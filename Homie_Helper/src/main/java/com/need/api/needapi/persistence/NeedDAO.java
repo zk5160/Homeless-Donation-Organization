@@ -2,7 +2,6 @@ package com.need.api.needapi.persistence;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.need.api.needapi.model.Need;
 

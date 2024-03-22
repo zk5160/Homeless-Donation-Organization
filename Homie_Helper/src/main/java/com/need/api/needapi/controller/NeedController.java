@@ -17,7 +17,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.need.api.needapi.persistence.NeedDAO;
-import com.need.api.needapi.persistence.NeedFileDAO;
 import com.need.api.needapi.model.Need;
 
 /**

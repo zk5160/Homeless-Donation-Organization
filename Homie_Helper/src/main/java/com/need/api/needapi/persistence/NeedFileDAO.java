@@ -6,13 +6,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -281,14 +277,6 @@ public class NeedFileDAO implements NeedDAO {
                 return null;  // need does not exist
 
             needs.put(need.getId(),need);
-            // needs.put(need.getCost(), need);
-            // needs.put(need.getQuantity(), need);
-            // needs.put(Interger.parseInt(need.getType),need);
-            // needs.put(need.getId(),need.getCost());
-            // needs.put(need.getId(), need.getType());
-            
-            //needs.put(need.getCost(),need);
-            //needs.put(need.getType(),need);
             save(); // may throw an IOException
             return need;
         }

@@ -2,14 +2,12 @@ package com.need.api.needapi.controller;
 
 import java.io.IOException;
 
-import com.need.api.needapi.model.FundingBasket;
-import com.need.api.needapi.model.Need;
-import com.need.api.needapi.persistence.FundingBasketDAO;
+//import com.need.api.needapi.persistence.FundingBasketDAO;
 import com.need.api.needapi.persistence.NeedDAO;
 import com.need.api.needapi.persistence.UserDAO;
 
 public class CheckoutController {
-    private FundingBasketDAO basket;
+    //private FundingBasketDAO basket;
     private NeedDAO need;
     private UserDAO user;
 
