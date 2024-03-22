@@ -6,8 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.io.File;
@@ -73,6 +76,21 @@ public class FundingBasketDAOTest {
         assertEquals(baskets[0],testBaskets[1]);
         assertEquals(baskets[1],testBaskets[2]);
     }
+
+    // @Test
+    // public void testDiscount() throws IOException {
+    //     FundingBasket[] test;
+    //     test = new FundingBasket[3];
+    //     test[0] = new FundingBasket(99,"tent", 13.5f, 4, "supplies");
+    //     test[1] = new FundingBasket(100,"sweater", 4.9f, 3, "clothes");
+    //     test[2] = new FundingBasket(101,"soup", 2.69f, 2, "food");
+    //     // Invoke
+    //     FundingBasket[] basket = fundingDAO.discounts(0.1f);
+
+    //     assertEquals(test[0], basket[0]);
+    //     assertEquals(test[1], basket[1]);
+    //     assertEquals(test[2], basket[2]);
+    // }
 
     @Test
     public void testGetBasket() {
