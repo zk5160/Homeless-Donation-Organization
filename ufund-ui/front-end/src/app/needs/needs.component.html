@@ -6,13 +6,14 @@
 <h2>Manage Products</h2>
 
 <div>
-  <label for="new-need">Product name: </label>
+  <h3>New Product</h3>
+  <label for="new-need">Name: </label>
   <input id="new-need" #needName />
-  <label for="new-need-cost">Product cost: </label>
+  <label for="new-need-cost">Cost: </label>
   <input cost="new-need-cost" #needCost />
-  <label for="new-need-quantity">Product quantity: </label>
+  <label for="new-need-quantity">Quantity: </label>
   <input quantity="new-need-quantity" #needQuantity />
-  <label for="new-need-type">Product type: </label>
+  <label for="new-need-type">Type: </label>
   <input type="new-need-type" #needType />
   
 
@@ -23,6 +24,7 @@
   </button> 
 </div>
 
+<h2>Cupboard</h2>
 <ul class="needs">
   <li *ngFor="let need of needs">
     <a routerLink="/detail/{{need.id}}">
