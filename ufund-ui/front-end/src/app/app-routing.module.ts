@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NeedsComponent } from './needs/needs.component';
 import { NeedDetailComponent } from './need-detail/need-detail.component';
 import { LoginComponent } from './login/login.component';
+import { FundingBasketComponent } from './funding-basket/funding-basket.component';
 
 const routes: Routes = [
   { path: '', loadChildren: ()=>import('./user/user.module').then((m)=>m.UserModule)}, 
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: NeedDetailComponent },
-  { path: 'needs', component: NeedsComponent }
+  { path: 'needs', component: NeedsComponent },
+  { path: 'funding-basket', component: FundingBasketComponent }
 ];
 
 @NgModule({

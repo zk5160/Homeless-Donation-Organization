@@ -2,9 +2,9 @@
 <div>
 <ul class="needs">
   <li *ngFor="let need of needs">
-    <a routerLink="/detail/{{need.id}}">
+    <!-- <a routerLink="/detail/{{need.id}}">
       <span class="badge">{{need.id}}</span> {{need.name}}
-    </a>
+    </a> -->
     <button type="button" class="delete" title="remove need"
       (click)="delete(need)">x</button>
   </li>
