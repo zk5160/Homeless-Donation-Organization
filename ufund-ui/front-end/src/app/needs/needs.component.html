@@ -8,12 +8,19 @@
 <div>
   <label for="new-need">Product name: </label>
   <input id="new-need" #needName />
+  <label for="new-need-cost">Product cost: </label>
+  <input cost="new-need-cost" #needCost />
+  <label for="new-need-quantity">Product quantity: </label>
+  <input quantity="new-need-quantity" #needQuantity />
+  <label for="new-need-type">Product type: </label>
+  <input type="new-need-type" #needType />
   
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">
+  <button type="button" class="add-button" (click)="add(needName.value, +needCost.value, +needQuantity.value, needType.value); 
+                                                    needName.value=''; needCost.value=''; needQuantity.value=''; needType.value=''">
     Add product
-  </button>
+  </button> 
 </div>
 
 <ul class="needs">
