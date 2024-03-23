@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.need.api.needapi.model.FundingBasket;
+import com.need.api.needapi.model.Need;
 
 
 /**
@@ -216,6 +217,34 @@ public class FundingBasketFileDAO implements FundingBasketDAO {
             else
                 return false;
         }
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public FundingBasket[] discounts(float percent) throws IOException {
+        //need array of fundingbasket
+        //update funding basket
+        //change cost, multiply by percent
+        //in for loop for each id
+        //System.out.println("TEST");
+        synchronized(fundingbaskets) {
+            //for loop is not the fastest, don't think for each would work
+            //System.out.println("SYNC");
+            for (int id=0; id<100; id++){
+                //System.out.println("FOR");
+                if (fundingbaskets.containsKey(id)) {
+                    //System.out.println("IF");
+                    FundingBasket f = getFundingBasket(id);
+                    float cost = (1-percent)*f.getCost();
+                    FundingBasket update = new FundingBasket(id, f.getName(), cost, f.getQuantity(), f.getType());
+                    updateFundingBasket(update);
+                }
+            }
+            return getFundingBasketArray();
+        }
+        
     }
 
     /**

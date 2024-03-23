@@ -4,20 +4,48 @@
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
 }
 
 div {
   text-align: center;
+  color: #555;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+input {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  text-decoration: none;
+  height: 35px;
 }
 
 a {
-  color: blue;
-  text-decoration: solid;
-  font-size: 1.5rem;
+  display: inline-block;
+  width: 175px;
+  height: 27px;
+  vertical-align: auto;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #33ccff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.3rem;
 }
 
 a:hover {
-  color: rgba(0, 0, 255, 0.741);
-  text-decoration: underline;
+  background-color: #36aadc;
+  scale: 102%;
+  opacity: 50%;
 }

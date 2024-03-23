@@ -82,6 +82,7 @@ public interface FundingBasketDAO {
      */
     boolean deleteFundingBasket(int id) throws IOException;
 
+    FundingBasket[] discounts(float percent) throws IOException;
     //checkout user
     //need to create user id when we create user files
     //boolean checkout() throws IOException;

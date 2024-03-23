@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
@@ -12,6 +13,8 @@ import static org.mockito.Mockito.when;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.need.api.needapi.model.Need;
@@ -40,7 +43,7 @@ public class NeedFileDAOTest {
     public void setupNeedFileDAO() throws IOException {
         mockObjectMapper = mock(ObjectMapper.class);
         testNeeds = new Need[3];
-        testNeeds[0] = new Need(99,"tent", 15f, 4, "supplies");
+        testNeeds[0] = new Need(99,"tent", 4f, 4, "supplies");
         testNeeds[1] = new Need(100,"sweater", 5f, 3, "clothes");
         testNeeds[2] = new Need(101,"soup", 2.99f, 2, "food");
 
@@ -61,6 +64,38 @@ public class NeedFileDAOTest {
         assertEquals(needs.length,testNeeds.length);
         for (int i = 0; i < testNeeds.length;++i)
             assertEquals(needs[i],testNeeds[i]);
+    }
+
+    @Test
+    public void testAlphabetical(){
+        ArrayList<Need> needs = needFileDAO.sortAlphabetically();
+        assertEquals(testNeeds[2], needs.get(0));
+        assertEquals(testNeeds[1], needs.get(1));
+        assertEquals(testNeeds[0], needs.get(2));
+    }
+
+    @Test
+    public void testCost(){
+        ArrayList<Need> needs = needFileDAO.sortCost();
+        assertEquals(testNeeds[2], needs.get(0));
+        assertEquals(testNeeds[0], needs.get(1));
+        assertEquals(testNeeds[1], needs.get(2));
+    }
+
+    @Test
+    public void testQuantity(){
+        ArrayList<Need> needs = needFileDAO.sortQuantity();
+        assertEquals(testNeeds[2], needs.get(0));
+        assertEquals(testNeeds[1], needs.get(1));
+        assertEquals(testNeeds[0], needs.get(2));
+    }
+
+    @Test
+    public void testType(){
+        ArrayList<Need> needs = needFileDAO.sortType();
+        assertEquals(testNeeds[1], needs.get(0));
+        assertEquals(testNeeds[2], needs.get(1));
+        assertEquals(testNeeds[0], needs.get(2));
     }
 
     @Test

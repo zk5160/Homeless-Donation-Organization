@@ -3,6 +3,9 @@ package com.need.api.needapi.persistence;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.logging.Logger;
@@ -154,6 +157,82 @@ public class NeedFileDAO implements NeedDAO {
     ** {@inheritDoc}
      */
     @Override
+    public ArrayList<Need> sortAlphabetically() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getName));
+        return needsList;
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortCost() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getCost));
+        return needsList;
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortQuantity() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getQuantity));
+        return needsList;
+    }
+
+        /**
+    ** {@inheritDoc}
+     */
+    @Override
+    public ArrayList<Need> sortType() {
+        Map<Integer, Need> needsMap = needs;
+        // Populate the HashMap
+        
+        // Extract values from the HashMap
+        Collection<Need> needs = needsMap.values();
+
+        // Convert the Collection to a List for sorting
+        ArrayList<Need> needsList = new ArrayList<>(needs);
+
+        // Sort the list based on the name field using a Comparator
+        Collections.sort(needsList, Comparator.comparing(Need::getType));
+        return needsList;
+    }
+
+    /**
+    ** {@inheritDoc}
+     */
+    @Override
     public Need[] findNeed(String containsText) {
         synchronized(needs) {
             return getNeedArray(containsText);
@@ -198,14 +277,6 @@ public class NeedFileDAO implements NeedDAO {
                 return null;  // need does not exist
 
             needs.put(need.getId(),need);
-            // needs.put(need.getCost(), need);
-            // needs.put(need.getQuantity(), need);
-            // needs.put(Interger.parseInt(need.getType),need);
-            // needs.put(need.getId(),need.getCost());
-            // needs.put(need.getId(), need.getType());
-            
-            //needs.put(need.getCost(),need);
-            //needs.put(need.getType(),need);
             save(); // may throw an IOException
             return need;
         }

@@ -6,16 +6,25 @@
 <h2>Manage Products</h2>
 
 <div>
-  <label for="new-need">Product name: </label>
+  <h3>New Product</h3>
+  <label for="new-need">Name: </label>
   <input id="new-need" #needName />
+  <label for="new-need-cost">Cost: </label>
+  <input cost="new-need-cost" #needCost />
+  <label for="new-need-quantity">Quantity: </label>
+  <input quantity="new-need-quantity" #needQuantity />
+  <label for="new-need-type">Type: </label>
+  <input type="new-need-type" #needType />
   
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">
+  <button type="button" class="add-button" (click)="add(needName.value, +needCost.value, +needQuantity.value, needType.value); 
+                                                    needName.value=''; needCost.value=''; needQuantity.value=''; needType.value=''">
     Add product
-  </button>
+  </button> 
 </div>
 
+<h2>Cupboard</h2>
 <ul class="needs">
   <li *ngFor="let need of needs">
     <a routerLink="/detail/{{need.id}}">
