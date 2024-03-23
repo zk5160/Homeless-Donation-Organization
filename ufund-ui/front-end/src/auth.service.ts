@@ -10,6 +10,12 @@ export class AuthService {
       name: 'Bob',
       username: 'Bob',
       password: '123'
+    },
+    {
+      id: 1,
+      name: 'Admin',
+      username: 'Admin',
+      password: '123'
     }
   ]
 

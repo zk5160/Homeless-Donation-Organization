@@ -24,7 +24,7 @@ export class LoginComponent {
     if(!user){
       alert('Invalid username or password');
     }
-    else{
+    else if (this.form.value.username == 'Admin'){
       this.router.navigateByUrl('/admin');
     }
 
