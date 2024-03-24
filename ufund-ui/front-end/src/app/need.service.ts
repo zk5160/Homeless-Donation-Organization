@@ -129,7 +129,7 @@ export class NeedService {
 
   /** PUT: update the need on the user server */
   addBasket(item: Need): Observable<User> {
-    return this.http.post<User>(this.userUrl, item, this.httpOptions).pipe(
+    return this.http.post<User>(this.fundingURl, item, this.httpOptions).pipe(
       tap((newitem: User) => this.log(`basket = ${item}`)),
       catchError(this.handleError<User>('addBasket'))
     );
