@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h1>User Login</h1>
   <label for="username">Username : </label>
   <input type="text" id="username" />
@@ -6,7 +6,22 @@
   <label for="password"> Password : </label>
   <input type="password" id="password" />
   <br />
+  <button type="button" (click)="login()">LOGIN</button>
+  <br />
   <a class="button" href="/dashboard">User Login</a>
   <br />
   <a class="button" href="/needs">Admin Login</a>
+</div> -->
+
+<div>
+  <h1>User Login</h1>
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <label for="username">Username</label>
+    <input type="text" id="username" formControlName="username" />
+    <br />
+    <label for="password">Password</label>
+    <input type="text" id="password" formControlName="password" />
+    <br />
+    <button type="submit">Login</button>
+  </form>
 </div>

@@ -13,7 +13,7 @@ import { NeedsComponent } from './needs/needs.component';
 import { NeedSearchComponent } from './need-search/need-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { FundingBasketComponent } from './funding-basket/funding-basket.component';
-import { LandingComponent } from './user/landing/landing.component';
+//import { LandingComponent } from './user/landing/landing.component';
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -33,7 +33,7 @@ import { LoginComponent } from './login/login.component';
     MessagesComponent,
     NeedSearchComponent,
     FundingBasketComponent,
-    LandingComponent,
+    //LandingComponent,
     LoginComponent
   ],
   bootstrap: [ AppComponent ]

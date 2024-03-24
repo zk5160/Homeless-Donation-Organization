@@ -5,13 +5,18 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Need } from './need';
+import { FundingBasket } from './fundingbasket';
 import { MessageService } from './message.service';
+import { User } from './user';
+
 
 
 @Injectable({ providedIn: 'root' })
 export class NeedService {
 
   private needsUrl = 'http://localhost:8080/need'
+  private fundingURl = 'http://localhost:8080/fundingbasket'
+  private userUrl = 'http://localhost:8080/users'
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -30,6 +35,26 @@ export class NeedService {
         catchError(this.handleError<Need[]>('getNeeds', []))
       );
   }
+
+    /** GET baskets from the server */
+    getFundingBaskets(): Observable<FundingBasket[]> {
+      console.log("Test2")
+      return this.http.get<FundingBasket[]>(this.fundingURl)
+        .pipe(
+          tap(_ => this.log('fetched baskets')),
+          catchError(this.handleError<FundingBasket[]>('getFundingBaskets', []))
+        );
+    }
+
+    /** GET users from the server */
+    getUser(): Observable<User[]> {
+      //console.log("Test")
+      return this.http.get<User[]>(this.userUrl)
+        .pipe(
+          tap(_ => this.log('fetched user')),
+          catchError(this.handleError<User[]>('getUser', []))
+        );
+    }
 
   /** GET need by id. Return `undefined` when id not found */
   getNeedNo404<Data>(id: number): Observable<Need> {
@@ -54,6 +79,23 @@ export class NeedService {
     );
   }
 
+    /** GET need by id. Will 404 if id not found */
+    getFundingBasket(id: number): Observable<FundingBasket> {
+      const url = `${this.fundingURl}/${id}`;
+      return this.http.get<FundingBasket>(url).pipe(
+        tap(_ => this.log(`fetched basket id=${id}`)),
+        catchError(this.handleError<FundingBasket>(`getFundingBasket id=${id}`))
+      );
+    }
+
+    getUserId(id: number): Observable<User> {
+      const url = `${this.userUrl}/${id}`;
+      return this.http.get<User>(url).pipe(
+        tap(_ => this.log(`fetched user id=${id}`)),
+        catchError(this.handleError<User>(`getUser id=${id}`))
+      );
+    }
+
   /* GET needs whose name contains search term */
   searchNeeds(term: string): Observable<Need[]> {
     if (!term.trim()) {
@@ -69,6 +111,12 @@ export class NeedService {
   }
 
   //////// Save methods //////////
+  addUser(user: User): Observable<User> {
+    return this.http.post<User>(this.userUrl, user, this.httpOptions).pipe(
+      tap((newUser: User) => this.log(`added  id=${newUser.id}, name =${newUser.name}`)),
+      catchError(this.handleError<User>('addUser'))
+    );
+  }
 
   /** POST: add a new need to the server */
   addNeed(need: Need): Observable<Need> {
@@ -78,6 +126,23 @@ export class NeedService {
       catchError(this.handleError<Need>('addNeed'))
     );
   }
+
+  /** PUT: update the need on the user server */
+  addBasket(item: Need): Observable<User> {
+    return this.http.post<User>(this.userUrl, item, this.httpOptions).pipe(
+      tap((newitem: User) => this.log(`basket = ${item}`)),
+      catchError(this.handleError<User>('addBasket'))
+    );
+  }
+
+    /** PUT: update the need on the server */
+    updateBasket(item: FundingBasket): Observable<any> {
+      return this.http.put(this.fundingURl, item, this.httpOptions).pipe(
+        tap(_ => this.log(`id=${item.id}, name=${item.name}, cost =${item.cost}, quantity =${item.quantity},
+        type =${item.type}`)),
+        catchError(this.handleError<any>('update'))
+      );
+    }
 
   /** DELETE: delete the need from the server */
   deleteNeed(id: number): Observable<Need> {
@@ -89,6 +154,16 @@ export class NeedService {
     );
   }
 
+    /** DELETE: delete the need from the server */
+    deleteBasket(id: number): Observable<FundingBasket> {
+      const url = `${this.fundingURl}/${id}`;
+  
+      return this.http.delete<FundingBasket>(url, this.httpOptions).pipe(
+        tap(_ => this.log(`deleted item id=${id}`)),
+        catchError(this.handleError<FundingBasket>('deleteitem'))
+      );
+    }
+  
   /** PUT: update the need on the server */
   updateNeed(need: Need): Observable<any> {
     return this.http.put(this.needsUrl, need, this.httpOptions).pipe(
