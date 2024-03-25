@@ -23,8 +23,8 @@ h2 {
 }
 
 a {
-  background-color: #3f525c;
-  border-radius: 2px;
+  background-color: rgb(63, 82, 92);
+  border-radius: 5px;
   padding: 1rem;
   font-size: 1.2rem;
   text-decoration: none;
@@ -33,7 +33,7 @@ a {
   text-align: center;
   width: 100%;
   min-width: 70px;
-  margin: .5rem auto;
+  margin: 0.5rem auto;
   box-sizing: border-box;
 
   /* flexbox */
@@ -50,5 +50,58 @@ a {
 }
 
 a:hover {
-  background-color: black;
+  background-color: rgb(52, 68, 119);
+  scale: 105%;
+}
+
+* {
+  font-size: 1.8rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+
+div {
+  text-align: center;
+  color: #555;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+input {
+  width: 20%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1.1rem;
+  text-decoration: none;
+  height: 35px;
+}
+
+button {
+  display: inline-block;
+  width: 85px;
+  height: 27px;
+  vertical-align: auto;
+  margin-top: 15px;
+  text-align: center;
+  background-color: #dd45ff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+button:hover {
+  background-color: #d04efc;
+  scale: 105%;
+  opacity: 90%;
 }
