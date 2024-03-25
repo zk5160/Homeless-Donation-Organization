@@ -28,14 +28,14 @@ input {
   height: 35px;
 }
 
-a {
+button {
   display: inline-block;
-  width: 175px;
+  width: 85px;
   height: 27px;
   vertical-align: auto;
   margin-top: 15px;
   text-align: center;
-  background-color: #33ccff;
+  background-color: #dd45ff;
   color: #fff;
   text-decoration: none;
   border: none;
@@ -44,8 +44,8 @@ a {
   font-size: 1.3rem;
 }
 
-a:hover {
-  background-color: #36aadc;
-  scale: 102%;
-  opacity: 50%;
+button:hover {
+  background-color: #d04efc;
+  scale: 105%;
+  opacity: 90%;
 }

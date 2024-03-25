@@ -12,16 +12,17 @@
   <br />
   <a class="button" href="/needs">Admin Login</a>
 </div> -->
-
-<div>
-  <h1>Login</h1>
-  <form [formGroup]="form" (ngSubmit)="login()">
-    <label for="username">Username</label>
-    <input type="text" id="username" formControlName="username" />
-    <br />
-    <label for="password">Password</label>
-    <input type="text" id="password" formControlName="password" />
-    <br />
-    <button type="submit">Login</button>
-  </form>
-</div>
+<html>
+  <div>
+    <h1>Login</h1>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <label for="username">Username</label>
+      <input type="text" id="username" formControlName="username" />
+      <br />
+      <label for="password">Password</label>
+      <input type="text" id="password" formControlName="password" />
+      <br />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</html>
