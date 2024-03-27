@@ -1,5 +1,10 @@
 /* DashboardComponent's private CSS styles */
 
+* {
+  font-size: 35px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 h2 {
   text-align: center;
 }
@@ -22,86 +27,20 @@ h2 {
   align-items: flex-start;
 }
 
-a {
-  background-color: rgb(63, 82, 92);
-  border-radius: 5px;
-  padding: 1rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  text-align: center;
+nav {
+  margin-top: -10px;
+  padding-right: 20px;
+  background: rgb(71, 71, 71);
+  height: 50px;
   width: 100%;
-  min-width: 70px;
-  margin: 0.5rem auto;
-  box-sizing: border-box;
-
-  /* flexbox */
-  order: 0;
-  flex: 0 1 auto;
-  align-self: auto;
+  margin-left: -10px;
+  line-height: 38px;
+  word-spacing: 20px;
 }
 
-@media (min-width: 600px) {
-  a {
-    width: 18%;
-    box-sizing: content-box;
-  }
-}
-
-a:hover {
-  background-color: rgb(52, 68, 119);
-  scale: 105%;
-}
-
-* {
-  font-size: 1.8rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-h1 {
-  font-size: 2.3rem;
-}
-
-div {
-  text-align: center;
-  color: #555;
-}
-
-label {
-  font-size: 1.6rem;
-}
-
-input {
-  width: 20%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
+a {
+  padding-left: 20px;
   font-size: 1.1rem;
   text-decoration: none;
-  height: 35px;
-}
-
-button {
-  display: inline-block;
-  width: 85px;
-  height: 27px;
-  vertical-align: auto;
-  margin-top: 15px;
-  text-align: center;
-  background-color: #dd45ff;
   color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 1.3rem;
-}
-
-button:hover {
-  background-color: #d04efc;
-  scale: 105%;
-  opacity: 90%;
 }
