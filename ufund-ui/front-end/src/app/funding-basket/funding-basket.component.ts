@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { FundingBasket } from '../fundingbasket';
 import { User } from '../user';
 import { NeedService } from '../need.service';
+import { CurrentUserService } from '../current-user.service';
+import { UserService } from '../user.service';
 import { Location } from '@angular/common';
 
 @Component({
@@ -19,12 +21,19 @@ export class FundingBasketComponent implements OnInit {
 
 
   constructor(private needService: NeedService,
+    private currentuserservice : CurrentUserService,
+    private userService : UserService,
     private location: Location) { }
 
   ngOnInit(): void {
     //this.getNeeds();
-    this.getFundingBasket();
-    this.getUser();
+    //this.getFundingBasket();
+    //this.getUser();
+
+    this.userService.searchUsers(this.currentuserservice.getCurrentUser())
+    .subscribe((currentcart: User[]) => {this.fundingbasket = currentcart[0].basket});
+
+    this.fundingbasket = this.currentuserservice.getCurrentUserCart(); 
   }
 
   // getNeeds(): void {
