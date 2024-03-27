@@ -6,6 +6,7 @@ import { Need } from '../need';
 import { User } from '../user';
 import { FundingBasket } from '../fundingbasket';
 import { NeedService } from '../need.service';
+import { CurrentUserService } from '../current-user.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -20,6 +21,7 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private needService: NeedService,
+    private currentuserservice : CurrentUserService,
     private location: Location
   ) {}
 
@@ -38,6 +40,9 @@ export class UserDetailComponent implements OnInit {
       });
   }
   
+  add (item: Need){
+    this.currentuserservice.addToCart(item);
+  }
   getNeed(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.needService.getNeed(id)

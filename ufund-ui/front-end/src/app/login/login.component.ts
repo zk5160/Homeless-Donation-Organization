@@ -58,12 +58,12 @@ export class LoginComponent {
         if (username.toLowerCase() === 'admin') {
           this.router.navigateByUrl('/needs');
         } 
-
-        // else if(this.userService.findUserByName(username)){
-        //   alert("Returning user");
-        //   //not working
-        //   //this.currentUser.setCurrentUser(username);
-        // }
+        else if(this.usernames.includes(username)){
+          //alert("Returning user");
+          //not working
+          this.currentUser.setCurrentUser(username);
+          this.router.navigateByUrl('/dashboard');
+        }
         else {
           //this.
           //check if returner??
