@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 //import { Need } from '../need';
 import { FundingBasket } from '../fundingbasket';
 import { User } from '../user';
+import { Need } from '../need';
 import { NeedService } from '../need.service';
 import { CurrentUserService } from '../current-user.service';
 import { UserService } from '../user.service';
@@ -84,9 +85,24 @@ export class FundingBasketComponent implements OnInit {
   //   }
   // }
 
-  delete(basket: FundingBasket): void {
-    this.fundingbasket = this.fundingbasket.filter(h => h !== basket);
-    this.needService.deleteBasket(basket.id).subscribe();
+  delete(item: Need): void {
+    // this.fundingbasket = this.fundingbasket.filter(h => h !== basket);
+    // this.needService.deleteBasket(basket.id).subscribe();
+    this.currentuserservice.removeOneFromCart(item);
   }
 
+  add(item : Need): void {
+    this.currentuserservice.addToCart(item);
+  }
+
+  removeAll (item : Need): void {
+    this.currentuserservice.removeAllFromCart(item);
+  }
+
+  checkout() : void {
+    if (this.fundingbasket.length == 0){
+      alert("Cart is empty");
+    }
+    this.currentuserservice.checkout();
+  }
 }
