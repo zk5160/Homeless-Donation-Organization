@@ -1,13 +1,17 @@
 <nav>
-  <a routerLink="/">Logout </a>
-  <a routerLink="/funding-basket">Shopping-Cart</a>
+  <a id="nav-links" routerLink="/">Logout </a>
+  <a id="nav-links" routerLink="/funding-basket">Shopping-Cart</a>
 </nav>
 <!-- <router-outlet></router-outlet> -->
 
 <!-- top needs -->
 <h2>Product Dashboard</h2>
 <div class="needs-menu">
-  <a *ngFor="let need of needs" routerLink="/userdetail/{{ need.id }}">
+  <a
+    id="need-details"
+    *ngFor="let need of needs"
+    routerLink="/userdetail/{{ need.id }}"
+  >
     {{ need.name }}
   </a>
 </div>

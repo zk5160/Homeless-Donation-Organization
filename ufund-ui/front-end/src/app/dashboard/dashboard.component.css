@@ -38,13 +38,41 @@ nav {
   word-spacing: 20px;
 }
 
-a {
+#nav-links {
   padding-left: 20px;
   font-size: 1.1rem;
   text-decoration: none;
   color: #fff;
 }
 
-a:hover {
+#nav-links:hover {
+  opacity: 60%;
+}
+
+#need-details {
+  border: 1px solid black;
+  background-color: #555;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  margin: 0.5rem auto;
+  box-sizing: border-box;
+
+  /* flexbox */
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+}
+
+#need-details:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  color: rgb(0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 24px,
+    rgba(0, 0, 0, 0.22) 0px 5px 10px;
   opacity: 80%;
 }
