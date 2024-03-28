@@ -65,13 +65,12 @@ export class LoginComponent {
           this.router.navigateByUrl('/dashboard');
         }
         else {
-          //this.
-          //check if returner??
           //need to save to json
           //id will increment correctly, 0 is placeholder
           //need to fix, can only add user
           const newUser: User = { id: 0, name: username,  basket : []};
           this.needService.addUser(newUser).subscribe();
+          this.currentUser.setCurrentUser(username);
           this.router.navigateByUrl('/dashboard');
         }
       } else {
