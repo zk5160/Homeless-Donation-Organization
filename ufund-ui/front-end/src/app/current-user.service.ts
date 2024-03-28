@@ -120,6 +120,12 @@ export class CurrentUserService {
   async addToCart(product: Need){
     try {
       const inventoryVariant = await firstValueFrom(this.needService.getNeed(Math.abs(product.id)));
+      console.log(inventoryVariant.quantity);
+      if (inventoryVariant.quantity == 0){
+        console.log("%d", inventoryVariant.quantity);
+        alert("Quantity limit reached, cannot add more items");
+      }
+      else{
       await lastValueFrom(this.needService.updateNeed({
         id: Math.abs(product.id),
         name: product.name,
@@ -148,7 +154,8 @@ export class CurrentUserService {
         basket: this.getCurrentUserCart()
       } as User).toPromise();
       console.log('User updated');
-    } catch (error) {
+    }
+   } catch (error) {
       console.error('Error updating user or product:', error);
     }
   }
