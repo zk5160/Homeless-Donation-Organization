@@ -98,10 +98,11 @@ deleteUser(id: number): Observable<User> {
 
 /* GET users whose name contains search term */
 searchUsers(term: string): Observable<User[]> {
-  if (!term.trim()) {
-    // if not search term, return empty user array.
-    return of([]);
-  }
+  // if (!term.trim()) {
+  //   if(this.findUserByName(term) == null){
+  //   // if not search term, return empty user array.
+  //   return of([]);
+  // }
   return this.http.get<User[]>(`${this.usersUrl}/?name=${term}`).pipe(
     tap(x => x.length ?
        this.log(`found users matching "${term}"`) :

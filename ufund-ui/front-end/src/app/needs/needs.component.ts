@@ -24,7 +24,10 @@ export class NeedsComponent implements OnInit {
 
   add(name: string, cost: number, quantity: number, type: string): void {
     name = name.trim();
-    if (!name) { return; }
+    if (!name || !cost || !quantity || !type) {
+       alert('Fill out all fields');
+       return;  
+      }
     this.needService.addNeed({ name, cost, quantity, type } as Need)
       .subscribe(need => {
         this.needs.push(need);

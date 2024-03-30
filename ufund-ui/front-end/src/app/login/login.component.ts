@@ -28,7 +28,7 @@ export class LoginComponent {
   }
   ngOnInit(): void {
 
-    this.currentUser.setCurrentUser("GUEST");
+    this.currentUser.setCurrentUser("user");
     
     this.userService.getUsers().subscribe((checkusers: User[]) =>{this.users = checkusers;
       for (let index = 0; index < checkusers.length; index++) {
@@ -43,18 +43,30 @@ export class LoginComponent {
     const password = this.form.value.password;
     //console.log('test');
     console.log('Raw username', username);
+    console.log('Raw password', password);
+    if (username==null && password ==null){
+      alert('no password');
+    }
     if (username ==null){
       alert('no username');
     }
+    if (password ==null){
+      alert('no password');
+    }
+
     // Check if username is empty
-    if (!username) {
+    if (!username && !password) {
+      alert('Please enter a username and password');
+    } else if(!username){
       alert('Please enter a username');
+    } else if(!password){
+      alert('Please enter a password');
     } else {
       // Pass username and password to AuthService login method
       //const user = this.authSurvice.login(username, password);
 
       // Check if user is successfully logged in
-      if (username) {
+      // if (username) {
         if (username.toLowerCase() === 'admin') {
           this.router.navigateByUrl('/needs');
         } 
@@ -73,9 +85,9 @@ export class LoginComponent {
           this.currentUser.setCurrentUser(username);
           this.router.navigateByUrl('/dashboard');
         }
-      } else {
-        alert('Invalid username or password');
-      }
+      // } else {
+      //   alert('Invalid username or password');
+      // }
     }
     }
 
