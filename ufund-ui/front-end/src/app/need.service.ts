@@ -56,6 +56,85 @@ export class NeedService {
         );
     }
 
+    sortA(): Observable<Need[]> {
+      return new Observable<Need[]>(observer => {
+          
+          this.getNeeds().subscribe(array => {
+              const sortedArray = array.slice().sort((a, b) => {
+                  
+                  const nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                  const nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                  if (nameA < nameB) {
+                      return -1;
+                  }
+                  if (nameA > nameB) {
+                      return 1;
+                  }
+                  // names must be equal
+                  return 0;
+              });
+              observer.next(sortedArray);
+              observer.complete();
+          });
+      });
+    }
+
+    sortQuant(): Observable<Need[]> {
+      return new Observable<Need[]>(observer => {
+        
+          this.getNeeds().subscribe(array => {
+              const sortedArray = array.slice().sort((a, b) => {
+                  // Assuming quantity is the property you want to sort by
+                  return a.quantity - b.quantity;
+              });
+              observer.next(sortedArray);
+              observer.complete();
+          });
+      });
+    }
+
+    sortQuantHigh(): Observable<Need[]> {
+      return new Observable<Need[]>(observer => {
+        
+          this.getNeeds().subscribe(array => {
+              const sortedArray = array.slice().sort((a, b) => {
+                  // Assuming quantity is the property you want to sort by
+                  return b.quantity - a.quantity;
+              });
+              observer.next(sortedArray);
+              observer.complete();
+          });
+      });
+    }
+
+    sortCostLow(): Observable<Need[]> {
+      return new Observable<Need[]>(observer => {
+        
+          this.getNeeds().subscribe(array => {
+              const sortedArray = array.slice().sort((a, b) => {
+                  // Assuming quantity is the property you want to sort by
+                  return a.cost - b.cost;
+              });
+              observer.next(sortedArray);
+              observer.complete();
+          });
+      });
+    }
+
+    sortCostHigh(): Observable<Need[]> {
+      return new Observable<Need[]>(observer => {
+        
+          this.getNeeds().subscribe(array => {
+              const sortedArray = array.slice().sort((a, b) => {
+                  // Assuming quantity is the property you want to sort by
+                  return b.cost - a.cost;
+              });
+              observer.next(sortedArray);
+              observer.complete();
+          });
+      });
+    }
+    
   /** GET need by id. Return `undefined` when id not found */
   getNeedNo404<Data>(id: number): Observable<Need> {
     const url = `${this.needsUrl}/?id=${id}`;
