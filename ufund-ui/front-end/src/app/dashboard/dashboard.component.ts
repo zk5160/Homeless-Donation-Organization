@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.getNeeds();
     this.sortedList = this.needService.sortA();
-    this.sortedQuantL = this.needService.sortQuant();
+    this.sortedQuantL = this.needService.sortQuantLow();
     this.sortedQuantH = this.needService.sortQuantHigh();
     this.sortedCostL = this.needService.sortCostLow();
     this.sortedCostH = this.needService.sortCostHigh();
@@ -40,26 +40,47 @@ export class DashboardComponent implements OnInit {
   toggleA(): void {
     // Toggle the value of showA when the button is clicked
     this.showA = !this.showA;
+    this.showQuantL = false;
+    this.showQuantH = false;
+    this.showCostL = false;
+    this.showCostH = false;
+
   }
 
-  toggleQuant(): void {
+  toggleQuantL(): void {
     // Toggle the value of showA when the button is clicked
     this.showQuantL = !this.showQuantL;
+    this.showA = false;
+    this.showQuantH = false;
+    this.showCostL = false;
+    this.showCostH = false;
   }
 
   toggleQuantH(): void {
     // Toggle the value of showA when the button is clicked
     this.showQuantH = !this.showQuantH;
+    this.showA = false;
+    this.showQuantL = false;
+    this.showCostL = false;
+    this.showCostH = false;
   }
 
   toggleCostL(): void {
     // Toggle the value of showA when the button is clicked
     this.showCostL = !this.showCostL;
+    this.showA = false;
+    this.showQuantL = false;
+    this.showQuantH = false;
+    this.showCostH = false;
   }
 
   toggleCostH(): void {
     // Toggle the value of showA when the button is clicked
     this.showCostH = !this.showCostH;
+    this.showA = false;
+    this.showQuantL = false;
+    this.showQuantH = false;
+    this.showCostL = false;
   }
 
 
