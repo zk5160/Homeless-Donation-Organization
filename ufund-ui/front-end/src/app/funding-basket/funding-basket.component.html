@@ -3,6 +3,11 @@
 </nav>
 
 <h2>Shopping Cart</h2>
+
+<ul *ngIf="EmptyBasket">
+  <label>Shopping cart is empty</label>
+</ul>
+
 <div>
 <ul class="user">
   <li *ngFor="let fundingbasket of fundingbasket">
