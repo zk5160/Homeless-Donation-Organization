@@ -19,6 +19,7 @@ export class FundingBasketComponent implements OnInit {
   //needs: Need[] = [];
   fundingbasket: FundingBasket[] = [];
   user: User[] = [];
+  EmptyBasket : boolean = false;
 
   constructor(
     private needService: NeedService,
@@ -39,12 +40,21 @@ export class FundingBasketComponent implements OnInit {
       });
 
     this.fundingbasket = this.currentuserservice.getCurrentUserCart();
+
+    if (this.fundingbasket.length == 0 ){
+      alert("NOTHING IN BASKET");
+    }
+    this.nothing()
   }
 
-  // getNeeds(): void {
-  //   this.needService.getNeeds()
-  //   .subscribe(needs => this.needs = needs);
-  // }
+  nothing(): void {
+    if (this.fundingbasket.length ==0){
+      this.EmptyBasket = true;
+    }
+    else {
+      this.EmptyBasket = false;
+    }
+  }
 
   getFundingBasket(): void {
     // Call the method to fetch funding baskets from the service
