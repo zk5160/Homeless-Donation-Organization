@@ -5,7 +5,9 @@
 h1 {
   margin-bottom: 0;
   padding: 15px;
+  margin-top: 20vh;
   text-align: center;
+  color: #555;
 }
 
 nav {
@@ -23,9 +25,9 @@ nav {
   padding-left: 20px;
   font-size: 1.1rem;
   text-decoration: none;
-  color: #fff;
+  color: #dedede;
 }
 
 #nav-links:hover {
-  opacity: 60%;
+  color: white;
 }

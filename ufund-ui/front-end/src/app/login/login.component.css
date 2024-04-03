@@ -1,5 +1,4 @@
 * {
-  font-size: 1.8rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -9,6 +8,7 @@ h1 {
 
 div {
   text-align: center;
+  margin-top: 20vh;
   color: #555;
 }
 

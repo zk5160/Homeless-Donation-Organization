@@ -1,12 +1,13 @@
 /* DashboardComponent's private CSS styles */
 
 * {
-  font-size: 35px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 h2 {
+  font-size: 2.3rem;
   text-align: center;
+  color: #555;
 }
 
 .needs-menu {
@@ -34,7 +35,7 @@ nav {
   height: 50px;
   width: 100%;
   margin-left: -10px;
-  line-height: 38px;
+  line-height: 50px;
   word-spacing: 20px;
 }
 
@@ -42,11 +43,11 @@ nav {
   padding-left: 20px;
   font-size: 1.1rem;
   text-decoration: none;
-  color: #fff;
+  color: #dedede;
 }
 
 #nav-links:hover {
-  opacity: 60%;
+  color: white;
 }
 
 #need-details {
