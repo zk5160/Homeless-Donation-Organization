@@ -79,7 +79,7 @@ export class NeedService {
       });
     }
 
-    sortQuant(): Observable<Need[]> {
+    sortQuantLow(): Observable<Need[]> {
       return new Observable<Need[]>(observer => {
         
           this.getNeeds().subscribe(array => {
