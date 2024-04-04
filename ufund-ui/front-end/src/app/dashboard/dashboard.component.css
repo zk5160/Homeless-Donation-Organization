@@ -72,8 +72,7 @@ nav {
 #need-details:hover {
   background-color: rgb(255, 255, 255);
   border: 1px solid black;
-  color: rgb(0, 0, 0);
+  color: #555;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 24px,
     rgba(0, 0, 0, 0.22) 0px 5px 10px;
-  opacity: 80%;
 }

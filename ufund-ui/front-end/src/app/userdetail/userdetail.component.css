@@ -17,8 +17,11 @@ h2 {
   width: 300px;
   border-radius: 20px;
   margin: auto;
-  height: 180px;
+  height: 205px;
   color: white;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px,
+    rgba(0, 0, 0, 0.22) 0px 5px 10px;
 }
 
 #detail {
@@ -27,33 +30,40 @@ h2 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #555;
   text-align: center;
 }
 
+#buttons {
+  text-align: center;
+}
+
 button {
-  margin: auto;
-  width: 85px;
+  width: fit-content;
   height: 50px;
-  margin-left: 45%;
-  margin-top: 15px;
+  margin-top: 50px;
+  margin-right: 15px;
+  margin-left: 30px;
+  margin-bottom: 10px;
   text-align: center;
   background-color: #555;
   color: #fff;
   text-decoration: none;
   border: none;
-  border-radius: 7px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.1rem;
+  border: 1px solid black;
 }
 
 button:hover {
   background-color: #ffffff;
   color: #555;
-  border: 2px solid black;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 16px, rgba(0, 0, 0, 0.22) 0px 5px 10px;
 }
 
 button:active {
-  scale: 110%;
+  scale: 105%;
 }
