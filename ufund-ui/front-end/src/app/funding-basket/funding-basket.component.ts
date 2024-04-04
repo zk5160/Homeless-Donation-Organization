@@ -9,6 +9,9 @@ import { NeedService } from '../need.service';
 import { CurrentUserService } from '../current-user.service';
 import { UserService } from '../user.service';
 import { Location } from '@angular/common';
+import { tap, catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
+
 
 @Component({
   selector: 'app-funding-basket',
@@ -74,22 +77,24 @@ export class FundingBasketComponent implements OnInit {
   save(): void {
     if (this.fundingbasket && this.fundingbasket.length > 0) {
       for (const basket of this.fundingbasket) {
-        this.needService.updateBasket(basket).subscribe(
-          () => {
+        this.needService.updateBasket(basket).pipe(
+          tap(() => {
             // Basket updated successfully, you can perform any additional logic here if needed
             console.log(`Basket with ID ${basket.id} updated successfully.`);
-          },
-          (error) => {
+          }),
+          catchError(error => {
             // Handle error
             console.error(`Error updating basket with ID ${basket.id}:`, error);
-          }
-        );
+            return of(null); // Returning an observable here to swallow the error
+          })
+        ).subscribe();
       }
       //this.copyBasket();
     } else {
       console.warn('No baskets to update.');
     }
   }
+  
 
   // save(): void {
   //   if (this.fundingbasket) {
@@ -102,14 +107,17 @@ export class FundingBasketComponent implements OnInit {
     // this.fundingbasket = this.fundingbasket.filter(h => h !== basket);
     // this.needService.deleteBasket(basket.id).subscribe();
     this.currentuserservice.removeOneFromCart(item);
+    this.updateFundingBasket();
   }
 
   add(item: Need): void {
     this.currentuserservice.addToCart(item);
+    this.updateFundingBasket();
   }
 
   removeAll(item: Need): void {
     this.currentuserservice.removeAllFromCart(item);
+    this.updateFundingBasket();
   }
 
   checkout(): void {
@@ -119,5 +127,9 @@ export class FundingBasketComponent implements OnInit {
       this.currentuserservice.clearCart();
     }
     this.currentuserservice.checkout();
+  }
+
+  updateFundingBasket(): void {
+    this.fundingbasket = this.currentuserservice.getCurrentUserCart();
   }
 }
