@@ -6,7 +6,12 @@
 
 <!-- top needs -->
 <h2>Product Dashboard</h2>
-<div class="needs-menu">
+
+<ul *ngIf="EmptyCupboard">
+  <label>Empty Cupboard</label>
+</ul>
+
+<div class="needs-menu" *ngIf="!EmptyCupboard">
   <a
     id="need-details"
     *ngFor="let need of needs"

@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class DashboardComponent implements OnInit {
   needs: Need[] = [];
+  EmptyCupboard: boolean = false;
   sortedList: Observable<Need[]> | undefined; 
   sortedQuantL: Observable<Need[]> | undefined; 
   sortedQuantH: Observable<Need[]> | undefined; 
@@ -34,7 +35,18 @@ export class DashboardComponent implements OnInit {
 
   getNeeds(): void {
     this.needService.getNeeds()
-      .subscribe(needs => this.needs = needs.slice());
+      .subscribe(needs => {
+        console.log("Needs fetched:", needs);
+        this.needs = needs.slice();
+        console.log("Updated needs:", this.needs);
+        this.checkEmptyCupboard();
+      });
+  }
+
+  checkEmptyCupboard(): void {
+    console.log("Checking empty cupboard...");
+    this.EmptyCupboard = this.needs.length === 0;
+    console.log("EmptyCupboard:", this.EmptyCupboard);
   }
 
   toggleA(): void {
