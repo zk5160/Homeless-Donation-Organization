@@ -40,9 +40,17 @@ export class UserDetailComponent implements OnInit {
       });
   }
   
-  add (item: Need){
+  add(item: Need): void {
     this.currentuserservice.addToCart(item);
+    // Check if need is defined and has a quantity property
+    if (this.need && this.need.quantity !== undefined) {
+      if(this.need.quantity != 0)
+      {
+        this.need.quantity--;
+      }
+    }
   }
+
   getNeed(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
     this.needService.getNeed(id)
