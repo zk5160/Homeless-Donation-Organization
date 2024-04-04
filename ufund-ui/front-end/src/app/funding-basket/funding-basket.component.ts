@@ -20,6 +20,7 @@ export class FundingBasketComponent implements OnInit {
   fundingbasket: FundingBasket[] = [];
   user: User[] = [];
   EmptyBasket : boolean = false;
+  sum : number = 0;
 
   constructor(
     private needService: NeedService,
@@ -27,8 +28,14 @@ export class FundingBasketComponent implements OnInit {
     private userService: UserService,
     private location: Location
   ) {}
-
+  
+  cost() : number {
+    this.sum = this.currentuserservice.getCurrentUserTotal();
+    return this.sum;
+  }
   ngOnInit(): void {
+    this.cost();
+    //this.currentuserservice.getCurrentUserTotal();
     //this.getNeeds();
     //this.getFundingBasket();
     //this.getUser();
@@ -120,4 +127,6 @@ export class FundingBasketComponent implements OnInit {
     }
     this.currentuserservice.checkout();
   }
+
+
 }
