@@ -1,14 +1,17 @@
 <html>
-  <div>
-    <h1>Enter your credentials</h1>
-    <form [formGroup]="form" (ngSubmit)="login()">
-      <label for="username">Username : </label>
-      <input type="text" id="username" formControlName="username" />
-      <br />
-      <label for="password">Password : </label>
-      <input type="password" id="password" formControlName="password" />
-      <br />
-      <button type="submit">Login</button>
-    </form>
-  </div>
+  <body [class.dark-theme]="isDarkTheme" [class.light-theme]="!isDarkTheme">
+    <div>
+      <button (click)="toggleTheme()" id="toggle">Toggle</button>
+      <h1>Enter your credentials</h1>
+      <form [formGroup]="form" (ngSubmit)="login()">
+        <label for="username">Username : </label>
+        <input type="text" id="username" formControlName="username" />
+        <br />
+        <label for="password">Password : </label>
+        <input type="password" id="password" formControlName="password" />
+        <br />
+        <button type="submit" id="login">Login</button>
+      </form>
+    </div>
+  </body>
 </html>

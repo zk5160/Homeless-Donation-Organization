@@ -6,50 +6,136 @@ h1 {
   font-size: 2.3rem;
 }
 
-div {
-  text-align: center;
-  margin-top: 20vh;
-  color: #555;
+.light-theme {
+  div {
+    text-align: center;
+    margin-top: 20vh;
+    color: #555;
+  }
+
+  label {
+    font-size: 1.4rem;
+  }
+
+  input {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    text-decoration: none;
+    height: 30px;
+  }
+
+  #login {
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    vertical-align: auto;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+
+  #login:hover {
+    background-color: #ffffff;
+    color: #555;
+    border: 2px solid black;
+  }
+
+  #login:active {
+    scale: 105%;
+  }
+
+  #toggle {
+    background-color: #555;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #toggle:hover {
+    background-color: #ffffff;
+    color: #555;
+    border: 2px solid black;
+  }
 }
 
-label {
-  font-size: 1.4rem;
-}
+.dark-theme {
+  div {
+    text-align: center;
+    margin-top: 20vh;
+    color: #555;
+  }
 
-input {
-  width: 20%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-sizing: border-box;
-  font-size: 1.1rem;
-  text-decoration: none;
-  height: 30px;
-}
+  label {
+    font-size: 1.4rem;
+  }
 
-button {
-  display: inline-block;
-  width: 85px;
-  height: 30px;
-  vertical-align: auto;
-  margin-top: 15px;
-  text-align: center;
-  background-color: #555;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  font-size: 1.3rem;
-}
+  input {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    text-decoration: none;
+    height: 30px;
+  }
 
-button:hover {
-  background-color: #ffffff;
-  color: #555;
-  border: 2px solid black;
-}
+  #login {
+    display: inline-block;
+    width: 85px;
+    height: 30px;
+    vertical-align: auto;
+    margin-top: 15px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
 
-button:active {
-  scale: 110%;
+  #login:hover {
+    background-color: #ffffff;
+    color: #555;
+    border: 2px solid black;
+  }
+
+  #login:active {
+    scale: 105%;
+  }
+
+  #toggle {
+    background-color: #e0e0e0;
+    color: #555;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #toggle:hover {
+    background-color: #ffffff;
+    color: #555;
+    border: 2px solid black;
+  }
 }
