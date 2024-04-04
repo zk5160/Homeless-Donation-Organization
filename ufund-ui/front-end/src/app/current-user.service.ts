@@ -117,6 +117,28 @@ export class CurrentUserService {
     return sum;
   }
 
+    /**
+   * Gets the current user's cart.
+   * @returns The current user's cart.
+   */
+    getCurrentUserTotal() {
+      this.userService
+        .searchUsers(CurrentUserService.currentUser)
+        .subscribe((users: User[]) => {
+          CurrentUserService.currentUserCart = users[0].basket;
+        });
+      var sum = 0;
+      for (
+        let index = 0; index < CurrentUserService.currentUserCart.length; index++
+        ) 
+        {
+        const element = CurrentUserService.currentUserCart[index];
+        sum += element.cost * element.quantity;
+      }
+      return sum;
+    }
+
+  
   getCurrentUserCart() {
     this.userService
       .searchUsers(CurrentUserService.currentUser)
