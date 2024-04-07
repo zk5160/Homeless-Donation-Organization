@@ -208,6 +208,7 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 #### Anomalies
 * FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
+  * Discrepency fixed as of Sprint 3, and sufficient tests have been created.
 
 ## Ongoing Rationale
 * 2024/04/07: Sprint 3 we decided to scrap our dark mode and discount code 10% enhancement features due to the complexity of implementing them. We are instead sticking with our five sorting features (high quantity, low quantity, high price, low price, alphabetical).
