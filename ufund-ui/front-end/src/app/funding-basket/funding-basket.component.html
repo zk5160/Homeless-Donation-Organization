@@ -9,32 +9,51 @@
 </ul>
 
 <div>
-<ul class="user">
-  <li *ngFor="let fundingbasket of fundingbasket">
-    <!-- <a routerLink="/userdetail/{{fundingbasket.id}}"> -->
+  <ul class="user">
+    <li *ngFor="let fundingbasket of fundingbasket">
+      <!-- <a routerLink="/userdetail/{{fundingbasket.id}}"> -->
       <label for="basket-name">name: </label>
-      <span class="badge"></span> {{fundingbasket.name}}
+      <span class="badge"></span> {{ fundingbasket.name }}
 
       <div>
         <label for="basket-quantity">quantity: </label>
-        <span class="badge"></span> {{fundingbasket.quantity}}
+        <span class="badge"></span> {{ fundingbasket.quantity }}
         <!-- <label for="basket-quantity">fundingbasket quantity: </label>
         <input id="basket-quantity" [(ngModel)]="fundingbasket.quantity" placeholder="Basket Quantity"/> -->
-      
-    <!-- </a> -->
-    <button type="button" class="add" title="remove need"
-      (click)="add(fundingbasket)">+1</button>
-    <button type="button" class="delete" title="remove need"
-      (click)="delete(fundingbasket)">-1</button>
-      <button type="button" class="removeAll" title="removeAll"
-      (click)="removeAll(fundingbasket)">🗑</button>
-    </div>
-    <br>
-  </li>
-</ul>
-<!-- to see update, you need to go back and reenter shopping cart -->
-<p>The current user's total is: {{ sum }}</p>
 
-<button type="button" (click)="goBack()">Go back</button>
-<button type="button" (click)="checkout()">Checkout</button>
+        <!-- </a> -->
+        <button
+          type="button"
+          class="add"
+          title="remove need"
+          (click)="add(fundingbasket)"
+        >
+          +
+        </button>
+        <button
+          type="button"
+          class="delete"
+          title="remove need"
+          (click)="delete(fundingbasket)"
+        >
+          -
+        </button>
+        <button
+          type="button"
+          id="removeAll"
+          class="removeAll"
+          title="removeAll"
+          (click)="removeAll(fundingbasket)"
+        >
+          🗑
+        </button>
+      </div>
+      <br />
+    </li>
+  </ul>
+  <!-- to see update, you need to go back and reenter shopping cart -->
+  <p>The current user's total is: {{ sum }}</p>
+
+  <button type="button" (click)="goBack()">Go back</button>
+  <button type="button" (click)="checkout()">Checkout</button>
 </div>
