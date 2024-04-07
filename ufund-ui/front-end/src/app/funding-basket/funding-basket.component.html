@@ -10,14 +10,14 @@
 
 <div>
   <ul class="user">
-    <li *ngFor="let fundingbasket of fundingbasket">
+    <li *ngFor="let need of fundingbasket">
       <!-- <a routerLink="/userdetail/{{fundingbasket.id}}"> -->
-      <label for="basket-name">name: </label>
-      <span class="badge"></span> {{ fundingbasket.name }}
+      <label for="need-name">name: </label>
+      <span class="badge"></span> {{ need.name }}
 
       <div>
-        <label for="basket-quantity">quantity: </label>
-        <span class="badge"></span> {{ fundingbasket.quantity }}
+        <label for="need-quantity">quantity: </label>
+        <span class="badge"></span> {{ need.quantity }}
         <!-- <label for="basket-quantity">fundingbasket quantity: </label>
         <input id="basket-quantity" [(ngModel)]="fundingbasket.quantity" placeholder="Basket Quantity"/> -->
 
@@ -25,8 +25,8 @@
         <button
           type="button"
           class="add"
-          title="remove need"
-          (click)="add(fundingbasket)"
+          title="add need"
+          (click)="add(need)"
         >
           +
         </button>
@@ -34,7 +34,7 @@
           type="button"
           class="delete"
           title="remove need"
-          (click)="delete(fundingbasket)"
+          (click)="delete(need)"
         >
           -
         </button>
@@ -43,7 +43,7 @@
           id="removeAll"
           class="removeAll"
           title="removeAll"
-          (click)="removeAll(fundingbasket)"
+          (click)="removeAll(need)"
         >
           🗑
         </button>

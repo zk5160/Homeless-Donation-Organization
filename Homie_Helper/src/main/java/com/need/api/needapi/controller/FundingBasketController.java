@@ -160,9 +160,10 @@ public class FundingBasketController {
     @PutMapping("")
     public ResponseEntity<FundingBasket> updateFundingBasket(@RequestBody FundingBasket fundingbasket) {
         LOG.info("PUT /fundingbasket " + fundingbasket);
-
+        
         try {
             FundingBasket h = fundingbasketDao.updateFundingBasket(fundingbasket);
+            LOG.info("" + h);
             if (h != null)
                 return new ResponseEntity<FundingBasket>(h,HttpStatus.OK);
             else

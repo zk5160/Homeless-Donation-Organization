@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 //import * as fs from 'fs'; // Import the file system module
 
 //import { Need } from '../need';
@@ -11,6 +11,7 @@ import { UserService } from '../user.service';
 import { Location } from '@angular/common';
 import { tap, catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
+
 
 
 @Component({
@@ -29,7 +30,8 @@ export class FundingBasketComponent implements OnInit {
     private needService: NeedService,
     private currentuserservice: CurrentUserService,
     private userService: UserService,
-    private location: Location
+    private location: Location,
+    private ref: ChangeDetectorRef
   ) {}
   
   cost() : number {
@@ -49,12 +51,15 @@ export class FundingBasketComponent implements OnInit {
         this.fundingbasket = currentcart[0].basket;
       });
 
-    this.fundingbasket = this.currentuserservice.getCurrentUserCart();
+    this.currentuserservice.getCurrentUserCart().subscribe( (basket) => {
+      this.fundingbasket = basket;
+      if (this.fundingbasket.length == 0 ){
+        alert("NOTHING IN BASKET");
+      }
+      this.nothing()
+    });
 
-    if (this.fundingbasket.length == 0 ){
-      alert("NOTHING IN BASKET");
-    }
-    this.nothing()
+   
   }
 
   nothing(): void {
@@ -113,20 +118,32 @@ export class FundingBasketComponent implements OnInit {
   delete(item: Need): void {
     // this.fundingbasket = this.fundingbasket.filter(h => h !== basket);
     // this.needService.deleteBasket(basket.id).subscribe();
-    this.currentuserservice.removeOneFromCart(item);
-    this.updateFundingBasket();
+    this.currentuserservice.removeOneFromCart(item).then( () => {
+      this.updateFundingBasket();
+      
+    } );
+    // this.updateFundingBasket();
     this.nothing();
   }
 
   add(item: Need): void {
-    this.currentuserservice.addToCart(item);
-    this.updateFundingBasket();
+    this.currentuserservice.addToCart(item).then( () => {
+      console.log("this.updateFundingBasket");
+      this.updateFundingBasket();
+      
+    } );
+
+    // this.updateFundingBasket();
     this.nothing();
   }
 
   removeAll(item: Need): void {
-    this.currentuserservice.removeAllFromCart(item);
-    this.updateFundingBasket();
+    this.currentuserservice.removeAllFromCart(item).then( () => {
+      this.updateFundingBasket();
+   
+      
+    } );
+    // this.updateFundingBasket();
     this.nothing();
   }
 
@@ -140,7 +157,14 @@ export class FundingBasketComponent implements OnInit {
   }
 
   updateFundingBasket(): void {
-    this.fundingbasket = this.currentuserservice.getCurrentUserCart();
+      this.currentuserservice.getCurrentUserCart().subscribe( (needs) => {
+      this.fundingbasket= needs;
+      this.cost();
+      this.ref.markForCheck();
+      console.log(this.fundingbasket[0].quantity)
+    });
+    
+    // this.save();
   }
 
 }

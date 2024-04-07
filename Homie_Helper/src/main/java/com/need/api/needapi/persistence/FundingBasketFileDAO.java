@@ -194,6 +194,7 @@ public class FundingBasketFileDAO implements FundingBasketDAO {
     @Override
     public FundingBasket updateFundingBasket(FundingBasket fundingbasket) throws IOException {
         synchronized(fundingbaskets) {
+            LOG.info("" + fundingbaskets.keySet());
             if (fundingbaskets.containsKey(fundingbasket.getId()) == false)
                 return null;  // fundingbasket does not exist
 

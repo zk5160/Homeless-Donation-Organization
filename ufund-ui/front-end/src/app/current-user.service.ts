@@ -63,7 +63,9 @@ export class CurrentUserService {
   setCurrentUser(username: string) {
     CurrentUserService.currentUser = username;
     CurrentUserService.currentUserID = this.getCurrentUserID();
-    CurrentUserService.currentUserCart = this.getCurrentUserCart();
+    this.getCurrentUserCart().subscribe( (currCart) => {
+      CurrentUserService.currentUserCart = currCart;
+    });
     //this.getCurrentUserCartSize();
   }
 
@@ -139,14 +141,15 @@ export class CurrentUserService {
     }
 
   
-  getCurrentUserCart() {
-    this.userService
+  getCurrentUserCart(): Observable<Need[]> {
+    return this.userService
       .searchUsers(CurrentUserService.currentUser)
-      .subscribe((users: User[]) => {
+      .pipe(map((users: User[]) => {
         CurrentUserService.currentUserCart = users[0].basket;
-      });
+        return CurrentUserService.currentUserCart;
+      }));
 
-    return CurrentUserService.currentUserCart;
+    // return CurrentUserService.currentUserCart;
   }
 
   async getCurrentUserCart2(): Promise<Need[]> {
@@ -204,7 +207,7 @@ export class CurrentUserService {
           .updateUser({
             id: this.getCurrentUserID(),
             name: this.getCurrentUser(),
-            basket: this.getCurrentUserCart(),
+            basket: CurrentUserService.currentUserCart,
           } as User)
           .toPromise();
         console.log('User updated');
@@ -248,7 +251,7 @@ export class CurrentUserService {
       .updateUser({
         id: this.getCurrentUserID(),
         name: this.getCurrentUser(),
-        basket: this.getCurrentUserCart(),
+        basket: CurrentUserService.currentUserCart,
       } as User)
       .subscribe();
   }
@@ -271,7 +274,7 @@ export class CurrentUserService {
           .updateUser({
             id: this.getCurrentUserID(),
             name: this.getCurrentUser(),
-            basket: this.getCurrentUserCart(),
+            basket: CurrentUserService.currentUserCart,
           } as User)
           .subscribe(() => {
             resolve();
@@ -321,7 +324,7 @@ export class CurrentUserService {
       .updateUser({
         id: this.getCurrentUserID(),
         name: this.getCurrentUser(),
-        basket: this.getCurrentUserCart(),
+        basket: CurrentUserService.currentUserCart,
       } as User)
       .subscribe();
   }
@@ -360,7 +363,7 @@ export class CurrentUserService {
       .updateUser({
         id: this.getCurrentUserID(),
         name: this.getCurrentUser(),
-        basket: this.getCurrentUserCart(),
+        basket: CurrentUserService.currentUserCart,
       } as User)
       .subscribe();
   }
