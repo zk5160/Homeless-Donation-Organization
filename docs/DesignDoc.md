@@ -23,7 +23,7 @@ Our team is creating a fully-implemented site called Homie Helper where users ca
 * Toiletries
 * Food
 
-The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, A-Z), toggle dark-mode, and use discount codes in checkout.
+The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, quantity, A-Z) and (potentially) toggle dark-mode.
 
 ### Purpose
 An E-store that enables users to purchase products to donate to homeless individuals in need, and recieve discount codes if they are returning customers. Admins have the ability to add and change item quantities and prices at their own discretion.
@@ -202,7 +202,8 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 ![Unit Testing](user-file-dao-code-coverage.png)
 
-FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
+* FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
+* FundingBasket's code coverage report is now up to par as of Sprint 3. Tests have been created to cover previously neglected components.
 
 >_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
