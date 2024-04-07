@@ -17,6 +17,14 @@
     <button type="button" (click)="goBack()">Go back</button>
     <button type="button" (click)="add(need)">Add to Cart</button>
   </div>
+  
+  <p id="text-container">Out of stock!</p>
+
+  <script>  
+   if ('{{need.quantity}}' == '0') {
+   document.getElementById('text-container').classList.add('zero');
+   } 
+  </script>
 
   <p>This page is updated after checkout from funding basket !</p>
 </div>

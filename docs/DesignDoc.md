@@ -23,7 +23,7 @@ Our team is creating a fully-implemented site called Homie Helper where users ca
 * Toiletries
 * Food
 
-The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, A-Z), toggle dark-mode, and use discount codes in checkout.
+The site will utilize persistence, updating quantities and prices as per user purchases and admin changes. Users will have the ability to sort items by various properties (price, quantity, A-Z) and (potentially) toggle dark-mode.
 
 ### Purpose
 An E-store that enables users to purchase products to donate to homeless individuals in need, and recieve discount codes if they are returning customers. Admins have the ability to add and change item quantities and prices at their own discretion.
@@ -170,6 +170,8 @@ Dependency inversion entails that high-level modules should not depend on low le
 * There are 4 user stories from this sprint that have passed their acceptance criteria tests (Funding Basket (8), Get Entire Cupboard (5), Checkout (8), Helper (13)).
 * There are 2 user stories from this sprint that have some failing acceptance criteria (Admin (13), Login/Logout (8)). Need to create logging in permissions specific to users/admins.
 
+#### Sprint 4
+
 > _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
 > acceptance criteria tests, the number that have some acceptance
 > criteria tests failing, and the number of user stories that
@@ -181,6 +183,8 @@ Dependency inversion entails that high-level modules should not depend on low le
 > achieved from unit testing of the code base. Discuss the team's
 > coverage targets, why you selected those values, and how well your
 > code coverage met your targets._
+>_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
+> those._
 
 ![Unit Testing](checkout-controller-code-coverage.png)
 
@@ -202,10 +206,8 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 ![Unit Testing](user-file-dao-code-coverage.png)
 
-FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
-
->_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
-> those._
+#### Anomalies
+* FundingBasket's code coverage report is currently a slight anomaly (as of Sprint 2) as there are not yet tests created to cover the setCost(float), setType(String), and setQuanitity(int) methods.
 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**major**_ team decisions or design milestones/changes and corresponding justification._

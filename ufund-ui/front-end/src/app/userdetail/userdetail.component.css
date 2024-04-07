@@ -67,3 +67,11 @@ button:hover {
 button:active {
   scale: 105%;
 }
+
+p {
+  display: none;
+}
+
+.zero {
+  display: block;
+}
