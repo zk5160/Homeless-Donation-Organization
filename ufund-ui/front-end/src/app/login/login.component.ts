@@ -18,7 +18,6 @@ import { Observable, Subject } from 'rxjs';
 export class LoginComponent {
   form!: FormGroup;
   users: User[] = [];
-  isDarkTheme: boolean = false;
 
   constructor(
     private authSurvice: AuthService,
@@ -94,9 +93,5 @@ export class LoginComponent {
       //   alert('Invalid username or password');
       // }
     }
-  }
-
-  toggleTheme() {
-    this.isDarkTheme = !this.isDarkTheme;
   }
 }
