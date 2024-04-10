@@ -1,10 +1,6 @@
-<!-- <nav>
-  <button routerLink = "/dashboard">Dashboard</button>
-  <button routerLink="/needs">Needs</button>
-</nav> -->
-
-<button class="button" routerLink="/">Logout</button>
-<!-- <button class="button">Logout</button> -->
+<nav>
+  <a id="nav-links" routerLink="/">Logout </a>
+</nav>
 
 <h2>Manage Products</h2>
 
@@ -18,22 +14,36 @@
   <input quantity="new-need-quantity" #needQuantity />
   <label for="new-need-type">Type: </label>
   <input type="new-need-type" #needType />
-  
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button type="button" class="add-button" (click)="add(needName.value, +needCost.value, +needQuantity.value, needType.value); 
-                                                    needName.value=''; needCost.value=''; needQuantity.value=''; needType.value=''">
+  <button
+    type="button"
+    class="add-button"
+    (click)="
+      add(needName.value, +needCost.value, +needQuantity.value, needType.value);
+      needName.value = '';
+      needCost.value = '';
+      needQuantity.value = '';
+      needType.value = ''
+    "
+  >
     Add product
-  </button> 
+  </button>
 </div>
 
 <h2>Cupboard</h2>
 <ul class="needs">
   <li *ngFor="let need of needs">
-    <a routerLink="/detail/{{need.id}}">
-      <span class="badge">{{need.id}}</span> {{need.name}}
+    <a routerLink="/detail/{{ need.id }}">
+      <span class="badge">{{ need.id }}</span> {{ need.name }}
     </a>
-    <button type="button" class="delete" title="delete need"
-      (click)="delete(need)">x</button>
+    <button
+      type="button"
+      class="delete"
+      title="delete need"
+      (click)="delete(need)"
+    >
+      x
+    </button>
   </li>
 </ul>
