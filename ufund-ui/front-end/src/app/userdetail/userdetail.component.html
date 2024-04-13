@@ -5,9 +5,7 @@
     <div id="detail"><span>Cost : </span>{{ need.cost }}</div>
     <!-- <div id="detail"><span>Quantity : </span>{{ need.quantity }}</div> -->
     <!-- <span>Quantity : </span>{{ need?.quantity }} -->
-    <div id="detail">
-      <span>Quantity : </span>{{ need.quantity }}
-    </div>
+    <div id="detail"><span>Quantity : </span>{{ need.quantity }}</div>
 
     <div id="detail"><span>Type : </span>{{ need.type }}</div>
     <div id="detail"><span>Name : </span>{{ need.name }}</div>
@@ -17,14 +15,8 @@
     <button type="button" (click)="goBack()">Go back</button>
     <button type="button" (click)="add(need)">Add to Cart</button>
   </div>
-  
-  <p id="text-container">Out of stock!</p>
 
-  <script>  
-   if ('{{need.quantity}}' == '0') {
-   document.getElementById('text-container').classList.add('zero');
-   } 
-  </script>
+  <p id="text-container">Out of stock!</p>
 
   <p>This page is updated after checkout from funding basket !</p>
 </div>

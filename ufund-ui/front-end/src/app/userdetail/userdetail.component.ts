@@ -11,7 +11,7 @@ import { CurrentUserService } from '../current-user.service';
 @Component({
   selector: 'app-user-detail',
   templateUrl: './userdetail.component.html',
-  styleUrls: [ './userdetail.component.css' ]
+  styleUrls: ['./userdetail.component.css'],
 })
 export class UserDetailComponent implements OnInit {
   need: Need | undefined;
@@ -21,7 +21,7 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private needService: NeedService,
-    private currentuserservice : CurrentUserService,
+    private currentuserservice: CurrentUserService,
     private location: Location
   ) {}
 
@@ -30,43 +30,53 @@ export class UserDetailComponent implements OnInit {
     //this.getFundingBasket();
   }
 
-  addtoBasket(id: number, name: string, cost: number, quantity: number, type: string): void {
+  addtoBasket(
+    id: number,
+    name: string,
+    cost: number,
+    quantity: number,
+    type: string
+  ): void {
     name = name.trim();
-    if (!name) { return; }
+    if (!name) {
+      return;
+    }
     //this.
-    this.needService.addBasket({id, name, cost, quantity, type } as FundingBasket)
-      .subscribe(basket => {
+    this.needService
+      .addBasket({ id, name, cost, quantity, type } as FundingBasket)
+      .subscribe((basket) => {
         console.log(`${name} has been added to the basket.`);
       });
   }
-  
+
   add(item: Need): void {
     this.currentuserservice.addToCart(item);
     // Check if need is defined and has a quantity property
     if (this.need && this.need.quantity !== undefined) {
-      if(this.need.quantity != 0)
-      {
+      if (this.need.quantity != 0) {
         this.need.quantity--;
+      }
+      if (this.need.quantity == 0) {
+        document.getElementById('text-container')!.classList.add('zero');
       }
     }
   }
 
   getNeed(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.needService.getNeed(id)
-      .subscribe(need => this.need = need);
+    this.needService.getNeed(id).subscribe((need) => (this.need = need));
   }
 
   getUser(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.needService.getUser()
-      .subscribe(user => this.user = user);
+    this.needService.getUser().subscribe((user) => (this.user = user));
   }
 
   getFundingBasket(): void {
     const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.needService.getFundingBasket(id)
-      .subscribe(fundingbasket => this.fundingbasket = fundingbasket);
+    this.needService
+      .getFundingBasket(id)
+      .subscribe((fundingbasket) => (this.fundingbasket = fundingbasket));
   }
 
   goBack(): void {
@@ -75,8 +85,7 @@ export class UserDetailComponent implements OnInit {
 
   save(): void {
     if (this.need) {
-      this.needService.updateNeed(this.need)
-        .subscribe(() => this.goBack());
+      this.needService.updateNeed(this.need).subscribe(() => this.goBack());
     }
   }
 }
