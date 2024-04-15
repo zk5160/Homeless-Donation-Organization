@@ -97,6 +97,8 @@ This section describes the web interface flow; this is how the user views and in
 
 ![View Tier](view-tier-diagram-1.png)
 
+![View Tier](view-tier-diagram-2.png)
+
 > _**[Sprint 4]** Provide a summary of the View Tier UI of your architecture.
 > Describe the types of components in the tier and describe their
 > responsibilities.  This should be a narrative description, i.e. it has
