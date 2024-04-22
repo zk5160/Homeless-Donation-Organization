@@ -75,3 +75,48 @@ p {
 .zero {
   display: block;
 }
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  #details {
+    font-size: 2rem;
+    background-color: #555;
+    text-align: center;
+    width: 400px;
+    border-radius: 20px;
+    height: 290px;
+    color: white;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px,
+      rgba(0, 0, 0, 0.22) 0px 5px 10px;
+  }
+
+  button {
+    height: 70px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 2px solid black;
+  }
+
+  p {
+    display: none;
+  }
+
+  .zero {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  #container {
+    margin-top: 23%;
+  }
+}

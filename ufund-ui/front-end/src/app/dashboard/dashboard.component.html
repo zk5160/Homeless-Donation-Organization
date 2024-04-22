@@ -2,10 +2,9 @@
   <a id="nav-links" routerLink="/">Logout </a>
   <a id="nav-links" routerLink="/funding-basket">Shopping-Cart</a>
 </nav>
-<!-- <router-outlet></router-outlet> -->
 
-<!-- top needs -->
 <h2>Product Dashboard</h2>
+<!-- top needs -->
 
 <ul *ngIf="EmptyCupboard">
   <label>Empty Cupboard</label>
@@ -27,41 +26,30 @@
 <button (click)="toggleCostL()">Cost Low</button>
 <button (click)="toggleCostH()">Cost High</button>
 
-<ul *ngIf="showA">
-  <label>Alphabetical</label>
-  <li *ngFor="let item of sortedList | async">{{ item.name }}</li>
-</ul>
+<div id="sort-list">
+  <ul *ngIf="showA">
+    <label>Alphabetical</label>
+    <li *ngFor="let item of sortedList | async">{{ item.name }}</li>
+  </ul>
 
-<ul *ngIf="showQuantL">
-  <label>Quantity Low to High</label>
-  <li *ngFor="let item of sortedQuantL | async">{{ item.name }}</li>
-</ul>
+  <ul *ngIf="showQuantL">
+    <label>Quantity Low to High</label>
+    <li *ngFor="let item of sortedQuantL | async">{{ item.name }}</li>
+  </ul>
 
-<ul *ngIf="showQuantH">
-  <label>Quantity High to Low</label>
-  <li *ngFor="let item of sortedQuantH | async">{{ item.name }}</li>
-</ul>
+  <ul *ngIf="showQuantH">
+    <label>Quantity High to Low</label>
+    <li *ngFor="let item of sortedQuantH | async">{{ item.name }}</li>
+  </ul>
 
-<ul *ngIf="showCostL">
-  <label>Cost Low to High</label>
-  <li *ngFor="let item of sortedCostL | async">{{ item.name }}</li>
-</ul>
+  <ul *ngIf="showCostL">
+    <label>Cost Low to High</label>
+    <li *ngFor="let item of sortedCostL | async">{{ item.name }}</li>
+  </ul>
 
-<ul *ngIf="showCostH">
-  <label>Cost High to Low</label>
-  <li *ngFor="let item of sortedCostH | async">{{ item.name }}</li>
-</ul>
-
-<!-- <ul>
-  <li *ngFor="let item of sortedList$ | async">{{ item.name }}</li>
-</ul> -->
-<!-- <div class="needs-alphabetical">
-  <button type="button" (click)="sortAlphabetical()">Alphabetical</button>
-  <a
-    id="need-details"
-    *ngFor="let need of needs"
-  >
-    {{ need.name }}
-  </a>
-</div> -->
+  <ul *ngIf="showCostH">
+    <label>Cost High to Low</label>
+    <li *ngFor="let item of sortedCostH | async">{{ item.name }}</li>
+  </ul>
+</div>
 <app-need-search></app-need-search>

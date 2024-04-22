@@ -71,6 +71,8 @@ input {
   border: 2px solid black;
 }
 
+/* MOBILE STYLES */
+
 @media (max-width: 600px) {
   h1 {
     font-size: 4rem;
@@ -85,6 +87,7 @@ input {
 
   label {
     font-size: 2.5rem;
+    margin-bottom: 10px;
   }
 
   input {
@@ -113,5 +116,11 @@ input {
     border-radius: 7px;
     cursor: pointer;
     font-size: 2.3rem;
+  }
+
+  label,
+  input {
+    display: flex;
+    width: 100%;
   }
 }

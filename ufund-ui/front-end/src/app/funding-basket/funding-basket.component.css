@@ -87,3 +87,24 @@ button:hover {
 button:active {
   scale: 105%;
 }
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  nav {
+    background: rgb(71, 71, 71);
+    height: 70px;
+    line-height: 68px;
+    word-spacing: 70px;
+    text-align: center;
+  }
+
+  #nav-links {
+    padding-left: 20px;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #dedede;
+  }
+}
