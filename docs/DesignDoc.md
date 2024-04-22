@@ -135,25 +135,11 @@ This section describes the web interface flow; this is how the user views and in
 ### View Tier
 
 ![View Tier](view-tier-diagram-1.png)
+Above is an example of an admin attempting to add or modify a need to the cupboard. First, an add() command is sent from the admin to Need when creating a new need. If all fields are filled out, the entered properties are saved to NeedDetail using the save() command, and the Need is effectively added to the Cupboard using addNeed(Need). If all properties are not correctly filled out, then Need returns an error back to the admin.
+Similarly, when modifying an exitsing need, a request is sent from the admin to NeedDetail to save() their changes. If any fields are incorrectly filled or empty, NeedDetail returns an erorr back to the admin. Otherwise, the admin's request is recieved, and an updateNeed(Need) request is successfully sent to the Cupboard.
 
 ![View Tier](view-tier-diagram-2.png)
-
-> _**[Sprint 4]** Provide a summary of the View Tier UI of your architecture.
-> Describe the types of components in the tier and describe their
-> responsibilities.  This should be a narrative description, i.e. it has
-> a flow or "story line" that the reader can follow._
-
-> _**[Sprint 4]** You must  provide at least **2 sequence diagrams** as is relevant to a particular aspects 
-> of the design that you are describing.  (**For example**, in a shopping experience application you might create a 
-> sequence diagram of a customer searching for an item and adding to their cart.)
-> As these can span multiple tiers, be sure to include an relevant HTTP requests from the client-side to the server-side 
-> to help illustrate the end-to-end flow._
-
-> _**[Sprint 4]** To adequately show your system, you will need to present the **class diagrams** where relevant in your design. Some additional tips:_
- >* _Class diagrams only apply to the **ViewModel** and **Model** Tier_
->* _A single class diagram of the entire system will not be effective. You may start with one, but will be need to break it down into smaller sections to account for requirements of each of the Tier static models below._
- >* _Correct labeling of relationships with proper notation for the relationship type, multiplicities, and navigation information will be important._
- >* _Include other details such as attributes and method signatures that you think are needed to support the level of detail in your discussion._
+This second example depicts the interactions betwene the Cupboard and FundingBasket entities when a user adds an item to the cart. By selecting addToCart(), the user is sending a getNeed() request to the Cupboard. If the need exists and has a quantity > 0, an addToCart(Need) request is sent to the FundingBasket, effectually adding the item to the user's cart. Otherwise, an error is returned to the user indicating that the need was unable to be added to the cart.
 
 ### ViewModel Tier
 The ViewModel Tier covers our controller classes, which allow for communication between the back and front-ends of our application. The CheckoutController, FundingBasketController, NeedController, and UserController classes are each responsible for handling HTTP requests relating to their corresponding entities (Checkout, FundingBasket, Need, and User).
@@ -180,9 +166,8 @@ The controller specifies a separation of concerns between the user-interface and
 ### Dependency Inversion/Injection
 Dependency inversion entails that high-level modules should not depend on low level modules: rather, both should depend on abstractions, providing a looser coupling between dependent entities. The main way by which we utilize this in our application is through our DAO (Data Access Object) classes. Each DAO file has a respective abstract DAO file that provides an interface for the implementation files to follow. This allows us to not only test our DAO files with mock classes but also completely change our implementations without affecting any classes external to the one being injected.  
 
-> _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
-
-> _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
+### Pure Fabrication
+Pure fabrication deals with the use of services that access certain capabilities to be reused as needed across the program. We implemented this using the ProductService, UserService, and CurrentUserService classes. ProductService, located in the product.service.ts file, handles requests to fetch and manipulate the properties of products for components such as product-list and product-search. Similarly, UserService deals with requests to log in existing users or create new user accounts. Finally, CurrentUserService is used to store information regarding the currently logged in user. All three of these classes help to maintain persistence throughout the program.
 
 ## Static Code Analysis/Future Design Improvements
 
@@ -203,16 +188,16 @@ Dependency inversion entails that high-level modules should not depend on low le
 ![Static Code](static_code(reorder).png)
 * The order was not correct with the java language, it may make it more difficult for another person to view and understand
 
-> _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
-> **Identify 3-4** areas within your code that have been flagged by the Static Code 
-> Analysis Tool (SonarQube) and provide your analysis and recommendations.  
-> Include any relevant screenshot(s) with each area._
+### Future Potential Refactoring & Design Improvements
 
-> _**[Sprint 4]** Discuss **future** refactoring and other design improvements your team would explore if the team had additional time._
+#### View Tier
+* Allow admin to view all the users and when a new user is created
+* Allow admin to see profits from cupboard
+* When adding a need and not all fields are filled out, indicate which field(s) require attention
+
+#### Usability
 
 ## Testing
-> _This section will provide information about the testing performed
-> and the results of the testing._
 
 ### Acceptance Testing
 
@@ -221,20 +206,10 @@ Dependency inversion entails that high-level modules should not depend on low le
 * There are 2 user stories from this sprint that have some failing acceptance criteria (Admin (13), Login/Logout (8)). Need to create logging in permissions specific to users/admins.
 
 #### Sprint 4
-
-> _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
-> acceptance criteria tests, the number that have some acceptance
-> criteria tests failing, and the number of user stories that
-> have not had any testing yet. Highlight the issues found during
-> acceptance testing and if there are any concerns._
+* All 12 user stories have passed their acceptance criteria tests. There are no issues or concerns at this time.
 
 ### Unit Testing and Code Coverage
-> _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
-> achieved from unit testing of the code base. Discuss the team's
-> coverage targets, why you selected those values, and how well your
-> code coverage met your targets._
->_**[Sprint 2 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
-> those._
+Our testing strategy was to reach a minimum of 90% coverage for each class. We effectively created tests while we implemented the code itself to avoid missing any tests in the long-run.
 
 ![Unit Testing](checkout-controller-code-coverage.png)
 
@@ -262,4 +237,4 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 ## Ongoing Rationale
 * 2024/04/07: Sprint 3 we decided to scrap our dark mode and discount code 10% enhancement features due to the complexity of implementing them. We are instead sticking with our five sorting features (high quantity, low quantity, high price, low price, alphabetical).
->_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**major**_ team decisions or design milestones/changes and corresponding justification._
+* 2024/04/17: Sprint 4 for our 2nd 10% enchancement we decided to implement a responsive UI design.
