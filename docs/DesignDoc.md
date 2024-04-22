@@ -161,13 +161,22 @@ Dependency inversion entails that high-level modules should not depend on low le
 
 ## Static Code Analysis/Future Design Improvements
 
+### User
 ![Static Code](static_code(Array).png)
+* Using a list is an interface whereas ArrayList is a class. ArrayList implements List, so using List may have been better.
 
+### FundingBasketFileDAO
 ![Static Code](static_code(FundingBasket).png)
+* We had a lot of imports that were unnecessary which made the code messy
+* There were also a good amount of comments that we did not need as they were unclear and more for our thought process of how to code the function
 
+### NeedController
 ![Static Code](static_code(Need).png)
+* We had extra code that was not needed
 
+### FundingBasketDAO
 ![Static Code](static_code(reorder).png)
+* The order was not correct with the java language, it may make it more difficult for another person to view and understand
 
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
 > **Identify 3-4** areas within your code that have been flagged by the Static Code 
