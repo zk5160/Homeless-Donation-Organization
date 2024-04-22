@@ -52,11 +52,11 @@ An E-store that enables users to purchase products to donate to homeless individ
 
 ### MVP Features
 * Need
- * Create new need
- * Search for needs
- * Delete a single need
- * Update a need
- * Get a single need
+  * Create new need
+  * Search for needs
+  * Delete a single need
+  * Update a need
+  * Get a single need
 * Get entire cupboard
 * Funding basket
 * Checkout
