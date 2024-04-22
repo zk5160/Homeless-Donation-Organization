@@ -160,6 +160,15 @@ Dependency inversion entails that high-level modules should not depend on low le
 > _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
 
 ## Static Code Analysis/Future Design Improvements
+
+![Static Code](static_code(Array).png)
+
+![Static Code](static_code(FundingBasket).png)
+
+![Static Code](static_code(Need).png)
+
+![Static Code](static_code(reorder).png)
+
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
 > **Identify 3-4** areas within your code that have been flagged by the Static Code 
 > Analysis Tool (SonarQube) and provide your analysis and recommendations.  
