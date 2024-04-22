@@ -3,11 +3,6 @@ geometry: margin=1in
 ---
 # PROJECT Design Documentation
 
-> _The following template provides the headings for your Design
-> Documentation.  As you edit each section make sure you remove these
-> commentary 'blockquotes'; the lines that start with a > character
-> and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations._
-
 ## Team Information
 * Team name: Team 7G
 * Team members
@@ -42,12 +37,6 @@ An E-store that enables users to purchase products to donate to homeless individ
 
 ## Requirements
 
-This section describes the features of the application.
-
-> _In this section you do not need to be exhaustive and list every
-> story.  Focus on top-level features from the Vision document and
-> maybe Epics and critical Stories._
-
 ### Definition of MVP
 * User can create and log into account
 * User can browse or search site inventory and add items to cart
@@ -57,11 +46,30 @@ This section describes the features of the application.
 * Admin can edit product inventory (items, quantities, prices, etc.)
 
 ### MVP Features
->  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
+* Need
+  * Create new need
+  * Search for needs
+  * Delete a single need
+  * Update a need
+  * Get a single need
+* Get entire cupboard
+* Funding basket
+* Checkout
+* Admin
+* Helper
+* Login/Logout
 
 ### Enhancements
-> _**[Sprint 4]** Describe what enhancements you have implemented for the project._
 
+#### Sort
+* Our first 10% enhancement enables users to sort through needs.
+* When a user clicks on one of the sorting options, the sorted corresponding list of items is returned/displayed.
+* Sorts include price (low-high), price (high-low), quantity (low-high), quantity (high-low), and alphabetical.
+
+#### Responsive Design
+* Our second 10% enhancement enables the UI to responsively fit to the size of the user's window.
+* As the user changes the size of their window, the UI actively resizes.
+* This enables our e-store to be displayed on both desktop and mobile devices.
 
 ## Application Domain
 
@@ -90,8 +98,22 @@ Both the ViewModel and Model are built using Java and Spring Framework. Details 
 ### Overview of User Interface
 This section describes the web interface flow; this is how the user views and interacts with the web application.
 
-> _Provide a summary of the application's user interface.  Describe, from the user's perspective, the flow of the pages in the web application._
-
+* The user is first brought to the launch page titled "Homie Helper Home page." Here, there is a "Login" button located in the top left corner that they can click.
+* The user is then brought to the login page. On this page is a heading stating "Enter your credentials" with two input bars underneath.
+  * The first bar prompts the user for their username.
+  * The second prompts for their password.
+  * Under the two input bars is a grey "Login" button located in the center. The user will click this after entering the required information.
+* If the user is a helper: 
+  * The user is brought to the "Product Dashboard" page. In the top left of the screen there are two buttons located on the nav-bar titled "Logout" and "Shopping Cart." 
+    * If the user clicks "Logout," they are led back to the landing page.
+    * If the user clicks "Shopping Cart," they are brought to the shopping cart page.
+      * The page reads "Shopping Cart" in the center, with a "Logout" button located on the navbar in the top left corner. Each need in the user's cart is listed here, with its name on top and quantity below it, and three buttons next to that: +1, -1, and a trash can icon.
+        * Clicking the +1 or -1 increments or decrements the quantity. It is updated on the need property.
+        * If the trash can is pressed, the need is removed from the cart and disappears from the cart.
+      * At the bottom of the page reads "The current user's total is:" with the user's calculated total next to it.
+      * Beneath that are two buttons: "Go back" and "Checkout."
+        * Selecting "Go back" brings you back to the Product Dashboard.
+        * Selecting Checkout clears the needs out from your shopping cart
 
 ### View Tier
 
@@ -120,14 +142,7 @@ This section describes the web interface flow; this is how the user views and in
 The ViewModel Tier covers our controller classes, which allow for communication between the back and front-ends of our application. The CheckoutController, FundingBasketController, NeedController, and UserController classes are each responsible for handling HTTP requests relating to their corresponding entities (Checkout, FundingBasket, Need, and User).
 
 ![ViewModel Tier](view-model-tier-diagram-1.png)
-
-> _**[Sprint 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
-
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as critical attributes and methods._
-> 
+As shown above, the ViewModelTier encompasses the four controllers: Need, Checkout, User, and FundingBasket. The CheckoutController utilizes both the UserDAO and the NeedDAO which access the user’s fundingbasket. The NeedController utilizes Need and NeedDAO. Similarly, the FundingBasketController utilizes FundingBasket and FundingBasketDAO, and the UserController utilizes User and UserDAO. The controller cannot directly interact with the database which is why it utilizes the model and DAO. The model represents the domain logic and data, and the DAO encapsulates access to the database. There are three models, the fundingbasket, need, and user, as they are main parts of the application. The CheckoutController does not have its own model or DAO as it relies on the user which has access to the fundingbasket, and the need which has access to the inventory.
 
 ### Model Tier
 Several foundational classes make up the Model Tier of our application, including Need, User, and FundingBasket. Each of these have their own sets of appliable attributes, including IDs and names, as well as getters and setters that allow these values to be modified.
@@ -135,14 +150,7 @@ Several foundational classes make up the Model Tier of our application, includin
 In addition, DAO (Data Access Object) files such as FundingBasketDAO, InventoryDAO, NeedDAO, and UserDAO provide interfaces that allow the migration of data between classes, and convert JSON scripts into their own respective objects. This allows for persistence within the application, as updates in app data are stored using these interfaces.
 
 ![Model Tier](model-tier-diagram-1.png)
-
-> _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
-
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as critical attributes and methods._
-> 
+Depicted above is the Model Tier, which encompasses FundingBasket, Need, and User backend files. User.java uses FundingBasket.java and Need.Java because a User has a Funding Basket Object that contains a list of Need Objects. In order for a User to navigate through the website it uses User.java and UserDAO.java methods. UserDAO.java is a blueprint for UserFileDAO.java to implement. This includes getting, updating, and finding a User. It also has methods that allow the user to access the Funding Basket. The User uses the FundingBasket files to remove, edit, and delete needs. When a user does this they update their FundingBasket. The Need files are so the User can view the Needs in their FundingBasket.  
 
 ## OO Design Principles
 
@@ -160,6 +168,24 @@ Dependency inversion entails that high-level modules should not depend on low le
 > _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
 
 ## Static Code Analysis/Future Design Improvements
+
+### User
+![Static Code](static_code(Array).png)
+* Using a list is an interface whereas ArrayList is a class. ArrayList implements List, so using List may have been better.
+
+### FundingBasketFileDAO
+![Static Code](static_code(FundingBasket).png)
+* We had a lot of imports that were unnecessary which made the code messy
+* There were also a good amount of comments that we did not need as they were unclear and more for our thought process of how to code the function
+
+### NeedController
+![Static Code](static_code(Need).png)
+* We had extra code that was not needed
+
+### FundingBasketDAO
+![Static Code](static_code(reorder).png)
+* The order was not correct with the java language, it may make it more difficult for another person to view and understand
+
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
 > **Identify 3-4** areas within your code that have been flagged by the Static Code 
 > Analysis Tool (SonarQube) and provide your analysis and recommendations.  
