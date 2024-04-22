@@ -196,6 +196,13 @@ Pure fabrication deals with the use of services that access certain capabilities
 * When adding a need and not all fields are filled out, indicate which field(s) require attention
 
 #### Usability
+* User: create clearly outlined section for the product dashboard
+  * Master list of products to prevent confusion (sorting, etc.)
+* Place sorting filters above product dashboard
+* Pop up message indicating checkout was successful
+* Add images to needs
+  * Enables users to see what exactly they are purchasing
+  * Add field to Admin “edit need” section
 
 ## Testing
 
