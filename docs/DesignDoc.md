@@ -42,12 +42,6 @@ An E-store that enables users to purchase products to donate to homeless individ
 
 ## Requirements
 
-This section describes the features of the application.
-
-> _In this section you do not need to be exhaustive and list every
-> story.  Focus on top-level features from the Vision document and
-> maybe Epics and critical Stories._
-
 ### Definition of MVP
 * User can create and log into account
 * User can browse or search site inventory and add items to cart
@@ -57,7 +51,18 @@ This section describes the features of the application.
 * Admin can edit product inventory (items, quantities, prices, etc.)
 
 ### MVP Features
->  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
+* Need
+ * Create new need
+ * Search for needs
+ * Delete a single need
+ * Update a need
+ * Get a single need
+* Get entire cupboard
+* Funding basket
+* Checkout
+* Admin
+* Helper
+* Login/Logout
 
 ### Enhancements
 
@@ -130,15 +135,6 @@ The ViewModel Tier covers our controller classes, which allow for communication 
 ![ViewModel Tier](view-model-tier-diagram-1.png)
 The ViewModelTier encompasses the four controllers: Need, Checkout, User, and FundingBasket. The CheckoutController utilizes both the UserDAO and the NeedDAO which access the user’s fundingbasket. The NeedController utilizes Need and NeedDAO. Similarly, the FundingBasketController utilizes FundingBasket and FundingBasketDAO, and the UserController utilizes User and UserDAO. The controller cannot directly interact with the database which is why it utilizes the model and DAO. The model represents the domain logic and data, and the DAO encapsulates access to the database. There are three models, the fundingbasket, need, and user, as they are main parts of the application. The CheckoutController does not have its own model or DAO as it relies on the user which has access to the fundingbasket, and the need which has access to the inventory.
 
-
-> _**[Sprint 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
-
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as critical attributes and methods._
-> 
-
 ### Model Tier
 Several foundational classes make up the Model Tier of our application, including Need, User, and FundingBasket. Each of these have their own sets of appliable attributes, including IDs and names, as well as getters and setters that allow these values to be modified.
 
@@ -148,15 +144,6 @@ In addition, DAO (Data Access Object) files such as FundingBasketDAO, InventoryD
 The Model Tier encompasses FundingBasket, Need, and User backend files. User.java uses FundingBasket.java and Need.Java because a User has a Funding Basket Object that contains a list of Need Objects.
 In order for a User to navigate through the website it uses User.java and UserDAO.java methods. UserDAO.java is a blueprint for UserFileDAO.java to implement. This includes getting, updating, and finding a User. It also has methods that allow the user to access the Funding Basket. 
 The User uses the FundingBasket files to remove, edit, and delete needs. When a user does this they update their FundingBasket. The Need files are so the User can view the Needs in their FundingBasket.  
-
-
-> _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
-
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as critical attributes and methods._
-> 
 
 ## OO Design Principles
 
