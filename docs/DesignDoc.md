@@ -216,7 +216,7 @@ Pure fabrication deals with the use of services that access certain capabilities
 * All 12 user stories have passed their acceptance criteria tests. There are no issues or concerns at this time.
 
 ### Unit Testing and Code Coverage
-Our testing strategy was to reach a minimum of 90% coverage for each class. We effectively created tests while we implemented the code itself to avoid missing any tests in the long-run.
+Our testing strategy was to reach a minimum of 90% coverage for each class. We achieved this by effectively creating tests while we implemented the code itself to avoid missing any methods.
 
 ![Unit Testing](checkout-controller-code-coverage.png)
 
