@@ -105,15 +105,32 @@ This section describes the web interface flow; this is how the user views and in
   * Under the two input bars is a grey "Login" button located in the center. The user will click this after entering the required information.
 * If the user is a helper: 
   * The user is brought to the "Product Dashboard" page. In the top left of the screen there are two buttons located on the nav-bar titled "Logout" and "Shopping Cart." 
-    * If the user clicks "Logout," they are led back to the landing page.
+    * If the user clicks "Logout," they are logged out and led back to the landing page.
     * If the user clicks "Shopping Cart," they are brought to the shopping cart page.
       * The page reads "Shopping Cart" in the center, with a "Logout" button located on the navbar in the top left corner. Each need in the user's cart is listed here, with its name on top and quantity below it, and three buttons next to that: +1, -1, and a trash can icon.
         * Clicking the +1 or -1 increments or decrements the quantity. It is updated on the need property.
-        * If the trash can is pressed, the need is removed from the cart and disappears from the cart.
+        * If the trash can is pressed, the need is removed from the cart and disappears from the page.
       * At the bottom of the page reads "The current user's total is:" with the user's calculated total next to it.
       * Beneath that are two buttons: "Go back" and "Checkout."
         * Selecting "Go back" brings you back to the Product Dashboard.
-        * Selecting Checkout clears the needs out from your shopping cart
+        * Selecting Checkout clears the needs out from your shopping cart and empties it if there are >= 1 needs in the cart. If there aren't, an error message appears at the top of the user's screen indicating that their cart is empty.
+    * Included on this page are also all featured needs.
+      * If the user clicks on one, they are brought to the need details page, which displays the need's id, name, cost, quantity, and type. It includes two buttons at the bottom: "Go back" and "Add to Cart"
+        * If the user selects "Go back," they are brought back to the product dashboard.
+        * If the user selects "Add to Cart" the need is added to their cart if quantity > 0. Otherwise, an error at the top of the user's screen is returned indicating that the item cannot be added to cart at this time.
+    * There are also five sort buttons, along with a "Product Search" bar beneath them.
+      * Clicking on each sort button returns a corresponding list of sorted needs that appears under the search bar.
+      * Searching up an existing need in the "Product Search" bar returns the need directly under the bar. If clicked, the user will be brought to the corresponding need detail page
+* If the user is an admin:
+  * The admin will be brought to the "Manage Products" page. In the top left is a "Logout" button on the navbar.
+    * If clicked, the admin will be logged out and brought back to the landing page.
+  * Beneath the title of the page are fields allowing an admin to enter a "New Product," including "Name," "Cost," "Quantity," and "Type."
+    * If all fields are properly filled out, the admin can press the "Add product" button beneath the input bars, effectively adding the need to the list of needs in the cupboard at the bottom of the page.
+    * If the admin selects a need from that list, they are brought to the "Product Details" page.
+      * Here, the admin can modify the aforementioned properties of the selected existing need. Details include id (unmodifiable), cost, quantity, type, and name, each with their own input bars containing their respective value.
+      * At the bottom are two buttons: "go back" and "save."
+        * Selecting "go back" brings the admin back to the Manage Products page.
+        * Selecting "save" saves the admin's changes to the need and updates its values.
 
 ### View Tier
 
