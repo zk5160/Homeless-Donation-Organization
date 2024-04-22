@@ -60,8 +60,16 @@ This section describes the features of the application.
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
 
 ### Enhancements
-> _**[Sprint 4]** Describe what enhancements you have implemented for the project._
 
+#### Sort
+* Our first 10% enhancement enables users to sort through needs.
+* When a user clicks on one of the sorting options, the sorted corresponding list of items is returned/displayed.
+* Sorts include price (low-high), price (high-low), quantity (low-high), quantity (high-low), and alphabetical.
+
+#### Responsive Design
+* Our second 10% enhancement enables the UI to responsively fit to the size of the user's window.
+* As the user changes the size of their window, the UI actively resizes.
+* This enables our e-store to be displayed on both desktop and mobile devices.
 
 ## Application Domain
 
@@ -120,6 +128,8 @@ This section describes the web interface flow; this is how the user views and in
 The ViewModel Tier covers our controller classes, which allow for communication between the back and front-ends of our application. The CheckoutController, FundingBasketController, NeedController, and UserController classes are each responsible for handling HTTP requests relating to their corresponding entities (Checkout, FundingBasket, Need, and User).
 
 ![ViewModel Tier](view-model-tier-diagram-1.png)
+The ViewModelTier encompasses the four controllers: Need, Checkout, User, and FundingBasket. The CheckoutController utilizes both the UserDAO and the NeedDAO which access the user’s fundingbasket. The NeedController utilizes Need and NeedDAO. Similarly, the FundingBasketController utilizes FundingBasket and FundingBasketDAO, and the UserController utilizes User and UserDAO. The controller cannot directly interact with the database which is why it utilizes the model and DAO. The model represents the domain logic and data, and the DAO encapsulates access to the database. There are three models, the fundingbasket, need, and user, as they are main parts of the application. The CheckoutController does not have its own model or DAO as it relies on the user which has access to the fundingbasket, and the need which has access to the inventory.
+
 
 > _**[Sprint 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
@@ -135,6 +145,10 @@ Several foundational classes make up the Model Tier of our application, includin
 In addition, DAO (Data Access Object) files such as FundingBasketDAO, InventoryDAO, NeedDAO, and UserDAO provide interfaces that allow the migration of data between classes, and convert JSON scripts into their own respective objects. This allows for persistence within the application, as updates in app data are stored using these interfaces.
 
 ![Model Tier](model-tier-diagram-1.png)
+The Model Tier encompasses FundingBasket, Need, and User backend files. User.java uses FundingBasket.java and Need.Java because a User has a Funding Basket Object that contains a list of Need Objects.
+In order for a User to navigate through the website it uses User.java and UserDAO.java methods. UserDAO.java is a blueprint for UserFileDAO.java to implement. This includes getting, updating, and finding a User. It also has methods that allow the user to access the Funding Basket. 
+The User uses the FundingBasket files to remove, edit, and delete needs. When a user does this they update their FundingBasket. The Need files are so the User can view the Needs in their FundingBasket.  
+
 
 > _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
